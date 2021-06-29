@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function SearchOverlay({ handleIsSearchOverlayOpened }) {
+  const [searchQuery, setSearchQuery] = useState('');
   return (
     <div
       className="search-overlay"
@@ -25,8 +26,12 @@ export default function SearchOverlay({ handleIsSearchOverlayOpened }) {
           <i className="fas fa-times"></i>
         </button>
         <div style={{ display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'center' }}>
-          <form>
+          <form method="get" action="/blogs">
             <input
+              value={searchQuery}
+              name="query"
+              onChange={(e) => setSearchQuery(e.target.value)}
+              required
               autoComplete="off"
               placeholder="Search..."
               autoFocus

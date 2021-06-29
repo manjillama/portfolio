@@ -9,15 +9,12 @@ import Wrapper from '../components/wrapper';
 import Projects from '../components/projects';
 import Spotify from '../components/spotify';
 import Footer from '../components/footer';
+import SEO from '../components/seo';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Helmet>
-        <title>
-          Get to know me better - Manjil Tamang | Full Stack Software Engineer
-        </title>
-      </Helmet>
+      <SEO />
       <Header />
       <Wrapper>
         <Intro />
