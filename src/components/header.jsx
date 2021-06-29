@@ -3,7 +3,7 @@ import { Parallax } from 'react-parallax';
 
 export default function Header() {
   return (
-    <header>
+    <header style={{ position: 'relative' }}>
       <Parallax
         className="jumbotron"
         bgImage="/images/header.jpg"
@@ -18,7 +18,7 @@ export default function Header() {
               left: '50%',
               top: `calc(40% * ${percentage})`,
               borderRadius: '50%',
-              transform: `translate(-50%,-50%)`,
+              transform: `translate(-50%,-50%)`
             }}
           >
             <h5 className="hint-text">FULL STACK SOFTWARE ENGINEER</h5>
@@ -36,7 +36,7 @@ export default function Header() {
           backgroundRepeat: 'repeat',
           backgroundSize: 'initial',
           marginBottom: 55,
-          backgroundImage: 'url(/images/brush_stroke.png)',
+          backgroundImage: 'url(/images/brush_stroke.png)'
         }}
       ></div>
     </header>

@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-export default function NavMobile({
-  isNavMobileOpened,
-  handleIsNavMobileOpened,
-}) {
+export default function NavMobile({ isNavMobileOpened, handleIsNavMobileOpened }) {
   return (
-    <div
-      className={isNavMobileOpened ? 'navbar-mobile opened' : 'navbar-mobile'}
-    >
+    <div className={isNavMobileOpened ? 'navbar-mobile opened' : 'navbar-mobile'}>
       <nav className="nav">
         <div>
           <button
@@ -26,8 +21,7 @@ export default function NavMobile({
               activeStyle={{
                 opacity: 1,
                 background: '#000',
-                width: '100%',
-                color: '#fff',
+                color: '#fff'
               }}
             >
               Home <span>Welcome</span>
@@ -41,8 +35,7 @@ export default function NavMobile({
         </ul>
         <p style={{ opacity: 0.5, padding: '15px', letterSpacing: 0 }}>
           <small>
-            Copyright &copy; <strong>Manjil Tamang</strong>,{' '}
-            {new Date().getFullYear()}. All Rights Reserved.
+            Copyright &copy; <strong>Manjil Tamang</strong>, {new Date().getFullYear()}. All Rights Reserved.
           </small>
         </p>
       </nav>

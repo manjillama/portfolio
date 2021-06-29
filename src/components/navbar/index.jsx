@@ -7,11 +7,6 @@ export default function Navbar() {
   const [isNavMobileOpened, setIsNavMobileOpened] = useState(false);
   const [isSearchOverlayOpened, setIsSearchOverlayOpened] = useState(false);
 
-  function handleIsNavMobileOpened(isOpened) {
-    setIsNavMobileOpened(isOpened);
-    preventBodyScroll(isOpened);
-  }
-
   function handleIsSearchOverlayOpened(isOpened) {
     setIsSearchOverlayOpened(isOpened);
     preventBodyScroll(isOpened);
@@ -24,11 +19,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Nav
-        handleIsNavMobileOpened={handleIsNavMobileOpened}
-        handleIsSearchOverlayOpened={handleIsSearchOverlayOpened}
-      />
-      <NavMobile isNavMobileOpened={isNavMobileOpened} handleIsNavMobileOpened={handleIsNavMobileOpened} />
+      <Nav handleIsNavMobileOpened={setIsNavMobileOpened} handleIsSearchOverlayOpened={setIsSearchOverlayOpened} />
+      <NavMobile isNavMobileOpened={isNavMobileOpened} handleIsNavMobileOpened={setIsNavMobileOpened} />
       {isSearchOverlayOpened && <SearchOverlay handleIsSearchOverlayOpened={handleIsSearchOverlayOpened} />}
     </>
   );
