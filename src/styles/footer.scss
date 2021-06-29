@@ -1,0 +1,20 @@
+footer {
+  display: grid;
+  padding: 2.5rem;
+  .socials {
+    justify-self: center;
+    display: grid;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0.8rem;
+    margin-bottom: 0.6rem;
+    a {
+      font-size: 1.2rem;
+      &:hover {
+        color: #bc9e86;
+      }
+    }
+  }
+}

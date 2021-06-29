@@ -1,0 +1,12 @@
+.jumbotron {
+  height: 100vh;
+  position: relative;
+  h1 {
+    font-weight: 300;
+    font-size: 3.2rem;
+  }
+  img {
+    height: 100% !important;
+    object-fit: cover;
+  }
+}

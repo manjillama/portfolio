@@ -1,0 +1,157 @@
+@import './header.scss';
+@import './quote.scss';
+@import './projects.scss';
+@import './footer.scss';
+@import './navbar.scss';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+html,
+body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  // line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+  letter-spacing: 1px;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+}
+section {
+  padding: 3rem 0;
+}
+.hint-text {
+  opacity: 0.7;
+}
+.text-center {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 200ms ease-out;
+}
+.btn-chromeless {
+  border-width: 0;
+  background: transparent;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-l {
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-md {
+  max-width: 940px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+ul.list-neutralize {
+  padding: 0;
+  margin: 0;
+  &.list-inline {
+    li {
+      display: inline-block;
+    }
+  }
+  li {
+    list-style-type: none;
+  }
+}
+h5 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.no-scroll {
+  overflow: hidden;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+.menu-toggler {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  user-select: none;
+  box-sizing: content-box;
+  cursor: pointer;
+  .one,
+  .two,
+  .three {
+    background: #000;
+
+    width: 100%;
+    height: 2px;
+    margin-bottom: 3px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+  }
+  .one,
+  .two {
+    transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
+  }
+}
