@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-export default function Nav({ handleIsNavMobileOpened }) {
+export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpened }) {
   return (
     <div className="navbar">
       <nav className="nav">
@@ -15,7 +15,7 @@ export default function Nav({ handleIsNavMobileOpened }) {
             <Link
               to="/"
               activeStyle={{
-                opacity: 1,
+                opacity: 1
               }}
             >
               Home <span>Welcome</span>
@@ -28,6 +28,7 @@ export default function Nav({ handleIsNavMobileOpened }) {
           </li>
           <li>
             <button
+              onClick={() => handleIsSearchOverlayOpened(true)}
               className="btn btn-chromeless"
               style={{ opacity: 1, fontSize: '1.1rem' }}
             >
@@ -38,6 +39,7 @@ export default function Nav({ handleIsNavMobileOpened }) {
         <ul className="nav-right-md list-inline list-neutralize">
           <li>
             <button
+              onClick={() => handleIsSearchOverlayOpened(true)}
               className="btn btn-chromeless"
               style={{ opacity: 1, fontSize: '1.1rem', marginRight: '1.2rem' }}
             >
@@ -45,10 +47,7 @@ export default function Nav({ handleIsNavMobileOpened }) {
             </button>
           </li>
           <li>
-            <button
-              onClick={() => handleIsNavMobileOpened(true)}
-              className="btn-chromeless menu-toggler"
-            >
+            <button onClick={() => handleIsNavMobileOpened(true)} className="btn-chromeless menu-toggler">
               <div className="one" />
               <div className="two" />
               <div className="three" style={{ marginBottom: 0 }} />
