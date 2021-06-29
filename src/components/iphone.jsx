@@ -5,14 +5,14 @@ export default function IPhone() {
   return (
     <div style={{ height: 350, overflow: 'hidden' }}>
       <div style={{ display: 'table', margin: '0 auto', position: 'relative' }}>
-        <img src="/images/phone.jpg" style={{ height: '100%' }} />
+        <img src="/images/phone.jpg" alt="phone frame" style={{ height: '100%' }} />
         <div
           style={{
             position: 'absolute',
             left: 0,
             right: 0,
             top: 0,
-            bottom: 0,
+            bottom: 0
           }}
         >
           <div
@@ -23,7 +23,7 @@ export default function IPhone() {
               right: 12,
               bottom: 76,
               height: 'auto',
-              overflowY: 'hidden',
+              overflowY: 'hidden'
             }}
           >
             <Parallax
@@ -31,11 +31,12 @@ export default function IPhone() {
               renderLayer={(percentage) => (
                 <img
                   src="/images/me.jpg"
+                  alt="Me"
                   style={{
                     marginTop: -20,
                     width: '100%',
                     transition: 'transform 1s ease 0s',
-                    transform: `translateY(${percentage * 14}%)`,
+                    transform: `translateY(${percentage * 14}%)`
                   }}
                 />
               )}

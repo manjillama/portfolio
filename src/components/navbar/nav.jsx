@@ -7,7 +7,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
       <nav className="nav">
         <div>
           <Link to="/">
-            <img src="/images/logo.png" height="15" />
+            <img src="/images/logo.png" alt="logo" height="15" />
           </Link>
         </div>
         <ul className="nav-right list-inline list-neutralize">
