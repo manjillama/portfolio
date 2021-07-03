@@ -1,8 +1,11 @@
 import React from 'react';
+import Newsletter from './newsletter';
 
 export default function Footer() {
   return (
     <footer className="text-center">
+      <Newsletter />
+
       <ul className="list-neutralize list-inline socials">
         <li>
           <a href="https://bit.ly/2YV19z0" rel="noopener noreferrer" target="_blank">

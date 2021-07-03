@@ -1,23 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export default function SEO() {
+export default function SEO({
+  title = 'Get to know me better - Manjil Tamang | Full Stack Software Engineer',
+  description = "Hi this is Manjil Tamang. I'm Full stack software engineer with experience in designing and developing enterprise applications. Say hello!",
+  image = 'https://www.manjiltamang.com/images/header.jpg'
+}) {
   return (
     <Helmet
       htmlAttributes={{
         lang: 'en'
       }}
-      title="Get to know me better - Manjil Tamang | Full Stack Software Engineer"
+      title={title}
       meta={[
         {
           name: `description`,
-          content:
-            "Hi this is Manjil Tamang. I'm Full stack software engineer with experience in designing and developing enterprise applications. Say hello!"
-        },
-        {
-          name: 'keywords',
-          content:
-            'Manjil Tamang, Coders in Nepal, Developers in Nepal, Kathmandu, Nepal, JavaScript, Java, React, Express, Spring Framework, Front-end developer, backend developer'
+          content: description
         },
         {
           name: 'author',
@@ -45,24 +43,19 @@ export default function SEO() {
         },
         {
           property: 'og:title',
-          content: 'Get to know me better! - Manjil Tamang | Full Stack Software Engineer'
+          content: title
         },
         {
           property: 'og:description',
-          content:
-            "Hi this is Manjil Tamang. I'm Full stack software engineer with experience in designing and developing enterprise applications. Say hello!"
-        },
-        {
-          property: 'og:url',
-          content: 'https://manjiltamang.com'
+          content: description
         },
         {
           property: 'og:image',
-          content: 'https://www.manjiltamang.com/images/header.jpg'
+          content: image
         },
         {
           property: 'og:site_name',
-          content: 'Get to know me better! - Manjil Tamang |  Full Stack Software Engineer'
+          content: title
         }
       ]}
     />

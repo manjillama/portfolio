@@ -3,6 +3,8 @@
 @import './projects.scss';
 @import './footer.scss';
 @import './navbar.scss';
+@import './blog-detail.scss';
+@import './mailerlite.scss';
 
 * {
   -webkit-box-sizing: border-box;
@@ -57,6 +59,9 @@ a {
   text-decoration: none;
   color: inherit;
   transition: all 200ms ease-out;
+  &:hover {
+    color: #ad8a6d;
+  }
 }
 a.link {
   color: #ad8a6d;
@@ -115,6 +120,16 @@ h5 {
 }
 .no-scroll {
   overflow: hidden;
+}
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:focus {
+    border-color: #ad8a6d !important;
+    -webkit-box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  }
 }
 @keyframes fadeInUp {
   from {

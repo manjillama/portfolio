@@ -1,0 +1,35 @@
+.blog-detail {
+  font-family: 'Lora', serif;
+  letter-spacing: 0.4px;
+  h1 {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    margin-bottom: 1rem;
+  }
+  .sub {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1rem;
+  }
+  .socials {
+    color: #757575;
+    margin-bottom: 1rem;
+    a {
+      font-size: 1.6rem;
+      margin-right: 0.8rem;
+    }
+  }
+  .blog-body {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    pre code {
+      padding: 1rem;
+      border-radius: 5px;
+      font-size: 1.15rem;
+    }
+    h2,
+    h3,
+    h4 {
+      line-height: 2.5rem;
+    }
+  }
+}
