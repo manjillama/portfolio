@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function SearchOverlay({ handleIsSearchOverlayOpened }) {
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const bodyNode = document.querySelector('body');
+    bodyNode.classList.add('no-scroll');
+    return () => {
+      bodyNode.classList.remove('no-scroll');
+    };
+  }, []);
+
   return (
     <div
       className="search-overlay"

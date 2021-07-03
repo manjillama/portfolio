@@ -1,7 +1,17 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { useEffect } from 'react';
 
 export default function NavMobile({ isNavMobileOpened, handleIsNavMobileOpened }) {
+  useEffect(() => {
+    const bodyNode = document.querySelector('body');
+    isNavMobileOpened ? bodyNode.classList.add('no-scroll') : bodyNode.classList.remove('no-scroll');
+
+    return () => {
+      bodyNode.classList.remove('no-scroll');
+    };
+  }, [isNavMobileOpened]);
+
   return (
     <div className={isNavMobileOpened ? 'navbar-mobile opened' : 'navbar-mobile'}>
       <nav className="nav">
