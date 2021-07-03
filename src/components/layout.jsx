@@ -6,9 +6,9 @@ export default function Layout({ children }) {
   return (
     <>
       <Helmet>
-        <link rel="apple-touch-icon" sizes="76x76" href="/images/ico/76.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/images/ico/120.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/images/ico/152.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/ico/76.jpg" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/ico/120.jpg" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/ico/152.jpg" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
