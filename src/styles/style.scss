@@ -119,7 +119,11 @@ h5 {
   margin-bottom: 1.5rem;
 }
 .no-scroll {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
   overflow: hidden;
+  /* Other browsers */
+  overscroll-behavior: none;
 }
 @keyframes fadeInUp {
   from {

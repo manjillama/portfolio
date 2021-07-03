@@ -22,8 +22,7 @@ export default function SearchOverlay({ handleIsSearchOverlayOpened }) {
         bottom: 0,
         background: 'rgba(255,255,255,.95)',
         zIndex: 1010,
-        overflow: 'auto',
-        height: '100vh'
+        overflow: 'auto'
       }}
     >
       <div className="container-l" style={{ height: '100%', position: 'relative' }}>
