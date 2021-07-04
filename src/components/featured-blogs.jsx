@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import featuredImage from '../images/solid.png';
+import solidImg from '../images/solid.png';
+import deployNodejsImg from '../images/nodejs-deploy.jpg';
 
 export default function FeaturedBlog({ limit }) {
   return (
@@ -10,9 +11,10 @@ export default function FeaturedBlog({ limit }) {
           <Link to="/blogs/solid-design-principles">
             <div className="item-img">
               <div className="img-wrapper">
-                <img src={featuredImage} className="img-cover" />
+                <img src={solidImg} className="img-cover" />
               </div>
             </div>
+            <p className="item-title">SOLID Design Principles</p>
             <p className="summary hint-text">
               SOLID is one of the most popular sets of design principles in object-oriented software development.
             </p>
@@ -21,25 +23,22 @@ export default function FeaturedBlog({ limit }) {
         </div>
 
         <div className="col">
-          <Link to="/blogs/solid-design-principles">
+          <Link to="/blogs/deploy-nodejs-to-ubuntu">
             <div className="item-img">
               <div className="img-wrapper">
-                <img
-                  src={
-                    'https://manjiltamang-threadly.s3.ap-south-1.amazonaws.com/1_8pxeDa9e4AIMCBYs8bfiod7Mxt5aHiti.jpg'
-                  }
-                  className="img-cover"
-                />
+                <img src={deployNodejsImg} className="img-cover" />
               </div>
             </div>
+            <p className="item-title">Deploy Node.js app to Ubuntu - Server setup, Nginx, SSL</p>
             <p className="summary hint-text">
-              SOLI D is one of the most popular sets of design principles in object-oriented software development. It’s
-              a mnemonic acronym for the following five design principles:
+              Initial Server Setup with Ubuntu 18.04 After creating a new Ubuntu 18.04 server, you should take some
+              configuration steps as part of an initial server setup in order to increase security and facilitate
+              management later.
             </p>
-            <div className="hint-text sub">July 2, 2021 • 4 min read</div>
+            <div className="hint-text sub">July 4, 2021 • 9 min read</div>
           </Link>
         </div>
-        {!limit && (
+        {/* {!limit && (
           <>
             <div className="col">
               <Link to="/blogs/solid-design-principles">
@@ -78,7 +77,7 @@ export default function FeaturedBlog({ limit }) {
               </Link>
             </div>
           </>
-        )}
+        )} */}
       </div>
     </div>
   );

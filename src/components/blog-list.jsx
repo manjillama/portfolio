@@ -1,4 +1,6 @@
 import React from 'react';
+import solidImg from '../images/solid.png';
+import deployNodejsImg from '../images/nodejs-deploy.jpg';
 
 export default function BlogList() {
   return (
@@ -7,46 +9,31 @@ export default function BlogList() {
         <div className="card-left">
           <h2>SOLID Design Principles SOLID Design Principles</h2>
           <p className="summary hint-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis minima rem quae asperiores optio est illum
-            nihil dolore maxime in quas beatae, ipsam molestiae dolorum, fugiat possimus assumenda nobis rerum!
+            SOLID is one of the most popular sets of design principles in object-oriented software development. It’s a
+            mnemonic acronym for the following five design principles:
           </p>
           <div className="hint-text sub">July 2, 2021 • 4 min read</div>
         </div>
         <div className="card-right">
           <div>
-            <img src={'https://miro.medium.com/max/700/0*t8mbPQ-YHz4qjWFl'} className="img-cover" />
+            <img src={solidImg} className="img-cover" />
           </div>
         </div>
       </div>
 
       <div className="card">
         <div className="card-left">
-          <h2>SOLID Design Principles</h2>
+          <h2>Deploy Node.js app to Ubuntu - Server setup, Nginx, SSL</h2>
           <p className="summary hint-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis minima rem quae asperiores optio est illum
-            nihil dolore maxime in quas beatae, ipsam molestiae dolorum, fugiat possimus assumenda nobis rerum!
-          </p>{' '}
-          <div className="hint-text sub">July 2, 2021 • 4 min read</div>
+            Initial Server Setup with Ubuntu 18.04 After creating a new Ubuntu 18.04 server, you should take some
+            configuration steps as part of an initial server setup in order to increase security and facilitate
+            management later.
+          </p>
+          <div className="hint-text sub">July 4, 2021 • 9 min read</div>
         </div>
         <div className="card-right">
           <div>
-            <img src={'https://miro.medium.com/max/700/0*t8mbPQ-YHz4qjWFl'} className="img-cover" />
-          </div>
-        </div>
-      </div>
-
-      <div className="card">
-        <div className="card-left">
-          <h2>SOLID Design Principles</h2>
-          <p className="summary hint-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis minima rem quae asperiores optio est illum
-            nihil dolore maxime in quas beatae, ipsam molestiae dolorum, fugiat possimus assumenda nobis rerum!
-          </p>{' '}
-          <div className="hint-text sub">July 2, 2021 • 4 min read</div>
-        </div>
-        <div className="card-right">
-          <div>
-            <img src={'https://miro.medium.com/max/700/0*t8mbPQ-YHz4qjWFl'} className="img-cover" />
+            <img src={deployNodejsImg} className="img-cover" />
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ export default function BlogDetail({ data }) {
             {formatDate(date)} • {readingTimeInMin(html)} min read
           </div>
           <div>
-            <Img fluid={featuredImage.childImageSharp.fluid} />
+            <Img fluid={featuredImage.childImageSharp.fluid} style={{ marginBottom: '2rem' }} />
             <div className="blog-body" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
