@@ -1,0 +1,121 @@
+.blogs {
+  //TODO
+  .card {
+    padding: 1.8rem 0;
+    display: flex;
+    // &:not(:last-child) {
+    //   border-bottom: 1px solid #e4e4e4;
+    // }
+    .card-left {
+      font-size: 0.95rem;
+      flex: 3;
+      padding-right: 1rem;
+      h2 {
+        font-size: 1.3rem;
+        line-height: 25px;
+        @media (max-width: 550px) {
+          font-size: 1.1rem;
+          line-height: 22px;
+        }
+      }
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-height: 20px;
+        height: 60px;
+        margin: 10px 0;
+        @media (max-width: 550px) {
+          height: 40px;
+          -webkit-line-clamp: 2;
+        }
+      }
+      .sub {
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+    }
+    .card-right {
+      position: relative;
+      flex: 0 0 130px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      @media (min-width: 768px) {
+        &.card-right {
+          flex: 0 0 186px;
+        }
+      }
+    }
+  }
+}
+.featured-blogs {
+  a:hover {
+    color: inherit;
+  }
+  .twin-cols {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      flex-basis: 50%;
+      margin-bottom: 2rem;
+      .item-img {
+        padding-top: 50%;
+        position: relative;
+        .img-wrapper {
+          -webkit-box-pack: center !important;
+          -ms-flex-pack: center !important;
+          -webkit-box-align: center !important;
+          -ms-flex-align: center !important;
+          position: absolute !important;
+          top: 0px !important;
+          bottom: 0px !important;
+          left: 0px !important;
+          right: 0px !important;
+          display: -webkit-box !important;
+          display: -moz-box !important;
+          display: -ms-flexbox !important;
+          display: -webkit-flex !important;
+          display: flex !important;
+          -webkit-align-items: center !important;
+          align-items: center !important;
+          -webkit-justify-content: center !important;
+          justify-content: center !important;
+        }
+      }
+      .summary {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-height: 20px;
+        max-height: 60px;
+      }
+      .sub {
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+    }
+    > * {
+      @media (max-width: 550px) {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+.blog-nav {
+  button {
+    transition: all 200ms ease-out;
+    &:hover {
+      color: #ad8a6d;
+    }
+  }
+}

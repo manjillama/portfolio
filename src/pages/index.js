@@ -9,6 +9,7 @@ import Projects from '../components/projects';
 import Spotify from '../components/spotify';
 import Footer from '../components/footer';
 import SEO from '../components/seo';
+import HomeBlog from '../components/home-blog';
 
 const IndexPage = () => {
   return (
@@ -20,6 +21,7 @@ const IndexPage = () => {
         <Spotify />
         <IPhone />
         <Quote />
+        <HomeBlog />
         <Projects />
         <Footer />
       </Wrapper>

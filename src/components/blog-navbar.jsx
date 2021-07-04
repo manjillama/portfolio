@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 
 export default function BlogNavbar() {
   return (
@@ -11,9 +11,11 @@ export default function BlogNavbar() {
           </Link>
         </div>
         <div>
-          <Link to="/blogs">
-            <i className="fas fa-chevron-left"></i> BLOGS
-          </Link>
+          <button onClick={() => navigate(-1)} className="btn-chromeless" style={{ fontWeight: 600 }}>
+            <small>
+              <i className="fas fa-chevron-left"></i> BACK
+            </small>
+          </button>
         </div>
       </div>
     </nav>

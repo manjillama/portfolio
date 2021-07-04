@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Layout from '../layout';
 import { formatDate, readingTimeInMin, removeHTMLEntities } from '../../utils';
 import Footer from '../footer';
@@ -23,7 +23,13 @@ export default function BlogDetail({ data }) {
   return (
     <Layout>
       <SEO title={title} image={featuredImage} description={removeHTMLEntities(html).split('.')[0]} />
-      <BlogNavbar />
+      <BlogNavbar>
+        <Link to="/blogs" style={{ fontWeight: 600 }}>
+          <small>
+            <i className="fas fa-chevron-left"></i> BLOGS
+          </small>
+        </Link>
+      </BlogNavbar>
       <section>
         <div className="container-md blog-detail">
           <h1 className="title">{title}</h1>

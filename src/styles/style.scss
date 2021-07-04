@@ -4,6 +4,7 @@
 @import './footer.scss';
 @import './navbar.scss';
 @import './blog-detail.scss';
+@import './blogs.scss';
 @import './mailerlite.scss';
 
 * {
@@ -49,6 +50,11 @@ h6 {
 section {
   padding: 3rem 0;
 }
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 0;
+}
 .hint-text {
   opacity: 0.7;
 }
@@ -64,7 +70,10 @@ a {
   }
 }
 a.link {
-  color: #ad8a6d;
+  color: #277bba;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 .btn-chromeless {
   border-width: 0;
@@ -72,6 +81,17 @@ a.link {
   padding: 0;
   outline: 0;
   cursor: pointer;
+}
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-cover {
+  height: 100%;
+  width: 100%;
+  position: static;
+  object-fit: cover;
 }
 .row {
   margin-right: -15px;
