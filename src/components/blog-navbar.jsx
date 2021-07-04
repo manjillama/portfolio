@@ -12,9 +12,9 @@ export default function BlogNavbar() {
         </div>
         <div>
           <button onClick={() => navigate(-1)} className="btn-chromeless" style={{ fontWeight: 600 }}>
-            <small>
+            <span style={{ fontSize: '.84rem' }}>
               <i className="fas fa-chevron-left"></i> BACK
-            </small>
+            </span>
           </button>
         </div>
       </div>

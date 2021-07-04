@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import solidImg from '../images/solid.png';
 import deployNodejsImg from '../images/nodejs-deploy.jpg';
 
 export default function BlogList() {
   return (
     <div className="blogs">
-      <div className="card">
+      <Link to="/blogs/solid-design-principles" className="card">
         <div className="card-left">
-          <h2>SOLID Design Principles SOLID Design Principles</h2>
+          <h2>SOLID Design Principles</h2>
           <p className="summary hint-text">
             SOLID is one of the most popular sets of design principles in object-oriented software development. It’s a
             mnemonic acronym for the following five design principles:
@@ -19,9 +20,9 @@ export default function BlogList() {
             <img src={solidImg} className="img-cover" />
           </div>
         </div>
-      </div>
+      </Link>
 
-      <div className="card">
+      <Link to="/blogs/deploy-nodejs-to-ubuntu" className="card">
         <div className="card-left">
           <h2>Deploy Node.js app to Ubuntu - Server setup, Nginx, SSL</h2>
           <p className="summary hint-text">
@@ -36,7 +37,7 @@ export default function BlogList() {
             <img src={deployNodejsImg} className="img-cover" />
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

@@ -22,7 +22,11 @@ export default function BlogDetail({ data }) {
 
   return (
     <Layout>
-      <SEO title={title} image={featuredImage} description={removeHTMLEntities(html).split('.')[0]} />
+      <SEO
+        title={title}
+        image={`${process.env.GATSBY_HOST}${featuredImage.childImageSharp.fluid.src}`}
+        description={removeHTMLEntities(html).split('.')[0]}
+      />
       <BlogNavbar>
         <Link to="/blogs" style={{ fontWeight: 600 }}>
           <small>

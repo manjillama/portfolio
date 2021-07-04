@@ -21,9 +21,21 @@
   .blog-body {
     font-size: 1.25rem;
     line-height: 2rem;
+    p > code {
+      color: #545454;
+      background: #f2f2f2;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
     pre code {
       padding: 1rem;
       border-radius: 5px;
+    }
+    blockquote {
+      font-style: italic;
+      box-shadow: rgb(41 41 41) 3px 0px 0px 0px inset;
+      padding-left: 1.5rem;
+      margin-left: 0;
     }
     hr {
       width: 20%;
