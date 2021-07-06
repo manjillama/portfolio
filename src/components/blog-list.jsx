@@ -13,7 +13,7 @@ export default function BlogList() {
             SOLID is one of the most popular sets of design principles in object-oriented software development. It’s a
             mnemonic acronym for the following five design principles:
           </p>
-          <div className="hint-text sub">July 2, 2021 • 4 min read</div>
+          <div className="hint-text sub">July 2, 2021 • 8 min read</div>
         </div>
         <div className="card-right">
           <div>

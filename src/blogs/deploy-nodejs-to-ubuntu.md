@@ -51,7 +51,7 @@ The following command will modify the default user settings, including the sudo 
 As root, run this command to add your new user to the sudo group (replace the highlighted word with your new user):
 
 ```console
-$ usermod -aG sudo sammy
+$ usermod -aG sudo manjiltamang
 ```
 
 ### Enabling External Access for Your Regular User

@@ -17,7 +17,7 @@ export default function BlogDetail({ data }) {
 
   useEffect(() => {
     // https://highlightjs.org/
-    window.hljs.highlightAll();
+    window.hljs && window.hljs.highlightAll();
   }, []);
 
   return (

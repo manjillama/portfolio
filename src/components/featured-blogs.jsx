@@ -18,7 +18,7 @@ export default function FeaturedBlog({ limit }) {
             <p className="summary hint-text">
               SOLID is one of the most popular sets of design principles in object-oriented software development.
             </p>
-            <div className="hint-text sub">July 2, 2021 • 4 min read</div>
+            <div className="hint-text sub">July 2, 2021 • 8 min read</div>
           </Link>
         </div>
 
@@ -56,7 +56,7 @@ export default function FeaturedBlog({ limit }) {
                   SOLI D is one of the most popular sets of design principles in object-oriented software development.
                   It’s a mnemonic acronym for the following five design principles:
                 </p>
-                <div className="hint-text sub">July 2, 2021 • 4 min read</div>
+                <div className="hint-text sub">July 2, 2021 • 8 min read</div>
               </Link>
             </div>
 
@@ -73,7 +73,7 @@ export default function FeaturedBlog({ limit }) {
                   of design principles in object-oriented software development. It’s a mnemonic acronym for the
                   following five design prin ciples:
                 </p>
-                <div className="hint-text sub">July 2, 2021 • 4 min read</div>
+                <div className="hint-text sub">July 2, 2021 • 8 min read</div>
               </Link>
             </div>
           </>
