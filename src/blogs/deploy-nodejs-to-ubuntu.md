@@ -136,19 +136,13 @@ By default, Nginx contains one server block called `default` which we can use as
 
 #### Create the First Server Block File
 
-As mentioned above, we will create our first server block config file by copying over the default file:
+As mentioned above, we will create and open our first server block config file in your text editor with sudo privileges:
 
 ```console
-$ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/yourdomain.com
+$ sudo vim /etc/nginx/sites-available/yourdomain.com
 ```
 
-Now, open the new file you created in your text editor with sudo privileges:
-
-```console
-$ sudo nano /etc/nginx/sites-available/yourdomain.com
-```
-
-Ignoring the commented lines, the file will look similar to this:
+Add the following lines, the file will look similar to this:
 
 ```console
   server_name yourdomain.com www.yourdomain.com;
@@ -163,6 +157,8 @@ Ignoring the commented lines, the file will look similar to this:
   }
 ```
 
+> Notice the localhost port there, that's the port on which our app should be running.
+
 #### Enable your Server Blocks and Restart Nginx
 
 Now that we have our server block files, we need to enable them. We can do this by creating symbolic links from these files to the sites-enabled directory, which Nginx reads from during startup.
@@ -175,10 +171,10 @@ $ sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
 
 These files are now in the enabled directory. We now have two server blocks enabled, which are configured to respond based on their listen directive and the server_name (you can read more about how Nginx processes these directives here):
 
-yourdomain.com: Will respond to requests for yourdomain.com and www.yourdomain.com
+`yourdomain.com`: Will respond to requests for yourdomain.com and `www.yourdomain.com`
 default: Will respond to any requests on port 80 that do not match the other blocks.
 
-In order to avoid a possible hash bucket memory problem that can arise from adding additional server names, we will go ahead and adjust a single value within our /etc/nginx/nginx.conf file. Open the file now:
+In order to avoid a possible hash bucket memory problem that can arise from adding additional server names, we will go ahead and adjust a single value within our `/etc/nginx/nginx.conf` file. Open the file now:
 
 ```console
 $ sudo nano /etc/nginx/nginx.conf

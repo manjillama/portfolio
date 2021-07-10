@@ -3,13 +3,15 @@ import React from 'react';
 export default function Newsletter() {
   return (
     <div id="mlb2-4355662" className="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-4355662">
-      <p className="hint-text" style={{ margin: 0 }}>
-        Subscribe to my newsletter
-      </p>
       <div className="ml-form-align-center">
         <div className="ml-form-embedWrapper embedForm">
           <div className="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
-            <div className="ml-form-embedContent" style={{ marginBottom: 0 }}></div>
+            <div className="ml-form-embedContent">
+              <h4></h4>
+              <p style={{ textAlign: 'center' }} className="hint-text">
+                Subscribe to my newsletter.
+              </p>
+            </div>
             <form
               className="ml-block-form"
               action="https://static.mailerlite.com/webforms/submit/w1u4g4"
