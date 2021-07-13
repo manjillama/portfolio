@@ -20,6 +20,8 @@ SOLID is one of the most popular sets of design principles in object-oriented so
 
 A class should have just a single reason to change. **A single class should have one primary responsibility instead of taking on a lots and lots of different responsibilities**.
 
+![alt](/images/blogs/srp.gif)
+
 For e.g. let make a simple Journal class. This class is going to store our most intimate thoughts. Features of the program should be able to
 
 - Add new entry
@@ -122,6 +124,8 @@ So the take away is that the single responsibility principle basically tries to 
 It's now time for the O in SOLID, known as the open-closed principle. **Simply put, classes should be open for extension but closed for modification**. In doing so, we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.
 
 **Of course, the one exception to the rule is when fixing bugs in existing code.**
+
+![alt](/images/blogs/ocp.jpg)
 
 Let's suppose you're building a program that will allow users to filter the products by a specific criteria i.e. `color`, `size`.
 
@@ -285,3 +289,125 @@ class App {
 ```
 
 Above code will yield the same output but the now upside is that if we want an additional specification, we don't need to jump into existing classes and modify them. Hence the take away is that we only have to use the inheritance and implementations of interfaces and at no point in time would we want to actually jump back into existing code and modify it to add new additional functionalities.
+
+---
+
+## Liskov Substitution Principle
+
+Next on our list is Liskov substitution. The idea of the Liskov Substitution Principle is **you should be able to substitute a subclass for a base class**. So if you have some API, which takes a base class, you should be able to stick a subclass in there without the things breaking in any way.
+
+The principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application. That requires the objects of your subclasses to behave in the same way as the objects of your superclass
+
+![alt](/images/blogs/lsp.jpg)
+
+Let's jump straight to the code to help us understand this concept:
+
+```java
+/**
+* BAD EXAMPLE
+*/
+class Rectangle {
+  protected int width, height;
+
+  public Rectangle() {
+  }
+
+  public Rectangle(int width, int height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  public int getWidth() {
+    return width;
+  }
+
+  public void setWidth(int width) {
+    this.width = width;
+  }
+
+  public int getHeight() {
+    return height;
+  }
+
+  public void setHeight(int height) {
+    this.height = height;
+  }
+
+  public int getArea() {
+    return width * height;
+  }
+
+  @Override
+  public String toString() {
+    return "Rectangle{" + "width=" + width + ", height=" + height + '}';
+  }
+}
+
+class Square extends Rectangle {
+  public Square() {
+  }
+
+  public Square(int size) {
+    width = height = size;
+  }
+
+  @Override
+  public void setWidth(int width) {
+    super.setWidth(width);
+    super.setHeight(width);
+  }
+
+  @Override
+  public void setHeight(int height) {
+    super.setHeight(height);
+    super.setWidth(height);
+  }
+}
+
+class Demo {
+  static void useIt(Rectangle r) {
+    int width = r.getWidth();
+    r.setHeight(10);
+    // area = w * 10
+    System.out.println("Expected area of " + (width * 10) + ", got " + r.getArea());
+  }
+
+  public static void main(String[] args) {
+    Rectangle rc = new Rectangle(2, 3);
+    useIt(rc);
+    // Output: Expected area of 20, got 20
+
+    Square sq = new Square();
+    sq.setWidth(5);
+    useIt(sq);
+    // Output: Expected area of 50, got 100
+  }
+}
+```
+
+Liskov Substitution Principle states that you should be able to substitute a derived class for a base class. Here, the `useIt()` method takes a Rectangle object, so it should be possible for `userIt()` method to take in a Square instead of a Rectangle. But when we tried to do that, things didn't go as expected.
+
+The reason why this happened is because the setter `setHeight(`) that we're using inside `useIt()` method is a very **non-intuitive** setter as it makes sense for a Rectangle but doesn't make sense for a Square because setting one would change the other to match it. In this case Square **fails** the Liskov Substitution Test with Rectangle and the abstraction of having Square inherit from Rectangle is a bad one.
+
+One possible solution would be to simple have some sort of detection whether a Rectangle is a Square or not. So here, you can create a boolean `isSquare()` method which checks whether something is a Square or not.
+
+```java
+class Rectangle{
+    protected int width, height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    /**
+    * Omitted
+    */
+
+    public boolean isSquare() {
+        return width == height;
+    }
+}
+```
+
+The illustration here is to show you that if you violate the Liskov Substitution Principle it will result in incorrect code through inheritance. Which is something you'll need to avoid.

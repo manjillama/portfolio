@@ -21,6 +21,11 @@
   .blog-body {
     font-size: 1.25rem;
     line-height: 2rem;
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+    }
     p > code {
       color: #545454;
       background: #f2f2f2;

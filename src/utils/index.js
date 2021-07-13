@@ -4,7 +4,7 @@ export function readingTimeInMin(text = ' ') {
 
   let textLength = text.split(' ').length; // Split by words
   let value = Math.ceil(textLength / wordsPerMinute);
-  result = value;
+  value = result;
   return value;
 }
 
