@@ -9,18 +9,18 @@ featuredImage: ../images/solid.png
 SOLID is one of the most popular sets of design principles in object-oriented software development. It’s a mnemonic acronym for the following five design principles:
 
 **S** - Single Responsibility Principle<br />
-**O** - Open/Closed Principle<br />
+**O** - Open-Closed Principle<br />
 **L** - Liskov Substitution Principle<br />
 **I** - Interface Segregation Principle<br />
 **D** - Dependency Inversion<br />
 
 ---
 
-## Single Responsibility Principle (SRP)
+## Single Responsibility Principle
 
 A class should have just a single reason to change. **A single class should have one primary responsibility instead of taking on a lots and lots of different responsibilities**.
 
-![alt](/images/blogs/srp.gif)
+![Single Responsibility Principle](/images/blogs/srp.gif)
 
 For e.g. let make a simple Journal class. This class is going to store our most intimate thoughts. Features of the program should be able to
 
@@ -62,7 +62,7 @@ class Journal {
 }
 ```
 
-Essentially, the example above is a violation of the SRP because the Journal class has taken on addition concerns. We're not only adding and removing the entries from the Journal but also handling the persistence (saving and loading the file from storage system). Persistence here, is a separate concern.
+Essentially, the example above is a violation of the Single Responsibility Principle (SRP) because the Journal class has taken on addition concerns. We're not only adding and removing the entries from the Journal but also handling the persistence (saving and loading the file from storage system). Persistence here, is a separate concern.
 Now what we can do is move the persistence concern to a whole new class in order to adhere to the SRP.
 
 ```java
@@ -115,17 +115,17 @@ class App {
 }
 ```
 
-So the take away is that the single responsibility principle basically tries to force you to put just one responsibility into any single class. If you add more responsibilities you'll end up with god object which can be very unmanageable and very difficult to work and refactor later on.
+So the take away is that the SRP basically tries to force you to put just one responsibility into any single class. If you add more responsibilities you'll end up with god object which can be very unmanageable and very difficult to work and refactor later on.
 
 ---
 
-## Open/Closed Principle (OCP)
+## Open-Closed Principle
 
-It's now time for the O in SOLID, known as the open-closed principle. **Simply put, classes should be open for extension but closed for modification**. In doing so, we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.
+It's now time for the O in SOLID, known as the open-closed principle (OCP). **Simply put, classes should be open for extension but closed for modification**. In doing so, we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.
 
 **Of course, the one exception to the rule is when fixing bugs in existing code.**
 
-![alt](/images/blogs/ocp.jpg)
+![Open-Closed Principle](/images/blogs/ocp.jpg)
 
 Let's suppose you're building a program that will allow users to filter the products by a specific criteria i.e. `color`, `size`.
 
@@ -294,11 +294,11 @@ Above code will yield the same output but the now upside is that if we want an a
 
 ## Liskov Substitution Principle
 
-Next on our list is Liskov substitution. The idea of the Liskov Substitution Principle is **you should be able to substitute a subclass for a base class**. So if you have some API, which takes a base class, you should be able to stick a subclass in there without the things breaking in any way.
+Next on our list is Liskov substitution principle (LSP). The idea of the LSP is **you should be able to substitute a subclass for a base class**. So if you have some API, which takes a base class, you should be able to stick a subclass in there without the things breaking in any way.
 
 The principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application. That requires the objects of your subclasses to behave in the same way as the objects of your superclass
 
-![alt](/images/blogs/lsp.jpg)
+![Liskov Substitution Principle](/images/blogs/lsp.jpg)
 
 Let's jump straight to the code to help us understand this concept:
 
@@ -385,7 +385,7 @@ class Demo {
 }
 ```
 
-Liskov Substitution Principle states that you should be able to substitute a derived class for a base class. Here, the `useIt()` method takes a Rectangle object, so it should be possible for `userIt()` method to take in a Square instead of a Rectangle. But when we tried to do that, things didn't go as expected.
+LSP states that you should be able to substitute a derived class for a base class. Here, the `useIt()` method takes a Rectangle object, so it should be possible for `userIt()` method to take in a Square instead of a Rectangle. But when we tried to do that, things didn't go as expected.
 
 The reason why this happened is because the setter `setHeight(`) that we're using inside `useIt()` method is a very **non-intuitive** setter as it makes sense for a Rectangle but doesn't make sense for a Square because setting one would change the other to match it. In this case Square **fails** the Liskov Substitution Test with Rectangle and the abstraction of having Square inherit from Rectangle is a bad one.
 
@@ -410,4 +410,80 @@ class Rectangle{
 }
 ```
 
-The illustration here is to show you that if you violate the Liskov Substitution Principle it will result in incorrect code through inheritance. Which is something you'll need to avoid.
+The illustration here is to show you that if you violate the LSP it will result in incorrect code through inheritance. Which is something you'll need to avoid.
+
+---
+
+## Interface Segregation Principle
+
+The I in SOLID stands for interface segregation principle (ISP), and it simply means that **larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.**
+
+![Interface Segregation Principle](/images/blogs/isp.jpg)
+
+For this example, we're going to try our hands as zookeepers. And more specifically, we'll be working in the bear enclosure.
+
+Let's start with an interface that outlines our roles as a bear keeper:
+
+```java
+/**
+* BAD EXAMPLE
+*/
+public interface BearKeeper {
+  void washTheBear();
+  void feedTheBear();
+  void petTheBear();
+}
+```
+
+As avid zookeepers, we're more than happy to wash and feed our beloved bears. But we're all too aware of the dangers of petting them. Unfortunately, our interface is rather large, and we have no choice but to implement the code to pet the bear. So this is where we come to the ISP, basically very simple idea that you shouldn't put into your interface more than what the client is expected to implement.
+
+Let's **fix this by splitting our large interface into three separate ones:**
+
+```java
+/**
+* GOOD EXAMPLE
+*/
+public interface BearCleaner {
+  void washTheBear();
+}
+
+public interface BearFeeder {
+  void feedTheBear();
+}
+
+public interface BearPetter {
+  void petTheBear();
+}
+```
+
+Now, thanks to interface segregation, we're free to implement only the methods that matter to us:
+
+```java
+public class BearCarer implements BearCleaner, BearFeeder {
+
+  public void washTheBear() {
+    //I think we missed a spot...
+  }
+
+  public void feedTheBear() {
+    //Tuna Tuesdays...
+  }
+}
+```
+
+And finally, we can leave the dangerous stuff to the reckless people:
+
+```java
+public class CrazyPerson implements BearPetter {
+
+    public void petTheBear() {
+      //Good luck with that!
+    }
+}
+```
+
+So the takeaway from ISP is that, instead of sticking everything into a single interface like we did for the `BearKeeper` interface. What we should do is put the absolute minimum amount of code into an interface so that at no point does a client (a developer) has to implement the interface that has a certain method that they don't need at all.
+
+---
+
+TO BE CONTINUED...
