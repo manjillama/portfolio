@@ -14,8 +14,6 @@ SOLID is one of the most popular sets of design principles in object-oriented so
 **I** - Interface Segregation Principle<br />
 **D** - Dependency Inversion<br />
 
----
-
 ## Single Responsibility Principle
 
 A class should have just a single reason to change. **A single class should have one primary responsibility instead of taking on a lots and lots of different responsibilities**.
@@ -116,8 +114,6 @@ class App {
 ```
 
 So the take away is that the SRP basically tries to force you to put just one responsibility into any single class. If you add more responsibilities you'll end up with god object which can be very unmanageable and very difficult to work and refactor later on.
-
----
 
 ## Open-Closed Principle
 
@@ -290,8 +286,6 @@ class App {
 
 Above code will yield the same output but the now upside is that if we want an additional specification, we don't need to jump into existing classes and modify them. Hence the take away is that we only have to use the inheritance and implementations of interfaces and at no point in time would we want to actually jump back into existing code and modify it to add new additional functionalities.
 
----
-
 ## Liskov Substitution Principle
 
 Next on our list is Liskov substitution principle (LSP). The idea of the LSP is **you should be able to substitute a subclass for a base class**. So if you have some API, which takes a base class, you should be able to stick a subclass in there without the things breaking in any way.
@@ -412,8 +406,6 @@ class Rectangle{
 
 The illustration here is to show you that if you violate the LSP it will result in incorrect code through inheritance. Which is something you'll need to avoid.
 
----
-
 ## Interface Segregation Principle
 
 The I in SOLID stands for interface segregation principle (ISP), and it simply means that **larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.**
@@ -484,6 +476,72 @@ public class CrazyPerson implements BearPetter {
 
 So the takeaway from ISP is that, instead of sticking everything into a single interface like we did for the `BearKeeper` interface. What we should do is put the absolute minimum amount of code into an interface so that at no point does a client (a developer) has to implement the interface that has a certain method that they don't need at all.
 
----
+## Dependency Inversion Principle
 
-TO BE CONTINUED...
+The general idea of this principle is as simple as it is important: High-level modules, which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features. To achieve that, you need to introduce an abstraction that decouples the high-level and low-level modules from each other.
+
+Based on this idea, Robert C. Martin’s definition of the Dependency Inversion Principle consists of two parts:
+
+- High-level modules should not depend on low level modules. Both should depend on abstraction.
+- Abstraction should not depend on details. Details should depend on abstractions.
+
+![Dependency Intersion Principle](/images/blogs/dip.jpg)
+
+Here is an example of a `PasswordReminder` that connects to a MySQL database:
+
+```java
+class MySQLConnection {
+  public void connect() {
+    // handle the database connection
+  }
+}
+
+class PasswordReminder {
+  private MySQLConnection dbConnection;
+
+  public PasswordReminder(MySQLConnection dbConnection) {
+    this.dbConnection = dbConnection;
+  }
+}
+```
+
+First, the `MySQLConnection` is the low-level module while the `PasswordReminder` is high level, but according to the definition of **D** in SOLID, which states to Depend on abstraction, not on concretions. This snippet above violates this principle as the `PasswordReminder` class is being forced to depend on the `MySQLConnection` class.
+
+Later, if you were to change the database engine, you would also have to edit the `PasswordReminder` class, and this would violate the open-close principle.
+
+The `PasswordReminder` class should not care what database your application uses. To address these issues, you can code to an interface since high-level and low-level modules should depend on abstraction:
+
+```java
+interface DBConnectionInterface
+{
+  public void connect();
+}
+```
+
+The interface has a connect method and the `MySQLConnection` class implements this interface. Also, instead of directly type-hinting `MySQLConnection` class in the constructor of the PasswordReminder, you instead type-hint the `DBConnectionInterface` and no matter the type of database your application uses, the `PasswordReminder` class can connect to the database without any problems and open-close principle is not violated.
+
+```java
+class MySQLConnection implements DBConnectionInterface {
+
+  @Override
+  public void connect() {
+    // handle the database connection
+    System.out.println("Connected to database");
+  }
+
+}
+
+class PasswordReminder {
+  private DBConnectionInterface dbConnection;
+
+  public PasswordReminder(DBConnectionInterface dbConnection) {
+    this.dbConnection = dbConnection;
+  }
+}
+```
+
+This code establishes that both the high-level and low-level modules depend on abstraction.
+
+## Conclusion
+
+In this article, you were presented with the five principles of SOLID Code. Projects that adhere to SOLID principles can be shared with collaborators, extended, modified, tested, and refactored with fewer complications.
