@@ -1,10 +1,8 @@
 export function readingTimeInMin(text = ' ') {
-  const wordsPerMinute = 200; // Average case.
-  let result = 1;
+  const wordsPerMinute = 250; // Average case.
 
-  let textLength = text.split(' ').length; // Split by words
+  let textLength = text.trim().split(/\s+/).length; // Split by words
   let value = Math.ceil(textLength / wordsPerMinute);
-  value = result;
   return value;
 }
 

@@ -18,7 +18,7 @@ export default function FeaturedBlog({ limit }) {
             <p className="summary hint-text">
               SOLID is one of the most popular sets of design principles in object-oriented software development.
             </p>
-            <div className="hint-text sub">July 2, 2021 • 8 min read</div>
+            <div className="hint-text sub">July 2, 2021 • 12 min read</div>
           </Link>
         </div>
 
@@ -35,7 +35,7 @@ export default function FeaturedBlog({ limit }) {
               configuration steps as part of an initial server setup in order to increase security and facilitate
               management later.
             </p>
-            <div className="hint-text sub">July 4, 2021 • 9 min read</div>
+            <div className="hint-text sub">July 4, 2021 • 12 min read</div>
           </Link>
         </div>
         {/* {!limit && (
