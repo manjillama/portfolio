@@ -21,15 +21,7 @@
     $ git clone https://github.com/manjillama/portfolio.git
     ```
 
-2.  **Configuration**
-
-    Create a `.env.development` file inside the site's root directory and add the given configs. (Create `.env.production` file to add production configurations).
-
-    ```shell
-    GATSBY_HOST=http://localhost:8000
-    ```
-
-3.  **Start developing.**
+2.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
@@ -38,13 +30,13 @@
     npm run develop
     ```
 
-4.  **Open the code and start customizing!**
+3.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
 
     Edit files inside `src/` to see your site update in real-time!
 
-5.  **Learn more**
+4.  **Learn more**
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 

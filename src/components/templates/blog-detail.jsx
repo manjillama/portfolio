@@ -24,7 +24,7 @@ export default function BlogDetail({ data }) {
     <Layout>
       <SEO
         title={title}
-        image={`${process.env.GATSBY_HOST}${featuredImage.childImageSharp.fluid.src}`}
+        image={`${featuredImage.childImageSharp.fluid.src}`}
         description={removeHTMLEntities(html).split('.')[0]}
       />
       <BlogNavbar>
