@@ -23,10 +23,16 @@
 
 2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into your new site’s directory, add your configuration and start.
 
     ```shell
     cd portfolio/
+    cp .env.example .env
+    ```
+
+    Update `.env` file with your configurations and then run:
+
+    ```shell
     npm run develop
     ```
 
