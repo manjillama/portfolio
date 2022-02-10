@@ -20,8 +20,7 @@ jobs:
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v1
         with:
-          GATSBY_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID }}
-          directory: '.'
+          envkey_GATSBY_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID }}
           file_name: .env
 
       - name: Install dependencies
@@ -40,3 +39,14 @@ jobs:
         with:
           source: './public'
           target: '/var/www/manjiltamang.com/html'
+          
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PRODUCTION_HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRODUCTION_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/manjiltamang.com/html
+            mv ./public/* ./
