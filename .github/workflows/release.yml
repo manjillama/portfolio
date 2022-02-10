@@ -37,5 +37,6 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.PRODUCTION_KEY }}
         with:
-          source: './public/*'
+          source: './public/'
           target: '/var/www/manjiltamang.com/html'
+          strip_components: 1
