@@ -78,7 +78,7 @@ export default function BlogDetail({ data }) {
           </div>
           <br />
           <br />
-          {showComment ? (
+          {/* {showComment ? (
             <DiscussionEmbed {...disqusConfig} />
           ) : (
             <div className="text-center">
@@ -86,7 +86,7 @@ export default function BlogDetail({ data }) {
                 Post a Comment
               </button>
             </div>
-          )}
+          )} */}
 
           <br />
           <br />

@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  release:
+    branches:
+      - 'master'
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.0.0'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Copy file via ssh key
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.PRODUCTION_HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.PRODUCTION_KEY }}
+        with:
+          source: './public'
+          target: '/var/www/manjiltamang.com/html'
+
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PRODUCTION_HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRODUCTION_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/manjiltamang.com/html
+            docker-compose -f docker-compose.prod.yml up --build -d
