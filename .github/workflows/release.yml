@@ -49,4 +49,4 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /var/www/manjiltamang.com/html
-            mv ./public ./
+            mv ./public/* ./
