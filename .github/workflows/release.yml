@@ -15,7 +15,7 @@ jobs:
       - name: Install nodejs
         uses: actions/setup-node@v1
         with:
-          node-version: '12.0.0'
+          node-version: '14.0.0'
 
       - name: Install dependencies
         run: npm install
@@ -33,14 +33,3 @@ jobs:
         with:
           source: './public'
           target: '/var/www/manjiltamang.com/html'
-
-      - name: Executing remote command
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.PRODUCTION_HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PRODUCTION_KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            cd /var/www/manjiltamang.com/html
-            docker-compose -f docker-compose.prod.yml up --build -d
