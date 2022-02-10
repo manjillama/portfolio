@@ -17,6 +17,13 @@ jobs:
         with:
           node-version: '14.0.0'
 
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          GATSBY_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID }}
+          directory: '.'
+          file_name: .env
+
       - name: Install dependencies
         run: npm install
 
