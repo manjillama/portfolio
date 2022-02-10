@@ -37,7 +37,16 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.PRODUCTION_KEY }}
         with:
-          source: 'public/'
+          source: './public'
           target: '/var/www/manjiltamang.com/html'
-          strip_components: 1
-          rm: true
+          
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PRODUCTION_HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRODUCTION_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/manjiltamang.com/html
+            mv ./public ./
