@@ -4,7 +4,7 @@ on:
   release:
     branches:
       - 'master'
-    types: [published]
+    # types: [published]
 
 jobs:
   build:
@@ -20,8 +20,7 @@ jobs:
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v1
         with:
-          GATSBY_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID }}
-          directory: '.'
+          envkey_GATSBY_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID }}
           file_name: .env
 
       - name: Install dependencies
