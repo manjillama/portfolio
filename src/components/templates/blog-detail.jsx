@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Img from 'gatsby-image';
 import { Link, graphql } from 'gatsby';
 import Layout from '../layout';
@@ -7,18 +7,25 @@ import Footer from '../footer';
 import { useLocation } from '@reach/router';
 import BlogNavbar from '../blog-navbar';
 import { HasWindow } from '../../hooks';
+import { DiscussionEmbed } from 'disqus-react';
 import SEO from '../seo';
 
 export default function BlogDetail({ data }) {
   const { html, frontmatter } = data.blog;
-  const { title, featuredImage, date } = frontmatter;
+  const { title, slug, featuredImage, date } = frontmatter;
   const { href } = useLocation();
   const isWindow = HasWindow();
+  const [showComment, setShowComment] = useState(false);
 
   useEffect(() => {
     // https://highlightjs.org/
     window.hljs && window.hljs.highlightAll();
   }, []);
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug, title }
+  };
 
   return (
     <Layout>
@@ -69,6 +76,20 @@ export default function BlogDetail({ data }) {
             <Img fluid={featuredImage.childImageSharp.fluid} style={{ marginBottom: '2rem' }} />
             <div className="blog-body" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
+          <br />
+          <br />
+          {/* {showComment ? (
+            <DiscussionEmbed {...disqusConfig} />
+          ) : (
+            <div className="text-center">
+              <button onClick={() => setShowComment(true)} className="btn btn-hollow">
+                Post a Comment
+              </button>
+            </div>
+          )} */}
+
+          <br />
+          <br />
         </div>
       </section>
       <Footer />

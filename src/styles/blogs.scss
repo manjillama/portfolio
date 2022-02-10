@@ -31,6 +31,7 @@
         line-height: 20px;
         max-height: 60px;
         margin: 10px 0;
+        margin-top: 6px;
         @media (max-width: 550px) {
           height: 40px;
           -webkit-line-clamp: 2;
@@ -69,7 +70,7 @@
     display: flex;
     flex-wrap: wrap;
     > * {
-      flex-basis: 50%;
+      flex-basis: 33.33%;
       margin-bottom: 2rem;
       .item-img {
         padding-top: 50%;
