@@ -33,3 +33,17 @@ a {
 .fadeInUp {
   animation-name: fadeInUp;
 }
+
+/* .particle-container {
+  height: 100vh;
+}
+
+#tsparticles {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+} */

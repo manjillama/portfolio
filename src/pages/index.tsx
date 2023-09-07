@@ -1,10 +1,10 @@
-import React from "react";
-import Layout from "../components/layout";
-import Header from "../components/header";
-import Seo from "../components/seo";
-import Wrapper from "../components/wrapper";
-import Spotify from "../components/spotify";
-import IPhone from "../components/iphone";
+import React from 'react';
+import Layout from '../components/layout';
+import Header from '../components/header';
+import Seo from '../components/seo';
+import Wrapper from '../components/wrapper';
+import Spotify from '../components/spotify';
+import IPhone from '../components/iphone';
 
 const IndexPage = () => {
   return (
@@ -17,7 +17,6 @@ const IndexPage = () => {
         <HomeBlog />
         <Projects />
         <Footer /> */}
-        <div className="h-[3000px] bg-white" />
       </Wrapper>
     </Layout>
   );
