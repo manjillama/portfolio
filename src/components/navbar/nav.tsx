@@ -21,7 +21,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
             <li className="mx-2">
               <Link
                 to={link.url}
-                className="text-primary inline-block uppercase font-bold text-sm	cursor-pointer px-4 hover:opacity-70"
+                className="text-primary inline-block uppercase font-bold text-sm	cursor-pointer px-4 hover:opacity-80"
               >
                 {link.title}
                 <span className="block capitalize font-medium text-gray-500 text-[0.8rem] text-[0.8rem]">
@@ -32,7 +32,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
           ))}
           <li className="ml-2">
             <button
-              className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:opacity-70"
+              className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:opacity-80"
               onClick={() => handleIsSearchOverlayOpened(true)}
             >
               <i className="fas fa-search"></i>

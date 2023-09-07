@@ -5,6 +5,8 @@ import Seo from '../components/seo';
 import Wrapper from '../components/wrapper';
 import Spotify from '../components/spotify';
 import IPhone from '../components/iphone';
+import Quote from '../components/quote';
+import HomeBlog from '../components/home-blog';
 
 const IndexPage = () => {
   return (
@@ -13,9 +15,9 @@ const IndexPage = () => {
       <Wrapper>
         <Spotify />
         <IPhone />
-        {/* <Quote />
+        <Quote />
         <HomeBlog />
-        <Projects />
+        {/* <Projects />
         <Footer /> */}
       </Wrapper>
     </Layout>

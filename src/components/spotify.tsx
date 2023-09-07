@@ -1,11 +1,11 @@
-import React from "react";
-import ScrollAnimation from "react-animate-on-scroll";
+import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Spotify() {
   return (
-    <section className="text-center" style={{ paddingTop: 0 }}>
+    <section className="text-center mt-20">
       <ScrollAnimation animateOnce animateIn="fadeInUp">
-        <h5 className="hint-text">Now playing on spotify 👾</h5>
+        <h5 className="uppercase font-bold mb-4">Now playing on spotify 👾</h5>
         <img
           className="mx-auto"
           src="https://now-playing-profile.manjillama.vercel.app/now-playing"
