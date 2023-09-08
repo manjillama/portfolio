@@ -17,10 +17,10 @@ export default function NavMobile({ isNavMobileOpened, handleIsNavMobileOpened }
     const bodyNode = document.querySelector('body');
     if (!bodyNode) return;
 
-    isNavMobileOpened ? (bodyNode.style.overflow = 'hidden') : (bodyNode.style.overflow = 'auto');
+    isNavMobileOpened ? (bodyNode.style.overflow = 'hidden') : (bodyNode.style.overflow = '');
 
     return () => {
-      bodyNode.style.overflow = 'auto';
+      bodyNode.style.overflow = '';
     };
   }, [isNavMobileOpened]);
 
@@ -44,37 +44,26 @@ export default function NavMobile({ isNavMobileOpened, handleIsNavMobileOpened }
       <nav
         className={`${
           isNavMobileOpened ? 'translate-x-0' : 'translate-x-[250px]'
-        } bg-white w-[250px] h-full absolute right-0 top-0 ease-in-out duration-150 flex flex-col items-end`}
+        } bg-[#112240] w-[250px] h-full absolute right-0 top-0 ease-in-out duration-150 flex flex-col items-end`}
       >
         <button onClick={() => handleIsNavMobileOpened(false)} className="cursor-pointer w-[24px] h-[24px] m-4">
           <div>
-            <div className="bg-black origin-[45%] rotate-45 w-[24px] border border-black" />
-            <div className="bg-black origin-[45%]	-rotate-45 w-[24px] border border-black" />
+            <div className="origin-[45%] rotate-45 w-[24px] border border-white" />
+            <div className="origin-[45%]	-rotate-45 w-[24px] border border-white" />
           </div>
         </button>
         <ul className="w-full h-full text-center flex flex-col justify-center">
           {navLinks.map((link) => (
-            <li className="mx-2 my-4">
+            <li className="mx-2 my-6" key={link.title}>
               <button
-                className="inline-block uppercase font-bold p-2 text-sm cursor-pointer w-full"
+                className="inline-block text-white uppercase font-bold p-2 text-sm cursor-pointer w-full hover:text-secondary-regular"
                 onClick={() => handleNavigate(link.url)}
               >
                 {link.title}
-                <span className="block capitalize font-medium">{link.caption}</span>
+                <span className="block capitalize font-medium text-gray-400">{link.caption}</span>
               </button>
             </li>
           ))}
-          <li className="mx-2 my-6">
-            <CustomLink
-              text="Resume"
-              href="/assets/manjiltamang-resume.pdf"
-              target="_blank"
-              variant="primary"
-              showBoxShadowOnHover
-            >
-              Resume
-            </CustomLink>
-          </li>
         </ul>
       </nav>
     </div>

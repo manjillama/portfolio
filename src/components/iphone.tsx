@@ -3,7 +3,7 @@ import { Parallax } from 'react-parallax';
 
 export default function IPhone() {
   return (
-    <div className="text-center mt-20 h-[370px] overflow-hidden">
+    <div className="text-center mt-14 h-[370px] overflow-hidden">
       <div style={{ display: 'table', margin: '0 auto', position: 'relative' }}>
         <img src="/images/phone.jpg" alt="phone frame" style={{ height: '100%' }} />
         <div

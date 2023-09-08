@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 type Props = {
   handleIsSearchOverlayOpened: (isOpened: boolean) => void;
 };
 
 export default function SearchOverlay({ handleIsSearchOverlayOpened }: Props) {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    const bodyNode = document.querySelector("body");
+    const bodyNode = document.querySelector('body');
     if (!bodyNode) return;
 
-    bodyNode.style.overflow = "hidden";
+    bodyNode.style.overflow = 'hidden';
 
     return () => {
-      bodyNode.style.overflow = "auto";
+      bodyNode.style.overflow = '';
     };
   }, []);
 
@@ -22,17 +22,17 @@ export default function SearchOverlay({ handleIsSearchOverlayOpened }: Props) {
     <div
       className="p-[15px]"
       style={{
-        position: "fixed",
+        position: 'fixed',
         left: 0,
         right: 0,
         top: 0,
         bottom: 0,
-        background: "rgba(255,255,255,.95)",
+        background: 'rgba(255,255,255,.95)',
         zIndex: 1010,
-        overflow: "auto",
+        overflow: 'auto'
       }}
     >
-      <div style={{ height: "100%", position: "relative" }}>
+      <div style={{ height: '100%', position: 'relative' }}>
         <button
           onClick={() => handleIsSearchOverlayOpened(false)}
           className="absolute top-0 right-0 cursor-pointer w-[24px] h-[24px]"
@@ -45,10 +45,10 @@ export default function SearchOverlay({ handleIsSearchOverlayOpened }: Props) {
 
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            height: "100%",
-            justifyContent: "center",
+            display: 'flex',
+            alignItems: 'center',
+            height: '100%',
+            justifyContent: 'center'
           }}
         >
           <form method="get" action="/blogs">
@@ -61,24 +61,24 @@ export default function SearchOverlay({ handleIsSearchOverlayOpened }: Props) {
               placeholder="Search..."
               autoFocus
               style={{
-                outline: "none",
-                color: "#626262",
+                outline: 'none',
+                color: '#000',
                 border: 0,
-                background: "inherit",
+                background: 'inherit',
                 fontWeight: 300,
-                fontSize: "4rem",
-                width: "100%",
+                fontSize: '4rem',
+                width: '100%',
                 height: 120,
-                letterSpacing: "-1.925px",
+                letterSpacing: '-1.925px'
               }}
             />
           </form>
         </div>
         <p
           style={{
-            position: "absolute",
+            position: 'absolute',
             opacity: 0.7,
-            bottom: "1.2rem",
+            bottom: '1.2rem'
           }}
         >
           <small>

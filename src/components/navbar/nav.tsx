@@ -18,10 +18,10 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
         </div>
         <ul className="hidden sm:flex items-center">
           {navLinks.map((link) => (
-            <li className="mx-2">
+            <li className="mx-2" key={link.title}>
               <Link
                 to={link.url}
-                className="text-primary inline-block uppercase font-bold text-sm	cursor-pointer px-4 hover:opacity-80"
+                className="text-primary inline-block uppercase font-bold text-sm cursor-pointer px-4 hover:text-primary-regular"
               >
                 {link.title}
                 <span className="block capitalize font-medium text-gray-500 text-[0.8rem] text-[0.8rem]">
@@ -32,7 +32,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
           ))}
           <li className="ml-2">
             <button
-              className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:opacity-80"
+              className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:text-primary-regular"
               onClick={() => handleIsSearchOverlayOpened(true)}
             >
               <i className="fas fa-search"></i>

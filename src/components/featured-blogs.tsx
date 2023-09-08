@@ -36,26 +36,29 @@ export default function FeaturedBlog() {
   const blogs = data.blogs.nodes;
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap mx-[-15px]">
       {blogs.map((blog: any) => {
         const { excerpt, frontmatter, id, timeToRead } = blog;
         const { date, featuredImage, slug, title } = frontmatter;
-
         return (
-          <div className="basis-1/3 px-[15px] overflow-hidden hover:scale-101	transition duration-300" key={id}>
-            <Link to={`/blogs/${slug}`} className="hover-effect">
-              <div className="pt-[50%] relative">
+          <div className="sm:basis-1/3 basis-12/12 px-[15px] mb-10 overflow-hidden" key={id}>
+            <Link to={`/blogs/${slug}`} className="hover:scale-101 transition duration-300 flex flex-col h-full">
+              <div className="pt-[50%] relative basis-auto">
                 <div className="absolute inset-0">
                   <img
                     src={featuredImage.childImageSharp.fluid.srcWebp}
-                    className="h-full w-full object-cover rounded"
+                    className="h-full w-full object-cover rounded-md"
                   />
                 </div>
               </div>
-              <p className="whitespace-nowrap	text-ellipsis	overflow-hidden text-lg font-bold mt-3">{title}</p>
-              <p className="text-gray-600 text-[0.95rem] my-3">{excerpt}</p>
-              <div className="text-sm text-gray-700 font-bold">
-                {formatDate(date)} • {timeToRead} min read
+              <div className="flex flex-col grow basis-auto">
+                <div className="my-4">
+                  <p className="whitespace-nowrap	text-ellipsis	overflow-hidden font-bold mb-2">{title}</p>
+                  <p className="text-gray-600 text-sm  grow">{excerpt}</p>
+                </div>
+                <div className="text-xs text-gray-500">
+                  {formatDate(date)} • {timeToRead} min read
+                </div>
               </div>
             </Link>
           </div>

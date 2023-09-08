@@ -1292,6 +1292,7 @@ type MarkdownRemark = Node & {
   readonly excerptAst: Maybe<Scalars['JSON']>;
   readonly fileAbsolutePath: Maybe<Scalars['String']>;
   readonly frontmatter: Maybe<MarkdownRemarkFrontmatter>;
+  readonly gatsbyPath: Maybe<Scalars['String']>;
   readonly headings: Maybe<ReadonlyArray<Maybe<MarkdownHeading>>>;
   readonly html: Maybe<Scalars['String']>;
   readonly htmlAst: Maybe<Scalars['JSON']>;
@@ -1315,6 +1316,11 @@ type MarkdownRemark_excerptArgs = {
 type MarkdownRemark_excerptAstArgs = {
   pruneLength?: InputMaybe<Scalars['Int']>;
   truncate?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+type MarkdownRemark_gatsbyPathArgs = {
+  filePath: InputMaybe<Scalars['String']>;
 };
 
 
@@ -1381,6 +1387,7 @@ type MarkdownRemarkFieldSelector = {
   readonly excerptAst: InputMaybe<FieldSelectorEnum>;
   readonly fileAbsolutePath: InputMaybe<FieldSelectorEnum>;
   readonly frontmatter: InputMaybe<MarkdownRemarkFrontmatterFieldSelector>;
+  readonly gatsbyPath: InputMaybe<FieldSelectorEnum>;
   readonly headings: InputMaybe<MarkdownHeadingFieldSelector>;
   readonly html: InputMaybe<FieldSelectorEnum>;
   readonly htmlAst: InputMaybe<FieldSelectorEnum>;
@@ -1399,6 +1406,7 @@ type MarkdownRemarkFilterInput = {
   readonly excerptAst: InputMaybe<JSONQueryOperatorInput>;
   readonly fileAbsolutePath: InputMaybe<StringQueryOperatorInput>;
   readonly frontmatter: InputMaybe<MarkdownRemarkFrontmatterFilterInput>;
+  readonly gatsbyPath: InputMaybe<StringQueryOperatorInput>;
   readonly headings: InputMaybe<MarkdownHeadingFilterListInput>;
   readonly html: InputMaybe<StringQueryOperatorInput>;
   readonly htmlAst: InputMaybe<JSONQueryOperatorInput>;
@@ -1502,6 +1510,7 @@ type MarkdownRemarkSortInput = {
   readonly excerptAst: InputMaybe<SortOrderEnum>;
   readonly fileAbsolutePath: InputMaybe<SortOrderEnum>;
   readonly frontmatter: InputMaybe<MarkdownRemarkFrontmatterSortInput>;
+  readonly gatsbyPath: InputMaybe<SortOrderEnum>;
   readonly headings: InputMaybe<MarkdownHeadingSortInput>;
   readonly html: InputMaybe<SortOrderEnum>;
   readonly htmlAst: InputMaybe<SortOrderEnum>;
@@ -1946,6 +1955,7 @@ type Query_markdownRemarkArgs = {
   excerptAst: InputMaybe<JSONQueryOperatorInput>;
   fileAbsolutePath: InputMaybe<StringQueryOperatorInput>;
   frontmatter: InputMaybe<MarkdownRemarkFrontmatterFilterInput>;
+  gatsbyPath: InputMaybe<StringQueryOperatorInput>;
   headings: InputMaybe<MarkdownHeadingFilterListInput>;
   html: InputMaybe<StringQueryOperatorInput>;
   htmlAst: InputMaybe<JSONQueryOperatorInput>;
@@ -2862,6 +2872,11 @@ type GatsbyImageSharpFluid_withWebp_noBase64Fragment = { readonly aspectRatio: n
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: string | null, readonly aspectRatio: number, readonly src: string, readonly srcSet: string, readonly srcWebp: string | null, readonly srcSetWebp: string | null, readonly sizes: string };
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
+
+type GetBlogsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type GetBlogsQuery = { readonly blogs: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly timeToRead: number | null, readonly frontmatter: { readonly date: string | null, readonly slug: string | null, readonly featuredImage: { readonly childImageSharp: { readonly fluid: { readonly srcWebp: string | null } | null } | null } | null } | null }> } };
 
 type GetFeaturedBlogsQueryVariables = Exact<{ [key: string]: never; }>;
 

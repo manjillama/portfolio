@@ -15,7 +15,7 @@ const HeaderHero = () => {
               top: `calc(35% * ${percentage})`
             }}
           >
-            <h5 className="text-md text-secondary mb-6">Hi, I am</h5>
+            <h5 className="text-md text-secondary-regular mb-6">Hi, I am</h5>
             <h1 className="font-bold text-6xl mb-6 text-[#ccd6f6]">Manjil Tamang.</h1>
             <h5 className="font-bold text-6xl mb-6 text-[#8892b0]">Software Engineer.</h5>
             <p className="max-w-2xl text-[#8892b0] mb-10">

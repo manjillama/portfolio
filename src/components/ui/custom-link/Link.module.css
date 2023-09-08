@@ -2,9 +2,17 @@
   color: var(--primary);
   border: 1px solid var(--primary);
 }
+.btnPrimaryDark {
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
 .btnSecondary {
   color: var(--secondary);
   border: 1px solid var(--secondary);
+}
+.btnSecondaryDark {
+  color: var(--secondary-dark);
+  border: 1px solid var(--secondary-dark);
 }
 .btnHoverEffect {
   display: inline-block;
@@ -15,7 +23,15 @@
   box-shadow: 4px 4px 0 0 var(--primary);
   transform: translate(-5px, -5px);
 }
+.primaryDarkShadowOnHover:hover {
+  box-shadow: 4px 4px 0 0 var(--primary-dark);
+  transform: translate(-5px, -5px);
+}
 .secondaryShadowOnHover:hover {
   box-shadow: 4px 4px 0 0 var(--secondary);
+  transform: translate(-5px, -5px);
+}
+.secondaryDarkShadowOnHover:hover {
+  box-shadow: 4px 4px 0 0 var(--secondary-dark);
   transform: translate(-5px, -5px);
 }

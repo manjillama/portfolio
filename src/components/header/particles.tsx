@@ -30,7 +30,6 @@ const options = {
 
 const ParticlesBackground = () => {
   const particlesInit = async (main: any) => {
-    console.log(main);
     await loadStarsPreset(main);
   };
 
