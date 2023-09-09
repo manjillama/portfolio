@@ -3,7 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Spotify() {
   return (
-    <section className="text-center mt-16">
+    <section className="container mx-auto px-[15px] text-center mt-16">
       <h5 className="font-bold mb-4 text-2xl">Now playing on spotify 👾</h5>
       <ScrollAnimation animateOnce animateIn="fadeInUp">
         <img
