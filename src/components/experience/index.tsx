@@ -3,23 +3,6 @@ import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import { experience } from '../../constants';
 
-const StyledJobsSection = styled.section`
-  max-width: 700px;
-
-  .inner {
-    display: flex;
-
-    @media (max-width: 640px) {
-      display: block;
-    }
-
-    // Prevent container from jumping
-    @media (min-width: 700px) {
-      min-height: 340px;
-    }
-  }
-`;
-
 const StyledTabList = styled.div`
   position: relative;
   z-index: 3;
@@ -36,7 +19,7 @@ const StyledTabList = styled.div`
     margin-bottom: 30px;
   }
   @media (max-width: 480px) {
-    width: calc(100% + 50px);
+    width: calc(100% + 40px);
     padding-left: 25px;
     margin-left: -25px;
   }
@@ -47,7 +30,6 @@ const StyledTabButton = styled.button<{ isActive: boolean }>`
   text-decoration-skip-ink: auto;
   position: relative;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   width: 100%;
   height: 42px;
@@ -64,9 +46,7 @@ const StyledTabButton = styled.button<{ isActive: boolean }>`
   }
   @media (max-width: 640px) {
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     min-width: 160px;
     padding: 0px 15px;
@@ -164,7 +144,7 @@ const Experience = () => {
             const { title, company, range, tasks } = job;
 
             return (
-              <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="my-node">
+              <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade-in">
                 <StyledTabPanel
                   id={`panel-${i}`}
                   role="tabpanel"
