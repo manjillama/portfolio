@@ -4,7 +4,7 @@ export const siteConfig = {
 
 export const navLinks: { title: string; caption: string; url: string }[] = [
   { title: 'Home', caption: 'Welcome', url: '/' },
-  // { title: 'Experience', caption: 'Work', url: '#experience' },
+  { title: 'Experience', caption: 'Work', url: '#experience' },
   { title: 'Projects', caption: 'Open source', url: '#projects' },
   { title: 'Blog', caption: 'Tech', url: '/blogs' },
   { title: 'Contact', caption: 'Connect', url: '#contact' }
@@ -26,6 +26,42 @@ export const socials: { faIconClass: string; url: string }[] = [
   {
     faIconClass: 'fas fa-envelope',
     url: `mailto:${siteConfig.email}`
+  }
+];
+
+export const experience = [
+  {
+    title: 'UI Engineer Co-op 1',
+    company: 'Yatri Motorcycles',
+    range: 'Jun 2018 - Dev 2020',
+    tasks: [
+      'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
+      'Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal API integrations',
+      "Architected and implemented the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback",
+      'Contributed extensively to the creation of MusicKit JS, a public-facing JavaScript SDK for embedding Apple Music players into web applications'
+    ]
+  },
+  {
+    title: 'UI Engineer Co-op 2',
+    company: 'Vortex Technology',
+    range: 'Jun 2018 - Dev 2020',
+    tasks: [
+      'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
+      'Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal API integrations',
+      "Architected and implemented the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback",
+      'Contributed extensively to the creation of MusicKit JS, a public-facing JavaScript SDK for embedding Apple Music players into web applications'
+    ]
+  },
+  {
+    title: 'UI Engineer Co-op 4',
+    company: 'Expresiv Studios',
+    range: 'Jun 2018 - Dev 2020',
+    tasks: [
+      'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
+      'Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal API integrations',
+      "Architected and implemented the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback",
+      'Contributed extensively to the creation of MusicKit JS, a public-facing JavaScript SDK for embedding Apple Music players into web applications'
+    ]
   }
 ];
 

@@ -7,9 +7,20 @@
 :root {
   --primary: #007aff;
   --primary-dark: #0348ad;
+  --primary-lightest: #e0f2fe;
   --secondary: #0ccccc;
   --secondary-dark: #149f9f;
+  --light: #6b7280;
+  --lightest: #e5e7eb;
 }
+/* ::-webkit-scrollbar {
+  width: 12px;
+} */
+/* ::-webkit-scrollbar-thumb {
+  background-color: var(--dark-slate);
+  border: 3px solid var(--navy);
+  border-radius: 10px;
+} */
 html {
   background-color: #fff;
   letter-spacing: 0.5px;
@@ -39,6 +50,20 @@ button {
 }
 .fadeInUp {
   animation-name: fadeInUp;
+}
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
 /* .particle-container {

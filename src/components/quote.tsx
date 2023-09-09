@@ -20,7 +20,7 @@ export default function Quote() {
                 to understand the system. <i className="fas fa-quote-right"></i>
               </p>
               <h5 className="text-gray-500 text-md">
-                - <span className="text-primary-dark font-bold">RYAN DAHL</span>, <small>creator of node.js</small>
+                - <span className="text-black font-bold">RYAN DAHL</span>, <small>creator of node.js</small>
               </h5>
             </div>
           </ScrollAnimation>
