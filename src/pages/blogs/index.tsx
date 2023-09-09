@@ -26,7 +26,7 @@ function Blogs({ data }: Props) {
         <FeaturedBlogs />
 
         <hr style={{ margin: '2rem 0' }} />
-        <div className="max-w-[910px] pt-10 mx-auto">
+        <div className="max-w-[910px] py-2 mx-auto">
           <div className="blogs">
             {blogs.map((blog, i) => (
               <BlogCard key={i} blog={blog} />
@@ -53,6 +53,7 @@ export const query = graphql`
               }
             }
           }
+          title
           slug
         }
         excerpt

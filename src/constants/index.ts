@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     title: 'Ease Nepal',
     description:
-      'Open-source platform dedicated to make daily life of Nepalese people bit easier, starting with mapping locations all the public restrooms.',
+      'Open-source platform dedicated to make daily life of Nepalese people bit easier, starting with mapping locations of all the public restrooms.',
     techStack: ['React', 'Redux', 'TypeScript', 'SASS', 'Node.js', 'Mongoose'],
     url: '',
     githubLink: 'https://github.com/manjillama/npl-public',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Mongoose Utils',
-    description: 'Easy lightweight utility library to make mongoose query easier.',
+    description: 'Easy lightweight utility library to make data querying in mongoose a lot easier.',
     techStack: ['TypeScript', 'Node.js', 'MongoDB', 'Mongoose'],
     url: '',
     githubLink: 'https://github.com/manjillama/mongoose-util',
@@ -109,7 +109,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Blogging Site',
-    description: 'Personal / professional blogging site.',
+    description: 'Personal / professional blogging website.',
     techStack: ['Ghost CMS'],
     url: 'https://marinatamang.com/',
     githubLink: '',
@@ -125,7 +125,7 @@ export const projects: Project[] = [
   },
   {
     title: 'React Modal',
-    description: 'Lightweight easy to use, highly customizable react modal library.',
+    description: 'Lightweight, easy to use, and highly customizable react modal library.',
     techStack: ['React'],
     url: '',
     githubLink: 'https://github.com/manjillama/plain-react-modal',
@@ -141,7 +141,7 @@ export const projects: Project[] = [
   // },
   {
     title: 'Audio Book Mobile App',
-    description: 'A simple mobile audio book app created using expo react-native.',
+    description: 'A simple mobile audio book app to listen to your favorite audio book.',
     techStack: ['React Native', 'Redux', 'Expo', 'NativeBase'],
     url: 'https://youtu.be/eALArnbyPIQ',
     githubLink: 'https://github.com/manjillama/audio-book-app',
@@ -158,7 +158,7 @@ export const projects: Project[] = [
   {
     title: 'Store Manager',
     description:
-      'Online sales, customers and orders manager as well as creating receipt for small business specially clothing built using Java (Spring Boot).',
+      'Online sales, customers and orders manager as well as creating receipt for small business specially clothing.',
     techStack: ['Java', 'Spring Boot', 'MySQL', 'Hibernate', 'Bootstrap'],
     url: '',
     githubLink: 'https://github.com/manjillama/clothing-manager',
@@ -187,7 +187,7 @@ export const projects: Project[] = [
   {
     title: 'Face Recognition App',
     description:
-      'Although I have barely used python before, I fell in love with its simplicity and robustness instantly. I did this as a college project to familiarize myself on with machine learning.',
+      'A web app for face detection and facial recognition to retrieve recognized persons information from the system. I did this as a college project to familiarize myself on with machine learning.',
     techStack: ['Machine Learning', 'Python 2', 'Django', 'OpenCV'],
     url: 'https://www.youtube.com/watch?v=p70srlZvyvQ',
     githubLink: 'https://github.com/manjillama/facial-recognition-python-django',

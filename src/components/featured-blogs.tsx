@@ -54,7 +54,7 @@ export default function FeaturedBlog() {
               <div className="flex flex-col grow basis-auto">
                 <div className="my-4">
                   <p className="whitespace-nowrap	text-ellipsis	overflow-hidden font-bold mb-2">{title}</p>
-                  <p className="text-gray-600 text-sm  grow">{excerpt}</p>
+                  <p className="text-gray-600 text-sm grow">{excerpt}</p>
                 </div>
                 <div className="text-xs text-gray-500">
                   {formatDate(date)} • {timeToRead} min read
