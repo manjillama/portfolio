@@ -87,7 +87,7 @@ export const query = graphql`
 `;
 
 export const Head = ({ data }: Props) => {
-  return <SEO />;
+  return <SEO title={data.markdownRemark.frontmatter.title} />;
 };
 
 export default BlogDetail;

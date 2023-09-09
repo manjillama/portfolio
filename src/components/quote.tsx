@@ -10,7 +10,7 @@ export default function Quote() {
         backgroundImage: 'url(/images/mount_phone.jpg)'
       }}
     >
-      <div className="container mx-auto px-[15px] mb-28">
+      <div className="container mx-auto px-[15px] mb-8">
         <div className="flex flex-wrap" style={{ padding: '10rem 0' }}>
           <div className="md:basis-3/5 basis-1/5"></div>
           <ScrollAnimation animateOnce animateIn="fadeInUp" className="md:basis-2/5 basis-4/5 text-right">

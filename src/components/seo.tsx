@@ -12,7 +12,7 @@ const Seo = ({ title, description, pathname, children }: Props) => {
   const { title: defaultTitle, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata();
 
   const data = {
-    title: title || defaultTitle,
+    title: title ? `${title} | Manjil Tamang` : defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,

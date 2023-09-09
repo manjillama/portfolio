@@ -16,7 +16,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
             <img src="/images/logo.png" alt="logo" className="h-[20px]" />
           </Link>
         </div>
-        <ul className="hidden sm:flex items-center">
+        <ul className="hidden md:flex items-center">
           {navLinks.map((link) => (
             <li className="mx-2" key={link.title}>
               <Link
@@ -40,7 +40,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
           </li>
         </ul>
 
-        <ul className="sm:hidden flex">
+        <ul className="md:hidden flex">
           <li className="mx-2">
             <button onClick={() => handleIsSearchOverlayOpened(true)}>
               <i className="fas fa-search"></i>

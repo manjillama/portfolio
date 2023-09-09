@@ -65,6 +65,6 @@ export const query = graphql`
 
 export default Blogs;
 
-export const Head = ({ data }: Props) => {
-  return <Seo />;
+export const Head = () => {
+  return <Seo title="Read my latest blogs" />;
 };
