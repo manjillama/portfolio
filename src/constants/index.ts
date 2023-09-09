@@ -5,7 +5,7 @@ export const siteConfig = {
 export const navLinks: { title: string; caption: string; url: string }[] = [
   { title: 'Home', caption: 'Welcome', url: '/' },
   // { title: 'Experience', caption: 'Work', url: '#experience' },
-  { title: 'Projects', caption: 'Archive', url: '#projects' },
+  { title: 'Projects', caption: 'Open source', url: '#projects' },
   { title: 'Blog', caption: 'Tech', url: '/blogs' },
   { title: 'Contact', caption: 'Connect', url: '#contact' }
 ];
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   {
     title: 'Ease Nepal',
     description:
-      'Open-source platform dedicated to make daily life of Nepalese people bit easier, starting with mapping locations of all the public restrooms.',
+      'An open-source platform dedicated to making the daily life of Nepalese people a bit easier, starting with mapping locations of all the public restrooms.',
     techStack: ['React', 'Redux', 'TypeScript', 'SASS', 'Node.js', 'Mongoose'],
     url: '',
     githubLink: 'https://github.com/manjillama/npl-public',
@@ -75,9 +75,8 @@ export const projects: Project[] = [
     year: 2023
   },
   {
-    title: 'Yatri Motorcycles E-Store',
-    description:
-      'Yatri Motorcycles online store: clothing, helmets, accessories and merchandising by Yatri Motorcycles.',
+    title: 'Online Store',
+    description: 'Clothing, helmets, accessories and merchandising by Yatri Motorcycles built with Strapi and Next.js',
     techStack: ['Strapi', 'Next.js', 'MySQL'],
     url: 'https://www.store.yatrimotorcycles.com',
     githubLink: 'https://github.com/manjillama/store',

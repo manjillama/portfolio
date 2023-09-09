@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Manjil Tamang | Software Engineer',
     description:
-      "Hi this is Manjil Tamang. I'm Full stack software engineer with experience in designing and developing enterprise web applications. Say hello!",
+      "Hi this is Manjil Tamang. I'm Full stack software engineer with experience in designing and developing enterprise applications. Say hello!",
     siteUrl: `https://www.manjiltamang.com`,
     image: `/images/header.jpg`
   },
