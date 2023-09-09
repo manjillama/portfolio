@@ -48,7 +48,7 @@ function BlogDetail({ location, data }: Props) {
           </ul>
         </div>
 
-        <div className="hint-text sub">
+        <div className="text-gray-500 mb-4 text-sm">
           {formatDate(date)} • {timeToRead} min read
         </div>
         <div>
