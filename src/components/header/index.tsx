@@ -6,7 +6,7 @@ import HeaderHero from './header-hero';
 
 export default function Header() {
   return (
-    <header>
+    <header className="relative">
       <ParticlesBackground />
       <HeaderHero />
       <HeaderSocials />
