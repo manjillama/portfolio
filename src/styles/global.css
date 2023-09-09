@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('./prism-vsc-dark-plus.css');
+@import url('./blog-detail.css');
 
 :root {
   --primary: #007aff;

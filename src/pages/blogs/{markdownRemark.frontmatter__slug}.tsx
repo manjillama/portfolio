@@ -23,16 +23,16 @@ function BlogDetail({ location, data }: Props) {
   return (
     <Layout>
       <BlogNavbar />
-      <div className="container mx-auto py-14 px-[15px]">
-        <h1 className="title">{title}</h1>
-        <div className="socials">
-          <ul className="list-neutralize list-inline">
-            <li>
+      <div className="blog-detail container mx-auto py-14 px-[15px]">
+        <h1 className="text-4xl mb-2">{title}</h1>
+        <div className="mb-2">
+          <ul>
+            <li className="inline-block mr-4 text-2xl text-gray-500 hover:text-primary-regular">
               <a href={`https://www.twitter.com/intent/tweet?url=${href}&text=${title}`} target="_blank">
                 <i className="fab fa-twitter-square"></i>
               </a>
             </li>
-            <li>
+            <li className="inline-block mr-4 text-2xl text-gray-500 hover:text-primary-regular">
               <a
                 href={`https://www.facebook.com/v5.0/dialog/share?app_id=542599432471018&href=${href}&display=page`}
                 target="_blank"
@@ -40,7 +40,7 @@ function BlogDetail({ location, data }: Props) {
                 <i className="fab fa-facebook-square"></i>
               </a>
             </li>
-            <li>
+            <li className="inline-block mr-4 text-2xl text-gray-500 hover:text-primary-regular">
               <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${href}`} target="_blank">
                 <i className="fab fa-linkedin"></i>
               </a>
@@ -52,8 +52,8 @@ function BlogDetail({ location, data }: Props) {
           {formatDate(date)} • {timeToRead} min read
         </div>
         <div>
-          <img src={featuredImage.childrenImageSharp[0].fluid.originalImg} style={{ marginBottom: '2rem' }} />
-          <div className="blog-body" dangerouslySetInnerHTML={{ __html: html }} />
+          <img src={featuredImage.childrenImageSharp[0].fluid.originalImg} className="mx-auto mb-8" />
+          <div className="blog-body text-lg" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
         <br />
         <br />

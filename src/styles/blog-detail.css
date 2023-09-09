@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@400;600;700&display=swap');
+
+.blog-detail {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.blog-body img {
+  margin: 2rem auto;
+  display: block;
+  max-width: 100%;
+}
+.blog-body p {
+  margin: 1rem 0;
+}
+.blog-body a {
+  color: var(--primary);
+}
+.blog-body a:hover {
+  text-decoration: underline;
+}
+.blog-body blockquote {
+  font-style: italic;
+  box-shadow: rgb(41 41 41) 3px 0px 0px 0px inset;
+  padding-left: 1.5rem;
+  margin-left: 0;
+}
+.blog-body hr {
+  width: 20%;
+  margin: 4rem auto;
+  border: 1px dashed #ccc;
+}
+.blog-body h2,
+.blog-body h3,
+.blog-body h4 {
+  line-height: 2.5rem;
+  margin-top: 2.5rem;
+  font-weight: 700;
+}
+.blog-body h2 {
+  font-size: 1.5rem;
+}
+.blog-body h3 {
+  font-size: 1.2rem;
+}
