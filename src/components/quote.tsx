@@ -15,12 +15,13 @@ export default function Quote() {
           <div className="md:basis-3/5 basis-1/5"></div>
           <ScrollAnimation animateOnce animateIn="fadeInUp" className="md:basis-2/5 basis-4/5 text-right">
             <div>
-              <p className="text-xl mb-6">
+              <p className="text-lg mb-6">
                 <i className="fas fa-quote-left"></i> You can never understand everything. But you should push yourself
                 to understand the system. <i className="fas fa-quote-right"></i>
               </p>
               <h5 className="text-gray-500 text-md">
-                - <span className="text-black font-bold">RYAN DAHL</span>, <small>creator of node.js</small>
+                - <span className="text-black font-bold">RYAN DAHL</span>,{' '}
+                <span className="text-sm">creator of node.js</span>
               </h5>
             </div>
           </ScrollAnimation>

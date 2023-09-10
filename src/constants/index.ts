@@ -1,5 +1,10 @@
 export const siteConfig = {
-  email: 'hello@manjiltamang.com'
+  name: 'Manjil Tamang',
+  intro:
+    'I’m a software engineer who enjoys solving real-world problems using computer technologies. I specialize in building and executing web products.',
+  position: 'Software Engineer',
+  email: 'hello@manjiltamang.com',
+  resumeUrl: '/assets/resume.pdf'
 };
 
 export const navLinks: { title: string; caption: string; url: string }[] = [
@@ -31,36 +36,41 @@ export const socials: { faIconClass: string; url: string }[] = [
 
 export const experience = [
   {
-    title: 'UI Engineer Co-op 1',
+    title: 'Founding Software Engineer',
     company: 'Yatri Motorcycles',
-    range: 'Jun 2018 - Dev 2020',
+    range: 'Sep 2020 - Present',
+    companyUrl: 'https://www.yatrimotorcycles.com',
     tasks: [
-      'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
-      'Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal API integrations',
-      "Architected and implemented the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback",
-      'Contributed extensively to the creation of MusicKit JS, a public-facing JavaScript SDK for embedding Apple Music players into web applications'
+      'Worked on a diverse array of responsibilities, encompassing talent acquisition and team management, as well as the end-to-end processes of designing, developing, and executing highly scalable software systems from ground up, significantly contributing to securing Series A funding for the organization',
+      "Played a central role in orchestrating the comprehensive transformation of the company's software ecosystem, overseeing pivotal changes across critical components, including the off-vehicle software, charge station's network, digital wallet, and other essential elements resulting in a staggering 12-fold increase in the company's valuation over a span of just 3 years",
+      'Led a cross-functional team of engineers, designers, and product managers in the development and launch of a groundbreaking charge station software solution, which went on securing a substantial $300,000 USD grant from USAID',
+      'Initiated the automated data-driven approach proven instrumental for both the sales and engineering teams, enabling them to harness real-time analytics and contribute to a remarkable revenue surge of 300% within a year.',
+      'Collaborated with investors and stakeholders to secure multiple rounds of seed investments and series A fund to fuel company growth'
     ]
   },
   {
-    title: 'UI Engineer Co-op 2',
+    title: 'Software Engineer',
     company: 'Vortex Technology',
-    range: 'Jun 2018 - Dev 2020',
+    range: 'Feb 2019 - Jul 2020',
+    companyUrl: 'https://www.vortexnepal.com',
     tasks: [
-      'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
-      'Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal API integrations',
-      "Architected and implemented the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback",
-      'Contributed extensively to the creation of MusicKit JS, a public-facing JavaScript SDK for embedding Apple Music players into web applications'
+      'Collaborated with cross-functional teams to develop innovative software products, translating client requirements into technical solutions',
+      'Designed and implemented RESTful APIs for Backend services, facilitating seamless communication between Frontend and Backend systems',
+      'Utilized AWS services (EC2, S3, Lambda, RDS) to build and deploy cloud-based solutions, reducing infrastructure costs by 25% while improving scalability and reliability',
+      'Developed and maintained Backend APIs and services, optimizing performance and scalability, resulting in a 30% decrease in server response times',
+      'Implemented CI/CD pipelines, automating the software release process, which led to a 40% reduction in deployment errors and faster release cycles',
+      'Leveraged Docker for containerization, simplifying application deployment and enhancing portability',
+      'Implemented unit testing and code reviews, improving code quality and reducing bug count by 30%'
     ]
   },
   {
-    title: 'UI Engineer Co-op 4',
+    title: 'Front-End Developer Intern',
     company: 'Expresiv Studios',
-    range: 'Jun 2018 - Dev 2020',
+    range: 'Jun 2018 - Aug 2018',
+    companyUrl: 'https://www.expresivstudios.com',
     tasks: [
-      'Developed and styled interactive web applications for Apple Music using Ember and SCSS',
-      'Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal API integrations',
-      "Architected and implemented the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback",
-      'Contributed extensively to the creation of MusicKit JS, a public-facing JavaScript SDK for embedding Apple Music players into web applications'
+      'Implemented responsive design techniques to ensure optimal display on various devices',
+      ' Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, React, Angular.js, jQuery and Bootstrap'
     ]
   }
 ];
@@ -95,7 +105,7 @@ export const projects: Project[] = [
   },
   {
     title: 'manjiltamang.com (v2)',
-    description: 'My portfolio site built with Gatsby.',
+    description: "My portfolio site built with Gatsby. Yes! the one you're looking at right now.",
     techStack: ['GatsbyJS', 'Tailwind', 'Styled-Components', 'GraphQL'],
     url: 'https://manjiltamang.com',
     githubLink: 'https://github.com/manjillama/portfolio',

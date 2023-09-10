@@ -31,6 +31,7 @@ const StyledTabButton = styled.button<{ isActive: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
+  font-weight: 500;
   width: 100%;
   height: 42px;
   padding: 0px 20px 2px;
@@ -92,6 +93,7 @@ const StyledTabPanels = styled.div`
   position: relative;
   width: 100%;
   margin-left: 20px;
+  min-height: 580px;
 
   @media (max-width: 640px) {
     margin-left: 0;
@@ -104,7 +106,15 @@ const StyledTabPanel = styled.div`
   padding: 10px 5px;
 
   li {
+    padding-left: 1rem;
     margin-bottom: 1rem;
+    position: relative;
+    &::before {
+      content: '▹';
+      position: absolute;
+      left: 0px;
+      color: var(--light);
+    }
   }
 `;
 
@@ -157,7 +167,7 @@ const Experience = () => {
                     <span>{title}</span>
                     <span className="text-primary-regular">
                       &nbsp;@&nbsp;
-                      <a href={'/'} className="hover:underline">
+                      <a href={job.companyUrl} rel="noopener noreferrer" target="_blank" className="hover:underline">
                         {company}
                       </a>
                     </span>
