@@ -24,21 +24,20 @@ jobs:
           file_name: .env
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Build
         run: npm run build
 
       - name: Copy file via ssh key
         uses: appleboy/scp-action@master
-        env:
+        with:
           HOST: ${{ secrets.PRODUCTION_HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.PRODUCTION_KEY }}
-        with:
           source: './public'
-          target: '/var/www/manjiltamang.com/html'
+          target: '/home/manjiltamang'
 
       - name: Executing remote command
         uses: appleboy/ssh-action@master
@@ -49,4 +48,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /var/www/manjiltamang.com/html
-            mv ./public/* ./
+            rm -rf ./*
+            mv /home/manjiltamang/public/* ./
