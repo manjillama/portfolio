@@ -15,7 +15,7 @@ jobs:
       - name: Install nodejs
         uses: actions/setup-node@v1
         with:
-          node-version: '14.0.0'
+          node-version: '18.0.0'
 
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v1
@@ -39,7 +39,7 @@ jobs:
         with:
           source: './public'
           target: '/var/www/manjiltamang.com/html'
-          
+
       - name: Executing remote command
         uses: appleboy/ssh-action@master
         with:

@@ -105,7 +105,7 @@ export const projects: Project[] = [
   },
   {
     title: 'manjiltamang.com (v2)',
-    description: "My portfolio site built with Gatsby. Yes! the one you're looking at right now.",
+    description: "My portfolio site built with Gatsby. Yes! The one you're looking at right now.",
     techStack: ['GatsbyJS', 'Tailwind', 'Styled-Components', 'GraphQL'],
     url: 'https://manjiltamang.com',
     githubLink: 'https://github.com/manjillama/portfolio',
