@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
 import { experience } from '../../constants';
 
@@ -124,10 +125,8 @@ const Experience = () => {
   return (
     <section id="experience" className="mx-auto max-w-[700px] px-[15px] mb-8">
       <div className="h-24" />
-
       <h5 className="font-bold mb-6 text-2xl">Where I&apos;ve Worked 💼</h5>
-      <h2 className="numbered-heading"></h2>
-      <div className="block sm:flex">
+      <ScrollAnimation animateOnce animateIn="fadeInUp" className="block sm:flex">
         <StyledTabList role="tablist" aria-label="Job tabs">
           {experience.map((job, i) => {
             return (
@@ -184,7 +183,7 @@ const Experience = () => {
             );
           })}
         </StyledTabPanels>
-      </div>
+      </ScrollAnimation>
     </section>
   );
 };

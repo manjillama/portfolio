@@ -44,7 +44,8 @@ export const experience = [
       'Worked on a diverse array of responsibilities, encompassing talent acquisition and team management, as well as the end-to-end processes of designing, developing, and executing highly scalable software systems from ground up, significantly contributing to securing Series A funding for the organization',
       "Played a central role in orchestrating the comprehensive transformation of the company's software ecosystem, overseeing pivotal changes across critical components, including the off-vehicle software, charge station's network, digital wallet, and other essential elements resulting in a staggering 12-fold increase in the company's valuation over a span of just 3 years",
       'Led a cross-functional team of engineers, designers, and product managers in the development and launch of a groundbreaking charge station software solution, which went on securing a substantial $300,000 USD grant from USAID',
-      'Initiated the automated data-driven approach proven instrumental for both the sales and engineering teams, enabling them to harness real-time analytics and contribute to a remarkable revenue surge of 300% within a year.',
+      'Spearheaded the automated data-driven approach proven instrumental for both the sales and engineering teams, enabling them to harness real-time analytics and contribute to a remarkable revenue surge of 300% within a year',
+      "Actively contributed to business strategy and product roadmap, aligning technology decisions with the company's growth objectives",
       'Collaborated with investors and stakeholders to secure multiple rounds of seed investments and series A fund to fuel company growth'
     ]
   },
@@ -60,17 +61,19 @@ export const experience = [
       'Developed and maintained Backend APIs and services, optimizing performance and scalability, resulting in a 30% decrease in server response times',
       'Implemented CI/CD pipelines, automating the software release process, which led to a 40% reduction in deployment errors and faster release cycles',
       'Leveraged Docker for containerization, simplifying application deployment and enhancing portability',
+      'Managed database systems, including schema design, optimization, and data migration, ensuring data integrity and accessibility',
       'Implemented unit testing and code reviews, improving code quality and reducing bug count by 30%'
     ]
   },
   {
     title: 'Front-End Developer Intern',
     company: 'Expresiv Studios',
-    range: 'Jun 2018 - Aug 2018',
+    range: 'Jun 2017 - Aug 2017',
     companyUrl: 'https://www.expresivstudios.com',
     tasks: [
-      'Implemented responsive design techniques to ensure optimal display on various devices',
-      ' Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, React, Angular.js, jQuery and Bootstrap'
+      ' Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, React, Angular.js, jQuery and Bootstrap',
+      'Collaborated with the UI/UX team to ensure a seamless and visually appealing user experience',
+      'Implemented responsive design techniques to ensure optimal display on various devices'
     ]
   }
 ];
