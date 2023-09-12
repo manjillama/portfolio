@@ -4,6 +4,10 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
 import { experience } from '../../constants';
 
+/**
+ * @author Brittany Chiang <brittany.chiang@gmail.com>
+ * @author Manjil Tamang <hello@manjiltamang.com>
+ */
 const StyledTabList = styled.div`
   position: relative;
   z-index: 3;
@@ -134,7 +138,6 @@ const Experience = () => {
                 key={i}
                 isActive={activeTabId === i}
                 onClick={() => setActiveTabId(i)}
-                // ref={el => (tabs.current[i] = el)}
                 id={`tab-${i}`}
                 role="tab"
                 tabIndex={activeTabId === i ? 0 : -1}
