@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { navLinks } from '../../constants';
 
 type Props = {
@@ -11,32 +12,34 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
   return (
     <div className="navbar h-[70px] sticky top-0 bg-white	z-10 border-b	border-[#f0f0f0]">
       <nav className="nav flex items-center justify-between p-[15px] container mx-auto h-full">
-        <div>
+        <ScrollAnimation animateOnce animateIn="fadeInUp" offset={0}>
           <Link to="/">
             <img src="/images/logo.png" alt="logo" className="h-[20px]" />
           </Link>
-        </div>
+        </ScrollAnimation>
         <ul className="hidden md:flex items-center">
-          {navLinks.map((link) => (
+          {navLinks.map((link, i) => (
             <li className="mx-2" key={link.title}>
-              <Link
-                to={link.url}
-                className="text-primary inline-block uppercase font-bold text-sm cursor-pointer px-4 hover:text-primary-regular"
-              >
-                {link.title}
-                <span className="block capitalize font-medium text-gray-500 text-[0.8rem] text-[0.8rem]">
-                  {link.caption}
-                </span>
-              </Link>
+              <ScrollAnimation delay={i * 200} animateOnce animateIn="fadeInUp" offset={0}>
+                <Link
+                  to={link.url}
+                  className="text-primary inline-block uppercase font-bold text-sm cursor-pointer px-4 hover:text-primary-regular"
+                >
+                  {link.title}
+                  <span className="block capitalize font-medium text-gray-500 text-[0.8rem]">{link.caption}</span>
+                </Link>
+              </ScrollAnimation>
             </li>
           ))}
           <li className="ml-2">
-            <button
-              className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:text-primary-regular"
-              onClick={() => handleIsSearchOverlayOpened(true)}
-            >
-              <i className="fas fa-search"></i>
-            </button>
+            <ScrollAnimation delay={navLinks.length * 200} animateOnce animateIn="fadeInUp" offset={0}>
+              <button
+                className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:text-primary-regular"
+                onClick={() => handleIsSearchOverlayOpened(true)}
+              >
+                <i className="fas fa-search"></i>
+              </button>
+            </ScrollAnimation>
           </li>
         </ul>
 

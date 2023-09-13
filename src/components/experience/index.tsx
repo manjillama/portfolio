@@ -4,6 +4,10 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
 import { experience } from '../../constants';
 
+/**
+ * @author Brittany Chiang <brittany.chiang@gmail.com>
+ * @author Manjil Tamang <hello@manjiltamang.com>
+ */
 const StyledTabList = styled.div`
   position: relative;
   z-index: 3;
@@ -125,64 +129,65 @@ const Experience = () => {
   return (
     <section id="experience" className="mx-auto max-w-[700px] px-[15px] mb-8">
       <div className="h-24" />
-      <h5 className="font-bold mb-6 text-2xl">Where I&apos;ve Worked 💼</h5>
-      <ScrollAnimation animateOnce animateIn="fadeInUp" className="block sm:flex">
-        <StyledTabList role="tablist" aria-label="Job tabs">
-          {experience.map((job, i) => {
-            return (
-              <StyledTabButton
-                key={i}
-                isActive={activeTabId === i}
-                onClick={() => setActiveTabId(i)}
-                // ref={el => (tabs.current[i] = el)}
-                id={`tab-${i}`}
-                role="tab"
-                tabIndex={activeTabId === i ? 0 : -1}
-                aria-selected={activeTabId === i ? true : false}
-                aria-controls={`panel-${i}`}
-              >
-                <span>{job.company}</span>
-              </StyledTabButton>
-            );
-          })}
-          <StyledHighlight activeTabId={activeTabId} />
-        </StyledTabList>
-
-        <StyledTabPanels>
-          {experience.map((job, i) => {
-            const { title, company, range, tasks } = job;
-
-            return (
-              <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade-in">
-                <StyledTabPanel
-                  id={`panel-${i}`}
-                  role="tabpanel"
+      <ScrollAnimation animateOnce animateIn="fadeInUp">
+        <h5 className="font-bold mb-6 text-2xl">Where I&apos;ve Worked 💼</h5>
+        <div className="block sm:flex">
+          <StyledTabList role="tablist" aria-label="Job tabs">
+            {experience.map((job, i) => {
+              return (
+                <StyledTabButton
+                  key={i}
+                  isActive={activeTabId === i}
+                  onClick={() => setActiveTabId(i)}
+                  id={`tab-${i}`}
+                  role="tab"
                   tabIndex={activeTabId === i ? 0 : -1}
-                  aria-labelledby={`tab-${i}`}
-                  aria-hidden={activeTabId !== i}
-                  hidden={activeTabId !== i}
+                  aria-selected={activeTabId === i ? true : false}
+                  aria-controls={`panel-${i}`}
                 >
-                  <h3 className="font-bold text-lg">
-                    <span>{title}</span>
-                    <span className="text-primary-regular">
-                      &nbsp;@&nbsp;
-                      <a href={job.companyUrl} rel="noopener noreferrer" target="_blank" className="hover:underline">
-                        {company}
-                      </a>
-                    </span>
-                  </h3>
-                  <p className="text-sm mb-6 text-gray-500">{range}</p>
+                  <span>{job.company}</span>
+                </StyledTabButton>
+              );
+            })}
+            <StyledHighlight activeTabId={activeTabId} />
+          </StyledTabList>
 
-                  <ul className="text-sm">
-                    {tasks.map((task) => (
-                      <li>{task}</li>
-                    ))}
-                  </ul>
-                </StyledTabPanel>
-              </CSSTransition>
-            );
-          })}
-        </StyledTabPanels>
+          <StyledTabPanels>
+            {experience.map((job, i) => {
+              const { title, company, range, tasks } = job;
+
+              return (
+                <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade-in">
+                  <StyledTabPanel
+                    id={`panel-${i}`}
+                    role="tabpanel"
+                    tabIndex={activeTabId === i ? 0 : -1}
+                    aria-labelledby={`tab-${i}`}
+                    aria-hidden={activeTabId !== i}
+                    hidden={activeTabId !== i}
+                  >
+                    <h3 className="font-bold text-lg">
+                      <span>{title}</span>
+                      <span className="text-primary-regular">
+                        &nbsp;@&nbsp;
+                        <a href={job.companyUrl} rel="noopener noreferrer" target="_blank" className="hover:underline">
+                          {company}
+                        </a>
+                      </span>
+                    </h3>
+                    <p className="text-sm mb-6 text-gray-500">{range}</p>
+
+                    <ul className="text-sm">
+                      {tasks.map((task) => (
+                        <li>{task}</li>
+                      ))}
+                    </ul>
+                  </StyledTabPanel>
+                </CSSTransition>
+              );
+            })}
+          </StyledTabPanels>
+        </div>
       </ScrollAnimation>
     </section>
   );
