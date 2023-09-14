@@ -12,7 +12,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
   return (
     <div className="navbar h-[70px] sticky top-0 bg-white	z-10 border-b	border-[#f0f0f0]">
       <nav className="nav flex items-center justify-between p-[15px] container mx-auto h-full">
-        <ScrollAnimation animateOnce animateIn="fadeInUp" offset={0}>
+        <ScrollAnimation detail={150} animateOnce animateIn="fadeInUp" offset={0}>
           <Link to="/">
             <img src="/images/logo.png" alt="logo" className="h-[20px]" />
           </Link>
@@ -20,7 +20,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
         <ul className="hidden md:flex items-center">
           {navLinks.map((link, i) => (
             <li className="mx-2" key={link.title}>
-              <ScrollAnimation delay={i * 200} animateOnce animateIn="fadeInUp" offset={0}>
+              <ScrollAnimation delay={i * 150} animateOnce animateIn="fadeInUp" offset={0}>
                 <Link
                   to={link.url}
                   className="text-primary inline-block uppercase font-bold text-sm cursor-pointer px-4 hover:text-primary-regular"
@@ -32,7 +32,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
             </li>
           ))}
           <li className="ml-2">
-            <ScrollAnimation delay={navLinks.length * 200} animateOnce animateIn="fadeInUp" offset={0}>
+            <ScrollAnimation delay={navLinks.length * 150} animateOnce animateIn="fadeInUp" offset={0}>
               <button
                 className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:text-primary-regular"
                 onClick={() => handleIsSearchOverlayOpened(true)}
