@@ -17,11 +17,11 @@ const HeaderHero = () => {
             }}
           >
             <ScrollAnimation animateOnce animateIn="fadeInUp">
-              <h5 className="text-md text-secondary-regular sm:mb-6 mb-4">Hi, I am</h5>
+              <p className="text-md text-secondary-regular sm:mb-6 mb-4">Hi, I am</p>
               <h1 className="font-bold sm:text-6xl text-4xl sm:mb-6 mb-4 text-[#ccd6f6]">{siteConfig.name}.</h1>
             </ScrollAnimation>
             <ScrollAnimation delay={200} animateOnce animateIn="fadeInUp">
-              <h5 className="font-bold sm:text-6xl text-3xl sm:mb-6 mb-4 text-[#8892b0]">{siteConfig.position}.</h5>
+              <p className="font-bold sm:text-6xl text-3xl sm:mb-6 mb-4 text-[#8892b0]">{siteConfig.position}.</p>
             </ScrollAnimation>
             <ScrollAnimation delay={400} animateOnce animateIn="fadeInUp">
               <p className="max-w-2xl text-[#8892b0] mb-10">{siteConfig.intro}</p>

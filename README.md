@@ -1,8 +1,12 @@
-<p align="center">
+<div align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://manjiltamang.com/images/logo-circle-mini.png" width="60" />
+    <img alt="Manjil Logo" src="https://manjiltamang.com/images/logo-circle-mini.png" width="60" />
   </a>
-</p>
+</div>
+<br/>
+<div align="center">
+ <a href="https://github.com/yatri-motorcycles/servers/actions"><img src="https://github.com/manjillama/portfolio/actions/workflows/release.yml/badge.svg" alt="Github actions status"></a>
+</div>
 <h1 align="center">
   Manjil Tamang
 </h1>
@@ -46,7 +50,7 @@
     - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-## Third-Party Credits
+## 🙏 Third-Party Credits
 
 This project includes code snippets from the following open-source projects:
 

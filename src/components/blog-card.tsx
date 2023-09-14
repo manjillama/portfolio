@@ -22,6 +22,7 @@ function BlogCard({ blog }: Props) {
       </div>
       <div className="md:flex-[0_0_186px] flex-[0_0_130px] relative">
         <img
+          alt={title}
           src={featuredImage.childImageSharp.fluid.srcWebp}
           className="absolute inset-0 h-full object-cover w-full rounded-md"
         />

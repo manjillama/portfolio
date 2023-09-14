@@ -46,6 +46,7 @@ export default function FeaturedBlog() {
               <div className="pt-[50%] relative basis-auto">
                 <div className="absolute inset-0">
                   <img
+                    alt={title}
                     src={featuredImage.childImageSharp.fluid.srcWebp}
                     className="h-full w-full object-cover rounded-md"
                   />
