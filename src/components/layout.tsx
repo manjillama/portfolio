@@ -6,11 +6,11 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function Layout({ children }: Props) {
+function Layout({ children }: Props) {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    const homePageImages = [`/images/brush_stroke.png`, '/images/me-1.jpg', '/images/mount_phone.jpg'];
+    const homePageImages = [`/images/brush_stroke.png`, '/images/me-1.jpg'];
 
     const images = [...homePageImages];
 
@@ -21,10 +21,25 @@ export default function Layout({ children }: Props) {
 
   return (
     <>
-      {isLoading && <div className="fixed w-full h-full bg-white z-50" />}
+      {isLoading && <PreLoader />}
       <div>{children}</div>
     </>
   );
 }
 
 export const Head = () => <Seo />;
+export default Layout;
+
+const PreLoader = () => {
+  React.useEffect(() => {
+    const bodyNode = document.querySelector('body');
+    if (!bodyNode) return;
+
+    bodyNode.style.overflow = 'hidden';
+
+    return () => {
+      bodyNode.style.overflow = '';
+    };
+  }, []);
+  return <div className="fixed w-full h-full bg-white z-50" />;
+};

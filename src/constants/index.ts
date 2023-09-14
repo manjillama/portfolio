@@ -52,7 +52,7 @@ export const experience = [
   {
     title: 'Software Engineer',
     company: 'Vortex Technology',
-    range: 'Feb 2019 - Jul 2020',
+    range: 'Feb 2019 - Aug 2020',
     companyUrl: 'https://www.vortexnepal.com',
     tasks: [
       'Collaborated with cross-functional teams to develop innovative software products, translating client requirements into technical solutions',
