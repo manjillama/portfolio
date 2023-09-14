@@ -9,10 +9,9 @@ const HeaderHero = () => {
     <div className="bg-[#0a192f]">
       <Parallax
         className="container mx-auto h-screen	relative px-[15px]"
-        strength={100}
         renderLayer={(percentage: number) => (
           <div
-            className="absolute text-white translate-y-[-50%]"
+            className="absolute text-white translate-y-[-50%] transition"
             style={{
               top: `calc(35% * ${percentage})`
             }}
