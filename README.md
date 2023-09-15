@@ -5,7 +5,7 @@
 </div>
 <br/>
 <div align="center">
- <a href="https://github.com/yatri-motorcycles/servers/actions"><img src="https://github.com/manjillama/portfolio/actions/workflows/release.yml/badge.svg" alt="Github actions status"></a>
+ <a href="https://github.com/manjillama/portfolio/actions/workflows/release.yml"><img src="https://github.com/manjillama/portfolio/actions/workflows/release.yml/badge.svg" alt="Github actions status"></a>
 </div>
 <h1 align="center">
   Manjil Tamang
