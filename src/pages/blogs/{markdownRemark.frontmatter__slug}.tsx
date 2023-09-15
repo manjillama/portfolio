@@ -52,7 +52,7 @@ function BlogDetail({ location, data }: Props) {
           {formatDate(date)} • {timeToRead} min read
         </div>
         <div>
-          <img src={featuredImage.childrenImageSharp[0].fluid.originalImg} className="mx-auto mb-8" />
+          <img alt={title} src={featuredImage.childrenImageSharp[0].fluid.originalImg} className="mx-auto mb-8" />
           <div className="blog-body text-lg" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
         <br />

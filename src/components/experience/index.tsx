@@ -178,8 +178,8 @@ const Experience = () => {
                     <p className="text-sm mb-6 text-gray-500">{range}</p>
 
                     <ul className="text-sm">
-                      {tasks.map((task) => (
-                        <li>{task}</li>
+                      {tasks.map((task, i) => (
+                        <li key={i}>{task}</li>
                       ))}
                     </ul>
                   </StyledTabPanel>
