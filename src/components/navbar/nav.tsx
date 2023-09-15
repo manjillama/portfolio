@@ -10,7 +10,7 @@ type Props = {
 
 export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpened }: Props) {
   return (
-    <div className="navbar h-[70px] sticky top-0 bg-white	z-10 border-b	border-[#f0f0f0]">
+    <div className="navbar h-[70px] sticky top-0 bg-white	z-50 border-b	border-[#f0f0f0]">
       <nav className="nav flex items-center justify-between p-[15px] container mx-auto h-full">
         <ScrollAnimation detail={150} animateOnce animateIn="fadeInUp" offset={0}>
           <Link to="/">
