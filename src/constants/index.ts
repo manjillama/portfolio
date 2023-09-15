@@ -41,12 +41,12 @@ export const experience = [
     range: 'Sep 2020 - Present',
     companyUrl: 'https://www.yatrimotorcycles.com',
     tasks: [
-      'Worked on a diverse array of responsibilities, encompassing talent acquisition and team management, as well as the end-to-end processes of designing, developing, and executing highly scalable software systems from ground up, significantly contributing to securing Series A funding for the organization',
-      "Played a central role in orchestrating the comprehensive transformation of the company's software ecosystem, overseeing pivotal changes across critical components, including the off-vehicle software, charge station's network, digital wallet, and other essential elements resulting in a staggering 12-fold increase in the company's valuation over a span of just 3 years",
-      'Led a cross-functional team of engineers, designers, and product managers in the development and launch of a groundbreaking charge station software solution, which went on securing a substantial $300,000 USD grant from USAID',
-      'Spearheaded the automated data-driven approach proven instrumental for both the sales and engineering teams, enabling them to harness real-time analytics and contribute to a remarkable revenue surge of 300% within a year',
-      "Actively contributed to business strategy and product roadmap, aligning technology decisions with the company's growth objectives",
-      'Collaborated with investors and stakeholders to secure multiple rounds of seed investments and series A fund to fuel company growth'
+      'Spearheaded multifaceted roles, encompassing talent acquisition, team leadership, and the complete end-to-end development of highly scalable software systems from the ground up, pivotal in securing Series A funding',
+      "Strategically drove the company's software ecosystem overhaul, overseeing pivotal changes across critical components, including the off-vehicle software, charge station's network, digital wallet, and other essential elements resulting in a staggering 12-fold increase in the company's valuation over a span of just 3 years",
+      'Led a cross-functional team of engineers, designers, and product managers in the development and launch of a groundbreaking charge station software solution, which went on to secure a substantial $300,000 grant from USAID',
+      'Orchestrated the automated data-driven approach proven instrumental for both the sales and engineering teams, enabling them to harness real-time analytics and contribute to a remarkable revenue surge of 300% within a year',
+      "Actively contributed to business strategy and product roadmap, aligning technology decisions with the company's growth objectives, resulting in a 60% increase in user acquisition after a year of product launch",
+      'Collaborated with investors and stakeholders to secure multiple rounds of seed investments and series A funding, raising over $2 million in capital to fuel company growth and expansion'
     ]
   },
   {
@@ -55,14 +55,14 @@ export const experience = [
     range: 'Feb 2019 - Aug 2020',
     companyUrl: 'https://www.vortexnepal.com',
     tasks: [
-      'Collaborated with cross-functional teams to develop innovative software products, translating client requirements into technical solutions',
-      'Designed and implemented RESTful APIs for Backend services, facilitating seamless communication between Frontend and Backend systems',
+      'Collaborated with cross-functional teams to develop innovative software products, translating client requirements into technical solutions, resulting in a 20% increase in client satisfaction and a 15% improvement in project delivery timelines',
+      'Designed and implemented RESTful APIs for Backend services, facilitating seamless communication between Frontend and Backend systems, resulting in a 30% improvement in data retrieval and response times',
       'Utilized AWS services (EC2, S3, Lambda, RDS) to build and deploy cloud-based solutions, reducing infrastructure costs by 25% while improving scalability and reliability',
       'Developed and maintained Backend APIs and services, optimizing performance and scalability, resulting in a 30% decrease in server response times',
-      'Implemented CI/CD pipelines, automating the software release process, which led to a 40% reduction in deployment errors and faster release cycles',
-      'Leveraged Docker for containerization, simplifying application deployment and enhancing portability',
-      'Managed database systems, including schema design, optimization, and data migration, ensuring data integrity and accessibility',
-      'Implemented unit testing and code reviews, improving code quality and reducing bug count by 30%'
+      'Established CI/CD pipelines, automating the software release process, which led to a 40% reduction in deployment errors and faster release cycles',
+      'Leveraged Docker for containerization and to streamline development pipelines, resulting in a 40% improvement in development efficiency',
+      'Managed database systems, including schema design, optimization, and data migration, ensuring data integrity and accessibility, resulting in a 25% reduction in query response times and a 20% improvement in overall system performance',
+      'Executed unit, integration, e2e testings, and code reviews, improving code quality and reducing bug count by 30%'
     ]
   },
   {
@@ -71,9 +71,9 @@ export const experience = [
     range: 'Jun 2017 - Aug 2017',
     companyUrl: 'https://www.expresivstudios.com',
     tasks: [
-      ' Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, React, Angular.js, jQuery and Bootstrap',
+      'Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, React, Angular.js, jQuery, and Bootstrap, resulting in a 20% improvement in website loading times and user experience',
       'Collaborated with the UI/UX team to ensure a seamless and visually appealing user experience',
-      'Implemented responsive design techniques to ensure optimal display on various devices'
+      'Applied responsive design techniques to ensure optimal display on various devices'
     ]
   }
 ];
