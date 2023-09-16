@@ -9,6 +9,7 @@ const HeaderSocials = () => (
         {socials.map((social, index) => (
           <li key={index}>
             <a
+              aria-label={social.name}
               className="p-3.5 block text-xl hover-effect hover:text-secondary-regular"
               href={social.url}
               rel="noopener noreferrer"

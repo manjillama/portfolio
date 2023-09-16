@@ -14,7 +14,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
       <nav className="nav flex items-center justify-between p-[15px] container mx-auto h-full">
         <ScrollAnimation detail={150} animateOnce animateIn="fadeInUp" offset={0}>
           <Link to="/">
-            <img src="/images/logo.png" alt="logo" className="h-[20px]" />
+            <img src="/images/logo.png" alt="logo" className="h-[20px] w-[38px]" />
           </Link>
         </ScrollAnimation>
         <ul className="hidden md:flex items-center">
@@ -34,6 +34,7 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
           <li className="ml-2">
             <ScrollAnimation delay={navLinks.length * 150} animateOnce animateIn="fadeInUp" offset={0}>
               <button
+                aria-label="Search"
                 className="text-primary uppercase font-bold text-lg cursor-pointer px-4 hover:text-primary-regular"
                 onClick={() => handleIsSearchOverlayOpened(true)}
               >

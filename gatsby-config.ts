@@ -13,6 +13,12 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/logo-circle.png'
+      }
+    },
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
