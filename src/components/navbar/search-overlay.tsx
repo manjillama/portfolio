@@ -34,6 +34,7 @@ export default function SearchOverlay({ handleIsSearchOverlayOpened }: Props) {
     >
       <div style={{ height: '100%', position: 'relative' }}>
         <button
+          aria-label="Close search"
           onClick={() => handleIsSearchOverlayOpened(false)}
           className="absolute top-0 right-0 cursor-pointer w-[24px] h-[24px]"
         >

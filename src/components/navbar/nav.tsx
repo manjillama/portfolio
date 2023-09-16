@@ -46,12 +46,16 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
 
         <ul className="md:hidden flex">
           <li className="mx-2">
-            <button onClick={() => handleIsSearchOverlayOpened(true)}>
+            <button aria-label="Search" onClick={() => handleIsSearchOverlayOpened(true)}>
               <i className="fas fa-search"></i>
             </button>
           </li>
           <li className="ml-2">
-            <button onClick={() => handleIsNavMobileOpened(true)} className="h-[15px] w-[20px] cursor-pointer">
+            <button
+              aria-label="Open menu"
+              onClick={() => handleIsNavMobileOpened(true)}
+              className="h-[15px] w-[20px] cursor-pointer"
+            >
               <div className="bg-black h-[2px] mb-[3px]" />
               <div className="bg-black h-[2px] mb-[3px]" />
               <div className="bg-black h-[2px]" />
