@@ -21,6 +21,7 @@ const Seo = ({ title, description, pathname, children }: Props) => {
 
   return (
     <>
+      <html lang="en" />
       <title>{data.title}</title>
       <meta name="description" content={data.description} />
       <meta name="image" content={data.image} />

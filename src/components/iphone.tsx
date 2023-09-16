@@ -14,7 +14,7 @@ export default function IPhone() {
           >
             Mount Batur, Bali - 2022
           </div>
-          <img src="/images/phone.jpg" alt="phone frame" style={{ height: '100%' }} />
+          <img src="/images/phone.jpg" alt="phone frame" className="w-[334px] h-[683px]" />
           <div
             style={{
               position: 'absolute',
@@ -41,9 +41,9 @@ export default function IPhone() {
                   <img
                     src="/images/me-1.jpg"
                     alt="Me"
+                    className="w-[310px] h-[414px]"
                     style={{
                       marginTop: -100,
-                      width: '100%',
                       transition: 'transform 1s ease 0s',
                       transform: `translateY(${percentage * 14}%)`
                     }}

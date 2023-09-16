@@ -15,20 +15,24 @@ export const navLinks: { title: string; caption: string; url: string }[] = [
   { title: 'Contact', caption: 'Connect', url: '#contact' }
 ];
 
-export const socials: { faIconClass: string; url: string }[] = [
+export const socials: { name: string; faIconClass: string; url: string }[] = [
   {
+    name: 'GitHub',
     faIconClass: 'fab fa-github',
     url: 'https://bit.ly/2EYmxJV'
   },
   {
+    name: 'LinkedIn',
     faIconClass: 'fab fa-linkedin-in',
     url: 'https://bit.ly/2JN69OO'
   },
   {
+    name: 'Twitter',
     faIconClass: 'fab fa-twitter',
     url: 'https://bit.ly/3PdlKY1'
   },
   {
+    name: 'Email',
     faIconClass: 'fas fa-envelope',
     url: `mailto:${siteConfig.email}`
   }

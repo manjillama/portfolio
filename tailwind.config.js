@@ -10,7 +10,7 @@ module.exports = {
       fontSize: 14,
       colors: {
         primary: {
-          regular: '#007aff',
+          regular: '#0071ea',
           dark: '#0348ad'
         },
         secondary: {

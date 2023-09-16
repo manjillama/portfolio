@@ -10,7 +10,7 @@ export default function Footer() {
         <ul className="text-center mb-3">
           {socials.map((social) => (
             <li key={social.url} className="inline-block mx-[7.5px] text-xl text-gray-500 hover:text-primary-regular">
-              <a href={social.url} rel="noopener noreferrer" target="_blank">
+              <a href={social.url} aria-label={social.name} rel="noopener noreferrer" target="_blank">
                 <i className={social.faIconClass}></i>
               </a>
             </li>
