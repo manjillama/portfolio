@@ -11,6 +11,7 @@ import Projects from '../components/projects';
 import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Experience from '../components/experience';
+import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 const IndexPage = () => {
   return (
@@ -32,4 +33,12 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <Seo />;
+export const Head = () => {
+  const { siteUrl } = useSiteMetadata();
+
+  return (
+    <Seo>
+      <link rel="canonical" href={siteUrl} />
+    </Seo>
+  );
+};
