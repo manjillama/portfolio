@@ -54,7 +54,7 @@ export const experience = [
     ]
   },
   {
-    title: 'Software Engineer',
+    title: 'Full Stack Engineer',
     company: 'Vortex Technology',
     range: 'Feb 2019 - Aug 2020',
     companyUrl: 'https://www.vortexnepal.com',
@@ -70,7 +70,7 @@ export const experience = [
     ]
   },
   {
-    title: 'Front-End Developer Intern',
+    title: 'Frontend Developer Intern',
     company: 'Expresiv Studios',
     range: 'Jun 2017 - Aug 2017',
     companyUrl: 'https://www.expresivstudios.com',
