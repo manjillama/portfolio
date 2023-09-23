@@ -1,6 +1,6 @@
 ---
-title: Polymophism Explained Using React Typescript
-slug: polymophism-explained-using-react-typescript
+title: Polymorphism Explained Using React Typescript
+slug: polymorphism-explained-using-react-typescript
 featured: true
 date: 2022-02-10T00:00:00+00:00
 featuredImage: ../src/images/react-typescript.jpg
