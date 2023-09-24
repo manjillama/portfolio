@@ -27,6 +27,11 @@ export const socials: { name: string; faIconClass: string; url: string }[] = [
     url: 'https://bit.ly/2JN69OO'
   },
   {
+    name: 'CodePen',
+    faIconClass: 'fab fa-codepen',
+    url: 'https://bit.ly/3ZuI7g8'
+  },
+  {
     name: 'Twitter',
     faIconClass: 'fab fa-twitter',
     url: 'https://bit.ly/3PdlKY1'
@@ -93,12 +98,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'CTRL Ease',
-    description:
-      'CtrlEase provides an intelligent software platform that simplifies and automates hardware control, saving time and effort for researchers and engineers.',
-    techStack: ['GatsbyJS', 'React', 'Tailwind', 'GraphQL'],
-    url: 'https://ctrlease.gatsbyjs.io/',
-    githubLink: 'https://github.com/manjillama/ctrlease',
+    title: ' Spotify now playing widget',
+    description: 'A small Spotify widget suitable to add to your profile.',
+    techStack: ['Spotify API', 'Next.js', 'React Hydration'],
+    url: 'https://spotify-playing-badge.vercel.app',
+    githubLink: 'https://github.com/manjillama/spotify-now-playing-widget',
     year: 2023
   },
   {
@@ -111,6 +115,15 @@ export const projects: Project[] = [
     year: 2023
   },
   {
+    title: 'CTRL Ease',
+    description:
+      'CtrlEase provides an intelligent software platform that simplifies and automates hardware control, saving time and effort for researchers and engineers.',
+    techStack: ['GatsbyJS', 'React', 'Tailwind', 'GraphQL'],
+    url: 'https://ctrlease.gatsbyjs.io/',
+    githubLink: 'https://github.com/manjillama/ctrlease',
+    year: 2023
+  },
+  {
     title: 'manjiltamang.com (v2)',
     description: "My portfolio site built with Gatsby. Yes! The one you're looking at right now.",
     techStack: ['GatsbyJS', 'Tailwind', 'Styled-Components', 'GraphQL'],
@@ -118,7 +131,6 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/portfolio',
     year: 2023
   },
-
   {
     title: 'Automotive Benchmarking App',
     description: 'An automotive benchmarking web application, useful to small scale vendors in automotive businesses.',
@@ -245,13 +257,13 @@ export const projects: Project[] = [
     url: 'https://www.youtube.com/watch?v=p70srlZvyvQ',
     githubLink: 'https://github.com/manjillama/facial-recognition-python-django',
     year: 2018
-  },
-  {
-    title: 'Chat Application',
-    description: 'A simple real-time chat application which enables users from all around the world to chat together.',
-    techStack: ['Node.js', 'React', 'Socket.IO'],
-    url: '',
-    githubLink: 'https://github.com/manjillama/react-chat-app',
-    year: 2018
   }
+  // {
+  //   title: 'Chat Application',
+  //   description: 'A simple real-time chat application which enables users from all around the world to chat together.',
+  //   techStack: ['Node.js', 'React', 'Socket.IO'],
+  //   url: '',
+  //   githubLink: 'https://github.com/manjillama/react-chat-app',
+  //   year: 2018
+  // }
 ];
