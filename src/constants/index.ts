@@ -98,7 +98,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: ' Spotify now playing widget',
+    title: 'Commentsy',
+    description:
+      'Commentsy is an open-source service that enables developers, bloggers, and content creators to integrate easy comments to their website and start engaging with their audiences',
+    techStack: ['Next.js 13', 'NextAuth 4', 'TailwindCSS', 'TypeScript', 'MongoDB'],
+    url: 'https://commentsy.vercel.app',
+    githubLink: 'https://github.com/manjillama/commentsy',
+    year: 2023
+  },
+  {
+    title: 'Spotify now playing widget',
     description: 'A small Spotify widget suitable to add to your profile.',
     techStack: ['Spotify API', 'Next.js', 'React Hydration'],
     url: 'https://spotify-playing-badge.vercel.app',

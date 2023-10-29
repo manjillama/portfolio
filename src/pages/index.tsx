@@ -11,7 +11,7 @@ import Projects from '../components/projects';
 import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Experience from '../components/experience';
-import { useSiteMetadata } from '../hooks/use-site-metadata';
+import Commentsy from '../components/Commentsy';
 
 const IndexPage = () => {
   return (
@@ -22,6 +22,7 @@ const IndexPage = () => {
         <IPhone />
         <Quote />
         <Experience />
+        <Commentsy />
         <Projects />
         <HomeBlog />
         <Contact />
