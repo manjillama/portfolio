@@ -128,7 +128,7 @@ export const projects: Project[] = [
     description:
       'CtrlEase provides an intelligent software platform that simplifies and automates hardware control, saving time and effort for researchers and engineers.',
     techStack: ['GatsbyJS', 'React', 'Tailwind', 'GraphQL'],
-    url: 'https://ctrlease.gatsbyjs.io/',
+    url: 'https://ctrlease-api.netlify.app/',
     githubLink: 'https://github.com/manjillama/ctrlease',
     year: 2023
   },
