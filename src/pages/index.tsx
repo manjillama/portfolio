@@ -11,7 +11,7 @@ import Projects from '../components/projects';
 import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Experience from '../components/experience';
-import Commentsy from '../components/Commentsy';
+import Commentsy from '../components/commentsy';
 
 const IndexPage = () => {
   return (
