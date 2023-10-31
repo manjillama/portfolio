@@ -1,10 +1,9 @@
 import React from 'react';
 import SEO from '../../components/seo';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import BlogNavbar from '../../components/blog-navbar';
 import Footer from '../../components/footer';
-import { StaticImage } from 'gatsby-plugin-image';
-import { formatDate, readingTimeInMin } from '../../utils';
+import { formatDate } from '../../utils';
 import Layout from '../../components/layout';
 import { Blog } from '../../types';
 
@@ -17,7 +16,7 @@ type Props = {
 
 function BlogDetail({ location, data }: Props) {
   const { frontmatter, html, timeToRead } = data.markdownRemark;
-  const { title, featuredImage, date } = frontmatter;
+  const { title, slug, featuredImage, date } = frontmatter;
   const { href } = location;
 
   return (
@@ -59,6 +58,14 @@ function BlogDetail({ location, data }: Props) {
         <br />
         <br />
         <br />
+
+        <iframe
+          scrolling="no"
+          frameBorder="0"
+          id="commentsyIframe"
+          src={`https://commentsy.vercel.app/embed/TF-ZtzmUlnQa?identifier=${slug}&theme=light`}
+          style={{ width: '100%', border: 'none', overflow: 'hidden' }}
+        />
       </div>
       <Footer />
     </Layout>
@@ -73,6 +80,7 @@ export const query = graphql`
       frontmatter {
         date
         title
+        slug
         featuredImage {
           childrenImageSharp {
             fluid {

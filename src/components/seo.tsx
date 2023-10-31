@@ -41,6 +41,8 @@ const Seo = ({ title, description, pathname, children }: Props) => {
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
         crossOrigin="anonymous"
       />
+      <script defer src="/script.js"></script>
+
       {/* <script defer src="/mailerlite.js"></script>
       <script
         defer
