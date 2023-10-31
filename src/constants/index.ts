@@ -100,7 +100,7 @@ export const projects: Project[] = [
   {
     title: 'Commentsy',
     description:
-      'Commentsy is an open-source service that enables developers, bloggers, and content creators to integrate easy comments to their website and start engaging with their audiences',
+      'Commentsy is an open-source service that enables developers, bloggers, and content creators to integrate comments to their website and start engaging with their audiences right away.',
     techStack: ['Next.js 13', 'NextAuth 4', 'TailwindCSS', 'TypeScript', 'MongoDB'],
     url: 'https://commentsy.vercel.app',
     githubLink: 'https://github.com/manjillama/commentsy',
