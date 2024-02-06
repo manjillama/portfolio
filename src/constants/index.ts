@@ -52,10 +52,11 @@ export const experience = [
     tasks: [
       'Spearheaded multifaceted roles, encompassing talent acquisition, team leadership, and the complete end-to-end development of highly scalable software systems from the ground up, pivotal in securing Series A funding',
       "Strategically drove the company's software ecosystem overhaul, overseeing pivotal changes across critical components, including the off-vehicle software, charge station's network, digital wallet, and other essential elements resulting in a staggering 12-fold increase in the company's valuation over a span of just 3 years",
-      'Led a cross-functional team of engineers, designers, and product managers in the development and launch of a groundbreaking charge station software solution, which went on to secure a substantial $300,000 grant from USAID',
-      'Orchestrated the automated data-driven approach proven instrumental for both the sales and engineering teams, enabling them to harness real-time analytics and contribute to a remarkable revenue surge of 300% within a year',
-      "Actively contributed to business strategy and product roadmap, aligning technology decisions with the company's growth objectives, resulting in a 60% increase in user acquisition after a year of product launch",
-      'Collaborated with investors and stakeholders to secure multiple rounds of seed investments and series A funding, raising over $2 million in capital to fuel company growth and expansion'
+      'Implemented customer-centric, accessible front-end development using React, Next.js, and TailwindCSS, resulting in a 40% surge in user engagement and a 25% decrease in bounce rate',
+      'Engineered a robust backend infrastructure with Express/Node.js and NoSQL databases, enhancing data handling efficiency by 30%',
+      'Implemented microservices architecture utilizing NATS and API gateways, configured Nginx for efficient routing, orchestrated AWS deployment with GitHub Actions (CI/CD), and integrated Docker for streamlined development pipelines reducing deployment time by 50% and errors by 40%',
+      'Key contributor in React Native mobile app development, expanding user base by 300% within first six months',
+      'Proficient in Git for version control, established collaborative workflows via GitHub, increasing development efficiency by 30%'
     ]
   },
   {
@@ -183,10 +184,10 @@ export const projects: Project[] = [
   },
   {
     title: 'Blogging Site',
-    description: 'Personal / professional blogging website.',
+    description: 'Professional blogging website.',
     techStack: ['Ghost CMS'],
-    url: 'https://marinatamang.com/',
-    githubLink: '',
+    url: 'https://blog.himalayanhike.com/',
+    githubLink: 'https://github.com/himalayan-hike/himalayan-hike-blogger',
     year: 2020
   },
   {
