@@ -66,11 +66,10 @@ export const experience = [
     companyUrl: 'https://www.vortexnepal.com',
     tasks: [
       'Collaborated with cross-functional teams to develop innovative software products, translating client requirements into technical solutions, resulting in a 20% increase in client satisfaction and a 15% improvement in project delivery timelines',
-      'Designed and implemented RESTful APIs for Backend services, facilitating seamless communication between Frontend and Backend systems, resulting in a 30% improvement in data retrieval and response times',
-      'Utilized AWS services (EC2, S3, Lambda, RDS) to build and deploy cloud-based solutions, reducing infrastructure costs by 25% while improving scalability and reliability',
-      'Developed and maintained Backend APIs and services, optimizing performance and scalability, resulting in a 30% decrease in server response times',
+      'Developed backend APIs using Java, Spring Framework, and PostgreSQL, achieving a 30% reduction in response time',
+      ' Designed front-ends with Angular, JavaScript, and SASS resulting in a notable 30% increase in user satisfaction and a 20% boost in user engagement',
+      'Architected and deployed cloud-based solutions on Digital Ocean, reducing infrastructure costs by 25%',
       'Established CI/CD pipelines, automating the software release process, which led to a 40% reduction in deployment errors and faster release cycles',
-      'Leveraged Docker for containerization and to streamline development pipelines, resulting in a 40% improvement in development efficiency',
       'Managed database systems, including schema design, optimization, and data migration, ensuring data integrity and accessibility, resulting in a 25% reduction in query response times and a 20% improvement in overall system performance',
       'Executed unit, integration, e2e testings, and code reviews, improving code quality and reducing bug count by 30%'
     ]
