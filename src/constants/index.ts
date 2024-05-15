@@ -3,8 +3,7 @@ export const siteConfig = {
   intro:
     'I’m a software engineer who enjoys solving real-world problems using computer technologies. I specialize in building and executing web products.',
   position: 'Software Engineer',
-  email: 'hello@manjiltamang.com',
-  resumeUrl: '/assets/resume.pdf'
+  email: 'hello@manjiltamang.com'
 };
 
 export const navLinks: { title: string; caption: string; url: string }[] = [
@@ -21,20 +20,15 @@ export const socials: { name: string; faIconClass: string; url: string }[] = [
     faIconClass: 'fab fa-github',
     url: 'https://bit.ly/2EYmxJV'
   },
-  {
-    name: 'LinkedIn',
-    faIconClass: 'fab fa-linkedin-in',
-    url: 'https://bit.ly/2JN69OO'
-  },
+  // {
+  //   name: 'LinkedIn',
+  //   faIconClass: 'fab fa-linkedin-in',
+  //   url: 'https://bit.ly/2JN69OO'
+  // },
   {
     name: 'CodePen',
     faIconClass: 'fab fa-codepen',
     url: 'https://bit.ly/3ZuI7g8'
-  },
-  {
-    name: 'Twitter',
-    faIconClass: 'fab fa-twitter',
-    url: 'https://bit.ly/3PdlKY1'
   },
   {
     name: 'Email',
@@ -43,49 +37,7 @@ export const socials: { name: string; faIconClass: string; url: string }[] = [
   }
 ];
 
-export const experience = [
-  {
-    title: 'Founding Software Engineer',
-    company: 'Yatri Motorcycles',
-    range: 'Sep 2020 - Present',
-    companyUrl: 'https://www.yatrimotorcycles.com',
-    tasks: [
-      'Spearheaded multifaceted roles, encompassing talent acquisition, team leadership, and the complete end-to-end development of highly scalable software systems from the ground up, pivotal in securing Series A funding',
-      "Strategically drove the company's software ecosystem overhaul, overseeing pivotal changes across critical components, including the off-vehicle software, charge station's network, digital wallet, and other essential elements resulting in a staggering 12-fold increase in the company's valuation over a span of just 3 years",
-      'Implemented customer-centric, accessible front-end development using React, Next.js, and TailwindCSS, resulting in a 40% surge in user engagement and a 25% decrease in bounce rate',
-      'Engineered a robust backend infrastructure with Express/Node.js and NoSQL databases, enhancing data handling efficiency by 30%',
-      'Implemented microservices architecture utilizing NATS and API gateways, configured Nginx for efficient routing, orchestrated AWS deployment with GitHub Actions (CI/CD), and integrated Docker for streamlined development pipelines reducing deployment time by 50% and errors by 40%',
-      'Key contributor in React Native mobile app development, expanding user base by 300% within first six months',
-      'Proficient in Git for version control, established collaborative workflows via GitHub, increasing development efficiency by 30%'
-    ]
-  },
-  {
-    title: 'Full Stack Engineer',
-    company: 'Vortex Technology',
-    range: 'Feb 2019 - Aug 2020',
-    companyUrl: 'https://www.vortexnepal.com',
-    tasks: [
-      'Collaborated with cross-functional teams to develop innovative software products, translating client requirements into technical solutions, resulting in a 20% increase in client satisfaction and a 15% improvement in project delivery timelines',
-      'Developed backend APIs using Java, Spring Framework, and PostgreSQL, achieving a 30% reduction in response time',
-      ' Designed front-ends with Angular, JavaScript, and SASS resulting in a notable 30% increase in user satisfaction and a 20% boost in user engagement',
-      'Architected and deployed cloud-based solutions on Digital Ocean, reducing infrastructure costs by 25%',
-      'Established CI/CD pipelines, automating the software release process, which led to a 40% reduction in deployment errors and faster release cycles',
-      'Managed database systems, including schema design, optimization, and data migration, ensuring data integrity and accessibility, resulting in a 25% reduction in query response times and a 20% improvement in overall system performance',
-      'Executed unit, integration, e2e testings, and code reviews, improving code quality and reducing bug count by 30%'
-    ]
-  },
-  {
-    title: 'Frontend Developer Intern',
-    company: 'Expresiv Studios',
-    range: 'Jun 2017 - Aug 2017',
-    companyUrl: 'https://www.expresivstudios.com',
-    tasks: [
-      'Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, React, Angular.js, jQuery, and Bootstrap, resulting in a 20% improvement in website loading times and user experience',
-      'Collaborated with the UI/UX team to ensure a seamless and visually appealing user experience',
-      'Applied responsive design techniques to ensure optimal display on various devices'
-    ]
-  }
-];
+export const experience = [];
 
 export type Project = {
   title: string;
