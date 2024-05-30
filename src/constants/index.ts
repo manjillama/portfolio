@@ -101,8 +101,8 @@ export const projects: Project[] = [
   //   year: 2023
   // },
   {
-    title: 'Online Store',
-    description: 'Clothing, helmets, accessories and merchandising by Yatri Motorcycles built with Strapi and Next.js',
+    title: 'E-Store',
+    description: 'Clothing, accessories and merchandising e-store built with Strapi and Next.js',
     techStack: ['Strapi', 'Next.js', 'MySQL'],
     url: 'https://www.store.yatrimotorcycles.com',
     githubLink: 'https://github.com/manjillama/store',
@@ -125,14 +125,14 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/mongoose-util',
     year: 2021
   },
-  {
-    title: 'Himalayan Hike',
-    description: 'Himalayan hike is a Nepal based tour and travel agency operating in Nepal, India and Bhutan.',
-    techStack: ['Stripe', 'React SSR', 'Node.js', 'GraphQL', 'Sequelize'],
-    url: 'https://himalayanhike.com/',
-    githubLink: '',
-    year: 2020
-  },
+  // {
+  //   title: 'Himalayan Hike',
+  //   description: 'Himalayan hike is a Nepal based tour and travel agency operating in Nepal, India and Bhutan.',
+  //   techStack: ['Stripe', 'React SSR', 'Node.js', 'GraphQL', 'Sequelize'],
+  //   url: 'https://himalayanhike.com/',
+  //   githubLink: '',
+  //   year: 2020
+  // },
   {
     title: 'Blogging Site',
     description: 'Professional blogging website.',
