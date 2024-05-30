@@ -66,15 +66,15 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/spotify-now-playing-widget',
     year: 2023
   },
-  {
-    title: 'Ease Nepal',
-    description:
-      'An open-source platform dedicated to making the daily life of Nepalese people a bit easier, starting with mapping locations of all the public restrooms.',
-    techStack: ['React', 'Redux', 'TypeScript', 'SASS', 'Node.js', 'Mongoose'],
-    url: '',
-    githubLink: 'https://github.com/manjillama/npl-public',
-    year: 2023
-  },
+  // {
+  //   title: 'Ease Nepal',
+  //   description:
+  //     'An open-source platform dedicated to making the daily life of Nepalese people a bit easier, starting with mapping locations of all the public restrooms.',
+  //   techStack: ['React', 'Redux', 'TypeScript', 'SASS', 'Node.js', 'Mongoose'],
+  //   url: '',
+  //   githubLink: 'https://github.com/manjillama/npl-public',
+  //   year: 2023
+  // },
   {
     title: 'CTRL Ease',
     description:
@@ -92,14 +92,14 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/portfolio',
     year: 2023
   },
-  {
-    title: 'Automotive Benchmarking App',
-    description: 'An automotive benchmarking web application, useful to small scale vendors in automotive businesses.',
-    techStack: ['Strapi', 'SvelteKit', 'MySQL'],
-    url: '',
-    githubLink: 'https://github.com/manjillama/automotive-benchmarking',
-    year: 2023
-  },
+  // {
+  //   title: 'Automotive Benchmarking App',
+  //   description: 'An automotive benchmarking web application, useful to small scale vendors in automotive businesses.',
+  //   techStack: ['Strapi', 'SvelteKit', 'MySQL'],
+  //   url: '',
+  //   githubLink: 'https://github.com/manjillama/automotive-benchmarking',
+  //   year: 2023
+  // },
   {
     title: 'Online Store',
     description: 'Clothing, helmets, accessories and merchandising by Yatri Motorcycles built with Strapi and Next.js',
@@ -217,7 +217,7 @@ export const projects: Project[] = [
     techStack: ['Machine Learning', 'Python 2', 'Django', 'OpenCV'],
     url: 'https://www.youtube.com/watch?v=p70srlZvyvQ',
     githubLink: 'https://github.com/manjillama/facial-recognition-python-django',
-    year: 2018
+    year: 2017
   }
   // {
   //   title: 'Chat Application',
