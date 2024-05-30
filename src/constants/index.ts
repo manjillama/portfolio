@@ -108,15 +108,15 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/store',
     year: 2022
   },
-  {
-    title: 'Food Loops',
-    description:
-      'An easy open-source Backend-as-a-Service (BaaS) that provides developers API needed for small restaurant/food businesses to go online.',
-    techStack: ['React', 'Redux', 'Node.js', 'Mongoose', 'REST API'],
-    url: '',
-    githubLink: 'https://github.com/manjillama/food-loops',
-    year: 2021
-  },
+  // {
+  //   title: 'Food Loops',
+  //   description:
+  //     'An easy open-source Backend-as-a-Service (BaaS) that provides developers API needed for small restaurant/food businesses to go online.',
+  //   techStack: ['React', 'Redux', 'Node.js', 'Mongoose', 'REST API'],
+  //   url: '',
+  //   githubLink: 'https://github.com/manjillama/food-loops',
+  //   year: 2021
+  // },
   {
     title: 'Mongoose Utils',
     description: 'Easy lightweight utility library to make data querying in mongoose a lot easier.',
