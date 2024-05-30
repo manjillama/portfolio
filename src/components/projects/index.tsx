@@ -8,7 +8,7 @@ export default function Projects() {
     <section id="projects" className="container px-[15px] mx-auto mb-8">
       <div className="h-24" />
       <ScrollAnimation animateOnce animateIn="fadeInUp">
-        <h5 className="text-center font-bold mb-6 text-2xl">Personal projects 👨🏽‍💻</h5>
+        <h5 className="text-center font-bold mb-6 text-2xl">Opensource projects 👨🏽‍💻</h5>
         <div className="flex flex-wrap mx-[-15px]">
           {projects.map((project, index) => (
             <ProjectItem key={index} project={project} />
