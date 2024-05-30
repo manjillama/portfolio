@@ -26,7 +26,7 @@ const HeaderHero = () => {
             <ScrollAnimation delay={400} animateOnce animateIn="fadeInUp">
               <p className="max-w-2xl text-[#8892b0] mb-10">{siteConfig.intro}</p>
               <CustomLink
-                text="Check out my latest projects"
+                text="Open source projects"
                 href={'#projects'}
                 variant="secondary"
                 showBoxShadowOnHover
