@@ -5,11 +5,7 @@ import { formatDate } from '../utils';
 export default function FeaturedBlog() {
   const data = useStaticQuery(graphql`
     query GetFeaturedBlogs {
-      blogs: allMarkdownRemark(
-        filter: { frontmatter: { featured: { eq: true } } }
-        sort: { frontmatter: { date: DESC } }
-        limit: 3
-      ) {
+      blogs: allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 6) {
         nodes {
           frontmatter {
             date

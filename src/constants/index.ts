@@ -79,7 +79,7 @@ export const projects: Project[] = [
     title: 'CTRL Ease',
     description:
       'CtrlEase provides an intelligent software platform that simplifies and automates hardware control, saving time and effort for researchers and engineers.',
-    techStack: ['GatsbyJS', 'React', 'Tailwind', 'GraphQL'],
+    techStack: ['OpenAI API', 'GatsbyJS', 'React', 'Tailwind', 'GraphQL'],
     url: 'https://ctrlease-api.netlify.app/',
     githubLink: 'https://github.com/manjillama/ctrlease',
     year: 2023
@@ -135,14 +135,14 @@ export const projects: Project[] = [
   // },
   {
     title: 'Blogging Site',
-    description: 'Professional blogging website.',
+    description: 'Personal or professional blogging website.',
     techStack: ['Ghost CMS'],
     url: 'https://blog.himalayanhike.com/',
     githubLink: 'https://github.com/himalayan-hike/himalayan-hike-blogger',
     year: 2020
   },
   {
-    title: 'Threadly - Medium Clone',
+    title: 'Threadly',
     description: 'A simple medium.com like online social story sharing platform. Like instagram but for stories!',
     techStack: ['React', 'Node.js', 'Express.js', 'Elasticsearch', 'Sequelize'],
     url: '',
@@ -173,18 +173,18 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/audio-book-app',
     year: 2020
   },
+  // {
+  //   title: 'HR Hub',
+  //   description: 'A Human resource company which offers effective recruiting solutions through different platforms.',
+  //   techStack: ['Java', 'Spring Boot', 'MySQL', 'Hibernate', 'Bootstrap'],
+  //   url: 'https://www.hrhub.com.np/',
+  //   githubLink: '',
+  //   year: 2019
+  // },
   {
-    title: 'HR Hub',
-    description: 'A Human resource company which offers effective recruiting solutions through different platforms.',
-    techStack: ['Java', 'Spring Boot', 'MySQL', 'Hibernate', 'Bootstrap'],
-    url: 'https://www.hrhub.com.np/',
-    githubLink: '',
-    year: 2019
-  },
-  {
-    title: 'Store Manager',
+    title: 'Retail CRM',
     description:
-      'Online sales, customers and orders manager as well as creating receipt for small business specially clothing.',
+      'Online sales, customers and orders manager as well as creating receipt for small business specially retail stores.',
     techStack: ['Java', 'Spring Boot', 'MySQL', 'Hibernate', 'Bootstrap'],
     url: '',
     githubLink: 'https://github.com/manjillama/clothing-manager',
