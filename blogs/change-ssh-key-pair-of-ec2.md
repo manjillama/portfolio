@@ -2,7 +2,7 @@
 title: Change ssh key-pair of running EC2 instance
 slug: change-ssh-key-pair-of-ec2
 featured: false
-date: 2021-08-14T00:00:00+00:00
+date: 2020-08-14T00:00:00+00:00
 featuredImage: ../src/images/ec2-ubuntu.jpg
 ---
 
