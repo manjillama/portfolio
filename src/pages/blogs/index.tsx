@@ -42,7 +42,11 @@ function Blogs({ data }: Props) {
 
 export const query = graphql`
   query GetBlogs {
-    blogs: allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 20) {
+    blogs: allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      limit: 20
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
       nodes {
         frontmatter {
           date

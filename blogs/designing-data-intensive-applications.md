@@ -2,6 +2,7 @@
 title: 'Guide: Designing Data-Intensive Applications'
 slug: designing-data-intensive-applications
 featured: true
+published: true
 date: 2023-09-14T00:00:00+00:00
 featuredImage: ../src/images/distributed-system.jpg
 ---

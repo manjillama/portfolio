@@ -2,6 +2,7 @@
 title: Introduction to Spring Framework and Spring Boot
 slug: introduction-to-spring-framework-and-spring-boot
 featured: true
+published: true
 date: 2021-09-02T00:00:00+00:00
 featuredImage: ../src/images/spring.png
 ---

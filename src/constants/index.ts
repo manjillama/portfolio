@@ -8,9 +8,9 @@ export const siteConfig = {
 
 export const navLinks: { title: string; caption: string; url: string }[] = [
   { title: 'Home', caption: 'Welcome', url: '/' },
-  { title: 'Experience', caption: 'Work', url: '#experience' },
-  { title: 'Projects', caption: 'Open source', url: '#projects' },
+  // { title: 'Experience', caption: 'Work', url: '#experience' },
   { title: 'Blog', caption: 'Tech', url: '/blogs' },
+  { title: 'Projects', caption: 'Open source', url: '#projects' },
   { title: 'Contact', caption: 'Connect', url: '#contact' }
 ];
 

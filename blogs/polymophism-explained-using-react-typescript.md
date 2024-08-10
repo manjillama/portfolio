@@ -2,6 +2,7 @@
 title: Polymorphism Explained Using React Typescript
 slug: polymorphism-explained-using-react-typescript
 featured: false
+published: true
 date: 2021-07-04T00:00:00+00:00
 featuredImage: ../src/images/react-typescript.jpg
 ---

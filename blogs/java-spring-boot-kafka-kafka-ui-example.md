@@ -2,6 +2,7 @@
 title: 'Spring Boot with Kafka, Kafka UI and Docker example'
 slug: java-spring-boot-kafka-kafka-ui-example
 featured: true
+published: true
 date: 2023-10-02T00:00:00+00:00
 featuredImage: ../src/images/spring-kafka.png
 ---

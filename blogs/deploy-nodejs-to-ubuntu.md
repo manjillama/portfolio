@@ -2,6 +2,7 @@
 title: Deploy Node.js app to Ubuntu - Server setup, Nginx, SSL
 slug: deploy-nodejs-to-ubuntu
 featured: true
+published: true
 date: 2021-07-02T00:00:00+00:00
 featuredImage: ../src/images/nodejs-deploy.jpg
 ---

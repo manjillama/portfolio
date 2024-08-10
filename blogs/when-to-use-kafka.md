@@ -2,6 +2,7 @@
 title: When to use Kafka
 slug: when-to-use-kafka
 featured: true
+published: true
 date: 2023-02-14T00:00:00+00:00
 featuredImage: ../src/images/kafka.jpg
 ---

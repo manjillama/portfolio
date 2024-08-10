@@ -22,8 +22,8 @@ const IndexPage = () => {
         <IPhone />
         <Quote />
         <Commentsy />
-        <Projects />
         <HomeBlog />
+        <Projects />
         <Contact />
         <Footer />
       </Wrapper>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import * as styles from './commentsy.module.css';
 
 export default function Commentsy() {
   return (
@@ -74,12 +75,12 @@ export default function Commentsy() {
             </div>
             <div className="lg:w-1/2 relative px-16 py-20">
               <img
-                className="-translate-x-20 rounded-xl border border-neutral-200 -rotate-12 shadow-md"
+                className={`${styles.left} rounded-xl border border-neutral-200  shadow-md`}
                 src="/images/commentsy-1.jpg"
                 alt="commentsy banner 1"
               />
               <img
-                className="translate-x-20 rounded-xl absolute inset-0 rotate-12 scale-75 shadow-2xl"
+                className={`${styles.right} rounded-xl absolute inset-0 rotate-12 scale-75 shadow-2xl`}
                 src="/images/commentsy-2.jpg"
                 alt="commentsy banner 2"
               />
