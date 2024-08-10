@@ -2,6 +2,7 @@
 title: SOLID Design Principles
 slug: solid-design-principles
 featured: true
+published: true
 date: 2022-02-10T00:00:00+00:00
 featuredImage: ../src/images/solid.png
 ---

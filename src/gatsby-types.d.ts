@@ -1427,6 +1427,7 @@ type MarkdownRemarkFrontmatter = {
   readonly date: Maybe<Scalars['Date']>;
   readonly featured: Maybe<Scalars['Boolean']>;
   readonly featuredImage: Maybe<File>;
+  readonly published: Maybe<Scalars['Boolean']>;
   readonly slug: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
 };
@@ -1443,6 +1444,7 @@ type MarkdownRemarkFrontmatterFieldSelector = {
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly featured: InputMaybe<FieldSelectorEnum>;
   readonly featuredImage: InputMaybe<FileFieldSelector>;
+  readonly published: InputMaybe<FieldSelectorEnum>;
   readonly slug: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
@@ -1451,6 +1453,7 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly featured: InputMaybe<BooleanQueryOperatorInput>;
   readonly featuredImage: InputMaybe<FileFilterInput>;
+  readonly published: InputMaybe<BooleanQueryOperatorInput>;
   readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
@@ -1459,6 +1462,7 @@ type MarkdownRemarkFrontmatterSortInput = {
   readonly date: InputMaybe<SortOrderEnum>;
   readonly featured: InputMaybe<SortOrderEnum>;
   readonly featuredImage: InputMaybe<FileSortInput>;
+  readonly published: InputMaybe<SortOrderEnum>;
   readonly slug: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };

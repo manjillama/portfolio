@@ -2,6 +2,7 @@
 title: Comprehensive Guide to Java Threads
 slug: comprehensive-guide-to-java-threads
 featured: true
+published: true
 date: 2021-08-02T00:00:00+00:00
 featuredImage: ../src/images/java-threads.webp
 ---
