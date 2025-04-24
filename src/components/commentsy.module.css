@@ -21,14 +21,16 @@
   }
 }
 .left {
-  animation-name: leftAnim;
+  transform: translateX(-5rem) rotate(-20deg);
+  /* animation-name: leftAnim;
   animation-duration: 8s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear; */
 }
 .right {
-  animation-name: rightAnim;
+  transform: translateX(5rem) scale(0.75) rotate(20deg);
+  /* animation-name: rightAnim;
   animation-duration: 8s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear; */
 }
