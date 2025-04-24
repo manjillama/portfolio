@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Manjil Tamang',
   intro:
-    'I’m a software engineer who enjoys solving real-world problems using computer technologies. I specialize in building and executing web products.',
+    'I’m a software engineer who enjoys solving real-world problems using computer technologies. Most days, you’ll find me working on backend systems that juggle real-time data and traffic without breaking a sweat.',
   position: 'Software Engineer',
   email: 'hello@manjiltamang.com'
 };
@@ -49,6 +49,14 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: 'Centsibly',
+    description: 'Track your income and spendings. The budget app that you always wanted.',
+    techStack: ['Next.js 13', 'NextAuth 4', 'TailwindCSS', 'TypeScript', 'MongoDB'],
+    url: 'https://centsibly.vercel.app',
+    githubLink: 'https://github.com/manjillama/centsibly',
+    year: 2024
+  },
   {
     title: 'Commentsy',
     description:

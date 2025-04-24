@@ -47,3 +47,13 @@
 .blog-body h3 {
   font-size: 1.2rem;
 }
+.blog-body table thead {
+  text-align: left;
+}
+.blog-body table {
+  margin: 0 -15px;
+}
+.blog-body table th,
+.blog-body table td {
+  padding: 6px 15px;
+}
