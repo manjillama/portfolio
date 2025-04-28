@@ -184,3 +184,35 @@ All nodes working together form a **cluster**. They share the data and work as o
   - Figures out which shard(s) should handle it
   - Distributes the work
   - Merges the results (for reads)
+- Why only a replica might go missing when a node goes down (yellow state) if the node was holding primary as well?
+  If a node that holds both primary and replica shards goes down, then all its shards are gone — not just the replicas.
+  BUT…
+  Elasticsearch never places a replica shard on the same node as its primary.
+  This is by design, to ensure high availability.
+  **Example Setup (3 nodes, 3 primary shards, 1 replica per shard)**
+  | **Shard ID** | **Primary on** | **Replica on** |
+  | ------------ | -------------- | -------------- |
+  | Shard 0 | Node A | Node B |
+  | Shard 1 | Node B | Node C |
+  | Shard 2 | Node C | Node A |
+  Now if **Node B goes down**:
+  - 🔴 Primary of Shard 1 is lost — BUT Elasticsearch **promotes** its replica from Node C to primary.
+  - 🟡 Replica of Shard 0 is lost (which was on Node B), and now **unassigned**.
+  - ✅ Shard 2 is unaffected.
+    So:
+  - No data loss.
+  - Cluster becomes **yellow** (due to missing replica).
+  - Elasticsearch continues to serve requests.
+    Internally when allocating shards, Elasticsearch:
+  - Tries to **balance shards evenly**.
+  - Ensures **a node never holds both a primary and its replica**.
+  - When a node is added/removed, it may **reallocate shards** to maintain this balance.
+    **After Node B goes down**, **Node C can hold both**:
+  - The **primary of Shard 1** (promoted from replica), and
+  - The **primary of Shard 2** (which it was already holding).
+    This is **allowed temporarily** to keep the cluster functional — but Elasticsearch will **rebalance** shards **automatically** when possible.
+- Is the number of primary shards in an Elasticsearch index fixed at the time of index creation?
+  Yes, the number of primary shards in an Elasticsearch index is fixed at the time of index creation. Once you create an index, you cannot change the number of primary shards.
+  **But you can:**
+  - Change the number of replicas at any time.
+  - Reindex into a new index with a different number of primary shards if you really need to change it.
