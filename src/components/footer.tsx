@@ -44,14 +44,14 @@ export default function Footer() {
           >
             Tailwind CSS
           </a>
-          , deployed on a{' '}
+          , deployed on{' '}
           <a
-            href="https://www.digitalocean.com/products/droplets"
+            href="https://vercel.com"
             rel="noopener noreferrer"
             target="_blank"
             className="text-primary-regular hover:underline"
           >
-            DigitalOcean Droplet
+            Vercel
           </a>
           .
         </p>

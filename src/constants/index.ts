@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Manjil Tamang',
   intro:
-    'I’m a software engineer who enjoys solving real-world problems using computer technologies. Most days, you’ll find me working on backend systems that juggle real-time data and traffic without breaking a sweat.',
+    'I’m a software engineer who enjoys solving real-world problems and building systems that scale. My work focuses on reliable backend systems that handle real-time data and high traffic across the globe.',
   position: 'Software Engineer',
   email: 'hello@manjiltamang.com'
 };
