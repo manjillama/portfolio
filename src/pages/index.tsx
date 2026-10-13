@@ -11,7 +11,7 @@ import Projects from '../components/projects';
 import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Experience from '../components/experience';
-import Commentsy from '../components/commentsy';
+import Featured from '../components/featured';
 
 const IndexPage = () => {
   return (
@@ -21,7 +21,7 @@ const IndexPage = () => {
         <Spotify />
         <IPhone />
         <Quote />
-        <Commentsy />
+        <Featured />
         <HomeBlog />
         <Projects />
         <Contact />
