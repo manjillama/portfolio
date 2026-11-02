@@ -2880,7 +2880,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type GetBlogsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type GetBlogsQuery = { readonly blogs: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly timeToRead: number | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly slug: string | null, readonly featuredImage: { readonly childImageSharp: { readonly fluid: { readonly srcWebp: string | null } | null } | null } | null } | null }> } };
+type GetBlogsQuery = { readonly blogs: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly timeToRead: number | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly slug: string | null } | null }> } };
 
 type GetFeaturedBlogsQueryVariables = Exact<{ [key: string]: never; }>;
 

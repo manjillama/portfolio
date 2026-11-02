@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './commentsy.module.css';
 
 export default function Commentsy() {
-  return <div className="flex flex-wrap rounded-lg mb-4">
+  return <div className="featured-project featured-commentsy flex flex-wrap rounded-lg mb-4">
     <div className="w-full lg:w-1/2 lg:mb-4 lg:pr-20 flex flex-col justify-center">
       <h5>Add comments to your website in just a few minutes.</h5>
       <div className="flex items-center mb-2">
@@ -28,7 +28,7 @@ export default function Commentsy() {
           </svg>
         </a>
         <a
-          href="https://commentsy.vercel.app/"
+          href="https://commentsy.com/"
           className="hover:text-primary-regular inline-block"
           target="_blank"
         >

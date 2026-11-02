@@ -8,12 +8,9 @@ export default function ProjectItem({
   project: Project;
 }) {
   return (
-    <div className="basis-12/12 sm:basis-6/12 md:basis-4/12 lg:basis-3/12 px-[15px] my-[15px] w-full">
+    <div className="homepage-project-column basis-12/12 sm:basis-6/12 md:basis-4/12 px-[15px] my-[15px] w-full">
       <ScrollAnimation animateOnce animateIn="fadeInUp project-item" style={{ height: '100%' }}>
-        <a
-          target="_blank"
-          href={url || githubLink}
-          rel="noopener noreferrer"
+        <div
           className="p-[1.5rem] overflow-hidden rounded-md shadow-custom hover-effect flex flex-col h-full w-full"
         >
           <div className="flex flex-wrap">
@@ -35,7 +32,7 @@ export default function ProjectItem({
             </div>
             <div className="text-[1.1rem] text-gray-500">
               {githubLink && (
-                <a href={githubLink} className="mr-[8px] hover:text-primary-regular inline-block" target="_blank">
+                <a href={githubLink} className="mr-[8px] hover:text-primary-regular inline-block" target="_blank" rel="noopener noreferrer" aria-label={`${title} source code`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
@@ -53,7 +50,7 @@ export default function ProjectItem({
                 </a>
               )}
               {url && (
-                <a href={url} className="hover:text-primary-regular inline-block" target="_blank">
+                <a href={url} className="hover:text-primary-regular inline-block" target="_blank" rel="noopener noreferrer" aria-label={`Visit ${title}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
@@ -77,7 +74,7 @@ export default function ProjectItem({
 
           <article className="my-4 grow">
             <span className="text-xs text-secondary-regular font-bold">{year}</span>
-            <h3 className="font-bold mb-1">{title}</h3>
+            <h3 className="font-bold mb-1"><a href={url || githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-primary-regular">{title}</a></h3>
             <p className="text-gray-600 text-sm">{description}</p>
           </article>
 
@@ -91,7 +88,7 @@ export default function ProjectItem({
               </span>
             ))}
           </div>
-        </a>
+        </div>
       </ScrollAnimation>
     </div>
   );
