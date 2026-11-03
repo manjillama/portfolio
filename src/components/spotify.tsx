@@ -11,7 +11,7 @@ export default function Spotify() {
           <a target="_blank" href="https://github.com/manjillama/spotify-now-playing-widget">
             <img
               className="mx-auto"
-              src="https://spotify-playing-badge.vercel.app/api/now-playing"
+              src="https://spotify-playing-badge.vercel.app/api/widgets/now-playing?theme=dark"
               alt="Now Playing"
             ></img>
           </a>
