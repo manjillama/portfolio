@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { formatDate } from '../utils';
 
-export default function FeaturedBlog() {
+export default function FeaturedBlog({ variant = 'cards' }: { variant?: 'cards' | 'list' }) {
   const data = useStaticQuery(graphql`
     query GetFeaturedBlogs {
       blogs: allMarkdownRemark(
@@ -34,6 +34,25 @@ export default function FeaturedBlog() {
   `);
 
   const blogs = data.blogs.nodes;
+
+  if (variant === 'list') {
+    return (
+      <ol className="writing-list">
+        {blogs.map((blog: any, index: number) => (
+          <li key={blog.id}>
+            <Link to={`/blogs/${blog.frontmatter.slug}`} className="writing-row">
+              <span className="writing-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+              <div className="writing-row-copy">
+                <h3>{blog.frontmatter.title}</h3>
+                <p>{formatDate(blog.frontmatter.date)} <span aria-hidden="true">·</span> {blog.timeToRead} min read</p>
+              </div>
+              <span className="writing-row-arrow" aria-hidden="true">↗</span>
+            </Link>
+          </li>
+        ))}
+      </ol>
+    );
+  }
 
   return (
     <div className="flex flex-wrap mx-[-15px]">

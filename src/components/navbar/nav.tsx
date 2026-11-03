@@ -1,3 +1,4 @@
+import Logo from '../logo';
 import React from 'react';
 import { Link } from 'gatsby';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -13,8 +14,8 @@ export default function Nav({ handleIsNavMobileOpened, handleIsSearchOverlayOpen
     <div className="navbar h-[70px] sticky top-0 bg-white	z-50 border-b	border-[#f0f0f0]">
       <nav className="nav flex items-center justify-between p-[15px] container mx-auto h-full">
         <ScrollAnimation detail={150} animateOnce animateIn="fadeInUp" offset={0}>
-          <Link to="/">
-            <img src="/images/logo.png" alt="logo" className="h-[20px] w-[38px]" />
+          <Link to="/" aria-label="Manjil Tamang home">
+            <Logo />
           </Link>
         </ScrollAnimation>
         <ul className="hidden md:flex items-center">

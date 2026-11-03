@@ -8,10 +8,10 @@ export default function Spotify() {
       <ScrollAnimation animateOnce animateIn="fadeInUp">
         <h5 className="font-bold mb-4 text-2xl">Now playing on spotify 👾</h5>
         <div className="flex justify-center">
-          <a target="_blank" href="https://github.com/manjillama/spotify-now-playing-widget">
+          <a target="_blank" href="https://spotify-tiles.vercel.app/">
             <img
               className="mx-auto"
-              src="https://spotify-playing-badge.vercel.app/api/now-playing"
+              src="https://spotify-tiles.vercel.app/api/widgets/now-playing?theme=dark"
               alt="Now Playing"
             ></img>
           </a>

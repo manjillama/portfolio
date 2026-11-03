@@ -1,14 +1,12 @@
 import React from 'react';
 
 export default function Centsibly() {
-  return <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 rounded-lg mb-4">
-    <div className="order-2 lg:order-1">
-      <img
-        className="w-full rounded-lg shadow-md"
-        src="/images/centsibly.png"
-        alt="centsibly banner"
-      />
-    </div>
+  return <div className="featured-project featured-centsibly grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 rounded-lg mb-4">
+    <a className="centsibly-showcase order-2 lg:order-1" href="https://centsibly.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore Centsibly (opens in a new tab)">
+      <img className="centsibly-preview-main" src="/images/centsibly-1.png" alt="Centsibly homepage and monthly spending overview" loading="lazy" />
+      <img className="centsibly-preview-detail" src="/images/centsibly-2.png" alt="Centsibly custom budgets for trips and projects" loading="lazy" />
+      <span className="centsibly-preview-label">Monthly spending ↗ Custom budgets</span>
+    </a>
     <div className="order-1 lg:order-2 lg:mb-4 lg:pr-20 flex flex-col justify-center">
       <h5>The budget tracking app that you always wanted.</h5>
       <div className="flex items-center mb-2">
@@ -67,7 +65,7 @@ export default function Centsibly() {
         ))}
       </div>
       <p className="text-gray-600 text-sm mt-6 mb-0 lg:mb-12">
-        &quot;Centsibly&quot; is an open-source budget tracking web app. Join and gain insights into you income and spendings.
+        &quot;Centsibly&quot; is an open-source budget tracking web app. Track your income and spending, with separate budgets for trips and projects.
       </p>
     </div>
 

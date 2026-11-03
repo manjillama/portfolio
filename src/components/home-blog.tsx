@@ -5,18 +5,11 @@ import FeaturedBlog from './featured-blogs';
 
 export default function HomeBlog() {
   return (
-    <section className="container px-[15px] mx-auto mb-32">
-      <div className="h-24" />
+    <section className="homepage-writing container px-[15px] mx-auto mb-32">
+
       <ScrollAnimation animateOnce animateIn="fadeInUp">
-        <h5 className="font-bold mb-6 text-center text-2xl">Featured posts 📝</h5>
-        <FeaturedBlog />
-        <div className="mt-2">
-          <Link to="/blogs" className="text-primary-regular hover:underline">
-            <small>
-              EXPLORE ALL <i className="fas fa-chevron-right"></i>
-            </small>
-          </Link>
-        </div>
+        <div className="homepage-section-title"><div><span className="section-kicker">03 / THE BLOG</span><h2>Occasional notes from my work<span>.</span></h2></div><Link to="/blogs" className="section-all-link">All posts ↗</Link></div>
+        <FeaturedBlog variant="list" />
       </ScrollAnimation>
     </section>
   );

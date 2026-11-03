@@ -50,28 +50,30 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'Commentsy',
+    description:
+      'Commentsy is an open source, embeddable comment system for websites and blogs. Add threaded discussions in minutes, customize the theme, and manage comments from one dashboard.',
+    techStack: ['Next.js 13', 'NextAuth 4', 'TailwindCSS', 'TypeScript', 'MongoDB'],
+    url: 'https://commentsy.com',
+    githubLink: 'https://github.com/manjillama/commentsy',
+    year: 2023
+  },
+  {
     title: 'Centsibly',
-    description: 'Track your income and spendings. The budget app that you always wanted.',
+    description:
+      'Track income and expenses, understand your monthly spending, and create separate budgets for trips and projects in the currency you need.',
     techStack: ['Next.js 13', 'NextAuth 4', 'TailwindCSS', 'TypeScript', 'MongoDB'],
     url: 'https://centsibly.vercel.app',
     githubLink: 'https://github.com/manjillama/centsibly',
     year: 2024
   },
   {
-    title: 'Commentsy',
+    title: 'Spotify widgets',
     description:
-      'Commentsy is an open-source service that enables developers, bloggers, and content creators to integrate comments to their website and start engaging with their audiences right away.',
-    techStack: ['Next.js 13', 'NextAuth 4', 'TailwindCSS', 'TypeScript', 'MongoDB'],
-    url: 'https://commentsy.vercel.app',
-    githubLink: 'https://github.com/manjillama/commentsy',
-    year: 2023
-  },
-  {
-    title: 'Spotify now playing widget',
-    description: 'A small Spotify widget suitable to add to your profile.',
+      'A personal Spotify dashboard with embeddable widgets for now playing, recently played tracks, top tracks, and top artists. Features light and dark themes, simple OAuth setup, and JSON APIs for custom integrations.',
     techStack: ['Spotify API', 'Next.js', 'React Hydration'],
-    url: 'https://spotify-playing-badge.vercel.app',
-    githubLink: 'https://github.com/manjillama/spotify-now-playing-widget',
+    url: 'https://spotify-tiles.vercel.app',
+    githubLink: 'https://github.com/manjillama/spotify-widgets',
     year: 2023
   },
   // {
@@ -83,17 +85,17 @@ export const projects: Project[] = [
   //   githubLink: 'https://github.com/manjillama/npl-public',
   //   year: 2023
   // },
+  // {
+  //   title: 'CTRL Ease',
+  //   description:
+  //     'CtrlEase provides an intelligent software platform that simplifies and automates hardware control, saving time and effort for researchers and engineers.',
+  //   techStack: ['OpenAI API', 'GatsbyJS', 'React', 'Tailwind', 'GraphQL'],
+  //   url: 'https://ctrlease-api.netlify.app/',
+  //   githubLink: 'https://github.com/manjillama/ctrlease',
+  //   year: 2023
+  // },
   {
-    title: 'CTRL Ease',
-    description:
-      'CtrlEase provides an intelligent software platform that simplifies and automates hardware control, saving time and effort for researchers and engineers.',
-    techStack: ['OpenAI API', 'GatsbyJS', 'React', 'Tailwind', 'GraphQL'],
-    url: 'https://ctrlease-api.netlify.app/',
-    githubLink: 'https://github.com/manjillama/ctrlease',
-    year: 2023
-  },
-  {
-    title: 'manjiltamang.com (v2)',
+    title: 'manjiltamang.com (v3)',
     description: "My portfolio site built with Gatsby. Yes! The one you're looking at right now.",
     techStack: ['GatsbyJS', 'Tailwind', 'Styled-Components', 'GraphQL'],
     url: 'https://manjiltamang.com',
@@ -108,14 +110,14 @@ export const projects: Project[] = [
   //   githubLink: 'https://github.com/manjillama/automotive-benchmarking',
   //   year: 2023
   // },
-  {
-    title: 'E-Store',
-    description: 'Clothing, accessories and merchandising e-store built with Strapi and Next.js',
-    techStack: ['Strapi', 'Next.js', 'MySQL'],
-    url: 'https://www.store.yatrimotorcycles.com',
-    githubLink: 'https://github.com/manjillama/store',
-    year: 2022
-  },
+  // {
+  //   title: 'E-Store',
+  //   description: 'Clothing, accessories and merchandising e-store built with Strapi and Next.js',
+  //   techStack: ['Strapi', 'Next.js', 'MySQL'],
+  //   url: 'https://www.store.yatrimotorcycles.com',
+  //   githubLink: 'https://github.com/manjillama/store',
+  //   year: 2022
+  // },
   // {
   //   title: 'Food Loops',
   //   description:
@@ -133,14 +135,14 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/mongoose-util',
     year: 2021
   },
-  // {
-  //   title: 'Himalayan Hike',
-  //   description: 'Himalayan hike is a Nepal based tour and travel agency operating in Nepal, India and Bhutan.',
-  //   techStack: ['Stripe', 'React SSR', 'Node.js', 'GraphQL', 'Sequelize'],
-  //   url: 'https://himalayanhike.com/',
-  //   githubLink: '',
-  //   year: 2020
-  // },
+  {
+    title: 'Himalayan Hike',
+    description: 'Himalayan hike is a Nepal based tour and travel agency operating in Nepal, India and Bhutan.',
+    techStack: ['Stripe', 'React SSR', 'Node.js', 'GraphQL', 'Sequelize'],
+    url: 'https://himalayanhike.com/',
+    githubLink: '',
+    year: 2020
+  },
   {
     title: 'Blogging Site',
     description: 'Personal or professional blogging website.',
