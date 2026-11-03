@@ -13,7 +13,7 @@ import {
 } from './Link.module.css';
 
 interface CustomGatsbyLinkProps extends Omit<GatsbyLinkProps<Record<string, unknown>>, 'ref' | 'to'> {
-  text: string;
+  text: React.ReactNode;
   href: string;
   isInternalLink?: boolean;
   variant?: 'primary' | 'primary-dark' | 'secondary' | 'secondary-dark';

@@ -1,3 +1,4 @@
+import Icon from './ui/icon';
 import React from 'react';
 
 export default function Centsibly() {
@@ -5,7 +6,7 @@ export default function Centsibly() {
     <a className="centsibly-showcase order-2 lg:order-1" href="https://centsibly.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore Centsibly (opens in a new tab)">
       <img className="centsibly-preview-main" src="/images/centsibly-1.png" alt="Centsibly homepage and monthly spending overview" loading="lazy" />
       <img className="centsibly-preview-detail" src="/images/centsibly-2.png" alt="Centsibly custom budgets for trips and projects" loading="lazy" />
-      <span className="centsibly-preview-label">Monthly spending ↗ Custom budgets</span>
+      <span className="centsibly-preview-label">Monthly spending <Icon /> Custom budgets</span>
     </a>
     <div className="order-1 lg:order-2 lg:mb-4 lg:pr-20 flex flex-col justify-center">
       <h5>The budget tracking app that you always wanted.</h5>

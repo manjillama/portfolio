@@ -1,3 +1,4 @@
+import Icon from '../ui/icon';
 import React, { useState } from 'react';
 import ProjectItem from './project-item';
 import { projects } from '../../constants';
@@ -21,7 +22,7 @@ export default function Projects() {
       <div className="flex flex-wrap mx-[-15px]">
         {visibleProjects.map(project => <ProjectItem key={project.title} project={project} />)}
       </div>
-      {visibleProjects.length === 0 && <div className="project-empty"><p>No projects match “{search}”.</p><button onClick={() => setSearch('')}>Show all projects ↗</button></div>}
+      {visibleProjects.length === 0 && <div className="project-empty"><p>No projects match “{search}”.</p><button onClick={() => setSearch('')}>Show all projects <Icon /></button></div>}
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/icon';
 import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import Footer from '../../components/footer';
@@ -32,12 +33,12 @@ function Blogs({ data }: Props) {
       <header className="notebook-nav">
         <nav className="notebook-container" aria-label="Main navigation">
           <p className="notebook-brand">Manjil Tamang <span>/ writing</span></p>
-          <div><Link to="/">Home</Link><Link to="/blogs/" aria-current="page">Blog<span className="notebook-current" /></Link><Link to="/#projects">Projects <span aria-hidden="true">↗</span></Link></div>
+          <div><Link to="/">Home</Link><Link to="/blogs/" aria-current="page">Blog<span className="notebook-current" /></Link><Link to="/#projects">Projects <span aria-hidden="true"><Icon /></span></Link></div>
         </nav>
       </header>
       <main>
         <section className="notebook-intro notebook-container" aria-labelledby="notebook-title">
-          <p className="notebook-kicker"><span aria-hidden="true">✳</span> THE ENGINEERING NOTEBOOK</p>
+          <p className="notebook-kicker"><span aria-hidden="true"><Icon name="asterisk" /></span> THE ENGINEERING NOTEBOOK</p>
           <h1 id="notebook-title">Occasional notes from my work<span>.</span></h1>
           <p className="notebook-description">A place for things I don’t want to forget.</p>
           <div className="notebook-byline"><img src="/images/me-1.jpg" alt="" /><span>Written by Manjil Tamang</span><span className="notebook-post-count">{blogs.length} articles</span></div>
@@ -60,15 +61,15 @@ function Blogs({ data }: Props) {
                 <article className="notebook-article">
                   <Link to={`/blogs/${frontmatter.slug}`}>
                     <div className="notebook-article-meta"><span>{topicFor(blog)}</span></div>
-                    <div className="notebook-article-title"><h3>{frontmatter.title}</h3><span aria-hidden="true">↗</span></div>
+                    <div className="notebook-article-title"><h3>{frontmatter.title}</h3><span aria-hidden="true"><Icon /></span></div>
                     <div className="notebook-article-footer"><time dateTime={frontmatter.date}>{formatDate(frontmatter.date)}</time><span aria-hidden="true">·</span><span>{timeToRead} min read</span></div>
                   </Link>
                 </article>
               </li>;
             })}
           </ol>
-          {visibleBlogs.length === 0 && <div className="notebook-empty"><span aria-hidden="true">⌕</span><h3>No matching notes yet.</h3><p>Try a different topic or search term.</p><button onClick={clearFilters}>Show all articles ↗</button></div>}
-          <div className="notebook-end"><span aria-hidden="true">{'</>'}</span><p>That’s the notebook so far.</p><a href="mailto:hello@manjiltamang.com">Have a question? Say hello ↗</a></div>
+          {visibleBlogs.length === 0 && <div className="notebook-empty"><span aria-hidden="true">⌕</span><h3>No matching notes yet.</h3><p>Try a different topic or search term.</p><button onClick={clearFilters}>Show all articles <Icon /></button></div>}
+          <div className="notebook-end"><span aria-hidden="true">{'</>'}</span><p>That’s the notebook so far.</p><a href="mailto:hello@manjiltamang.com">Have a question? Say hello <Icon /></a></div>
         </section>
       </main>
       <Footer />

@@ -66,7 +66,7 @@ export default function Commentsy() {
         It simplifies the process of code integration and commenting, saving time and effort.
       </p>
     </div>
-    <div className="w-full lg:w-1/2 relative px-16 py-20">
+    <a className="w-full lg:w-1/2 relative px-16 py-20" href="https://commentsy.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore Commentsy (opens in a new tab)">
       <img
         className={`${styles.left} rounded-xl border border-neutral-200  shadow-md`}
         src="/images/commentsy-1.jpg"
@@ -77,6 +77,6 @@ export default function Commentsy() {
         src="/images/commentsy-2.jpg"
         alt="commentsy banner 2"
       />
-    </div>
+    </a>
   </div>
 }

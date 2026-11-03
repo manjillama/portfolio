@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Manjil Tamang',
   intro:
-    'I’m a software engineer who enjoys solving real-world problems and building systems that scale. My work focuses on reliable backend systems that handle real-time data and high traffic across the globe.',
+    'I’m a software engineer who enjoys working on open-source projects and building apps I use myself. On regular days, I’m usually working on backend systems, keeping them fast and reliable as they scale.',
   position: 'Software Engineer',
   email: 'hello@manjiltamang.com'
 };
@@ -18,17 +18,12 @@ export const socials: { name: string; faIconClass: string; url: string }[] = [
   {
     name: 'GitHub',
     faIconClass: 'fab fa-github',
-    url: 'https://bit.ly/2EYmxJV'
+    url: 'https://github.com/manjillama'
   },
-  // {
-  //   name: 'LinkedIn',
-  //   faIconClass: 'fab fa-linkedin-in',
-  //   url: 'https://bit.ly/2JN69OO'
-  // },
   {
     name: 'CodePen',
     faIconClass: 'fab fa-codepen',
-    url: 'https://bit.ly/3ZuI7g8'
+    url: 'https://codepen.io/manjiltamang'
   },
   {
     name: 'Email',
@@ -167,14 +162,6 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/manjillama/plain-react-modal',
     year: 2020
   },
-  // {
-  //   category: "Start Ups - Platform",
-  //   title: "Maidan",
-  //   description: "Online fashion store. Provided with very well engineered, sophisticated interface for both customer and sellers, Maidan seeks to provide a easy online shopping experience for customers nation wide.",
-  //   techStack:
-  //     "JavaScript, React/Redux, MySQL, Sequelize.js, Node/Express.js, SASS, Elasticsearch",
-  //   source: "https://bit.ly/3a7zePd",
-  // },
   {
     title: 'Audio Book Mobile App',
     description: 'A simple mobile audio book app to listen to your favorite audio book.',
@@ -213,12 +200,6 @@ export const projects: Project[] = [
   //   techStack:
   //     "Tech stack - React, Redux, Node.js, Express.js, Sequelize, MySQL",
   //   source: "http://food.vortexnepal.com/",
-  // },
-  // {
-  //   title: 'Threadly',
-  //   description: 'Threadly enables users to find and connect with people within close proximity sharing similar stories and visions.',
-  //   techStack: 'React, Redux, Node.js, Express.js, Elasticsearch, Sequelize, PostgreSQL',
-  //   source: 'https://bit.ly/2zAtaBo',
   // },
   {
     title: 'Face Recognition App',
