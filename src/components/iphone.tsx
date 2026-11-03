@@ -1,3 +1,4 @@
+import Icon from './ui/icon';
 import React from 'react';
 
 export default function IPhone() {
@@ -9,7 +10,7 @@ export default function IPhone() {
         <span className="personal-phone-location">Mount Batur, Bali · 2022</span>
         <span className="personal-phone-home" aria-hidden="true" />
       </div>
-      <figcaption>A little above the clouds. ↗</figcaption>
+      <figcaption>A little above the clouds. <Icon /></figcaption>
     </figure>
   );
 }

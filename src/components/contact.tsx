@@ -1,3 +1,4 @@
+import Icon from './ui/icon';
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { CustomLink } from './ui';
@@ -13,7 +14,7 @@ export default function Contact() {
           <CustomLink
             isInternalLink={false}
             href="mailto:hello@manjiltamang.com"
-            text="hello@manjiltamang.com ↗"
+            text={<>hello@manjiltamang.com <Icon /></>}
             showBoxShadowOnHover
           />
         </div>

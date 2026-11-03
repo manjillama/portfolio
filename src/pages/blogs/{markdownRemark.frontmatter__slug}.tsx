@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/icon';
 import React, { useEffect, useRef, useState } from 'react';
 import SEO from '../../components/seo';
 import { graphql, Link } from 'gatsby';
@@ -95,14 +96,14 @@ function BlogDetail({ data }: Props) {
         <header className="article-header" id="article-top">
           <Link className="article-back" to="/blogs/">← Back to the notebook</Link>
           <h1>{title}</h1>
-          <div className="article-byline"><img src="/images/me-1.jpg" alt="" /><div><span>Manjil Tamang</span><p><time dateTime={date}>{formatDate(date)}</time><span aria-hidden="true"> · </span>{timeToRead} min read</p></div><button onClick={copyLink} type="button" aria-label="Copy article link"><span role="status">{copyStatus}</span><span aria-hidden="true"> ↗</span></button></div>
+          <div className="article-byline"><img src="/images/me-1.jpg" alt="" /><div><span>Manjil Tamang</span><p><time dateTime={date}>{formatDate(date)}</time><span aria-hidden="true"> · </span>{timeToRead} min read</p></div><button onClick={copyLink} type="button" aria-label="Copy article link"><span role="status">{copyStatus}</span><span aria-hidden="true"> <Icon /></span></button></div>
         </header>
         <div className="article-layout">
           <article className="article-reading">
             {image && <div className="article-cover"><img src={image} alt="" /></div>}
             <div id="article-content" ref={bodyRef} className="blog-detail blog-body" dangerouslySetInnerHTML={{ __html: html }} />
             <div className="article-endnote"><span aria-hidden="true">{'</>'}</span><p>Thanks for reading.</p><div><Link to="/blogs/">← More from the notebook</Link><a href="#article-top">Back to top ↑</a></div></div>
-            <section className="article-comments" aria-labelledby="comments-title"><p className="article-section-label">CONTINUE THE CONVERSATION</p><h2 id="comments-title">Questions or thoughts?</h2><p>Leave a comment below, or <a href="mailto:hello@manjiltamang.com">send me an email ↗</a>.</p><iframe title="Article comments powered by Commentsy" loading="lazy" scrolling="no" id="commentsyIframe" src={`https://commentsy.vercel.app/embed/TF-ZtzmUlnQa?identifier=${slug}&theme=light`} /></section>
+            <section className="article-comments" aria-labelledby="comments-title"><p className="article-section-label">CONTINUE THE CONVERSATION</p><h2 id="comments-title">Questions or thoughts?</h2><p>Leave a comment below, or <a href="mailto:hello@manjiltamang.com">send me an email <Icon /></a>.</p><iframe title="Article comments powered by Commentsy" loading="lazy" scrolling="no" id="commentsyIframe" src={`https://commentsy.vercel.app/embed/TF-ZtzmUlnQa?identifier=${slug}&theme=light`} /></section>
           </article>
           {sections.length > 0 && <aside className="article-sidebar" aria-label="Article contents"><details open><summary>ON THIS PAGE <span aria-hidden="true">⌄</span></summary><ol>{sections.map(section => <li key={section.id} className={section.depth === 3 ? 'is-subsection' : ''}><a href={`#${section.id}`} onClick={event => {
             const heading = document.getElementById(section.id);

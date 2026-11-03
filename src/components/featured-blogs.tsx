@@ -1,3 +1,4 @@
+import Icon from './ui/icon';
 import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { formatDate } from '../utils';
@@ -46,7 +47,7 @@ export default function FeaturedBlog({ variant = 'cards' }: { variant?: 'cards' 
                 <h3>{blog.frontmatter.title}</h3>
                 <p>{formatDate(blog.frontmatter.date)} <span aria-hidden="true">·</span> {blog.timeToRead} min read</p>
               </div>
-              <span className="writing-row-arrow" aria-hidden="true">↗</span>
+              <span className="writing-row-arrow" aria-hidden="true"><Icon /></span>
             </Link>
           </li>
         ))}
