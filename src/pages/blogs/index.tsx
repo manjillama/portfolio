@@ -31,25 +31,25 @@ function Blogs({ data }: Props) {
       <a className="blog-skip" href="#articles">Skip to articles</a>
       <header className="notebook-nav">
         <nav className="notebook-container" aria-label="Main navigation">
-          <Link to="/" className="notebook-brand" aria-label="Manjil Tamang home"><img src="/images/logo.png" alt="" /><span>Manjil Tamang <span>/ writing</span></span></Link>
+          <p className="notebook-brand">Manjil Tamang <span>/ writing</span></p>
           <div><Link to="/">Home</Link><Link to="/blogs/" aria-current="page">Blog<span className="notebook-current" /></Link><Link to="/#projects">Projects <span aria-hidden="true">↗</span></Link></div>
         </nav>
       </header>
       <main>
         <section className="notebook-intro notebook-container" aria-labelledby="notebook-title">
           <p className="notebook-kicker"><span aria-hidden="true">✳</span> THE ENGINEERING NOTEBOOK</p>
-          <h1 id="notebook-title">Notes from my editor<span>.</span></h1>
-          <p className="notebook-description">Things I’ve learned about Java, backend systems, and building for the web.</p>
+          <h1 id="notebook-title">Occasional notes from my work<span>.</span></h1>
+          <p className="notebook-description">A place for things I don’t want to forget.</p>
           <div className="notebook-byline"><img src="/images/me-1.jpg" alt="" /><span>Written by Manjil Tamang</span><span className="notebook-post-count">{blogs.length} articles</span></div>
           <span className="notebook-margin-note" aria-hidden="true">// learn. build. write.</span>
         </section>
         <section id="articles" className="notebook-archive notebook-container" aria-labelledby="archive-title">
+          <h2 id="archive-title" className="sr-only">Articles</h2>
           <div className="notebook-tools">
-            <h2 id="archive-title">The reading list<span aria-hidden="true"> ↓</span></h2>
+            <div className="notebook-filters" role="group" aria-label="Filter articles by topic">{topics.map(item => <button key={item} aria-pressed={topic === item} onClick={() => setTopic(item)}>{item}{item === 'All posts' && <span>{blogs.length}</span>}</button>)}</div>
             <label className="notebook-search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg><span className="sr-only">Search articles</span><input type="search" placeholder="Search the notebook…" value={search} onChange={event => setSearch(event.target.value)} /></label>
           </div>
-          <div className="notebook-filters" role="group" aria-label="Filter articles by topic">{topics.map(item => <button key={item} aria-pressed={topic === item} onClick={() => setTopic(item)}>{item}{item === 'All posts' && <span>{blogs.length}</span>}</button>)}</div>
-          <p className="notebook-result-count" role="status">{filtered ? `${visibleBlogs.length} ${visibleBlogs.length === 1 ? 'article' : 'articles'} found` : 'Latest first · Take your time.'}</p>
+          <p className={filtered ? 'notebook-result-count' : 'sr-only'} role="status">{visibleBlogs.length} {visibleBlogs.length === 1 ? 'article' : 'articles'}{filtered ? ' found' : ' · newest first'}</p>
           <ol className="notebook-list">
             {visibleBlogs.map((blog, index) => {
               const { frontmatter, timeToRead } = blog;
