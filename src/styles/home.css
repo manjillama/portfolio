@@ -121,7 +121,6 @@
 .homepage #commentsy h5 { font-size: 12px; color: #537085; }
 .homepage #commentsy p { line-height: 1.9; margin-bottom: 0; }
 .homepage #commentsy img { transition: transform .4s ease; }
-.homepage #commentsy img:hover { transform: translateY(-4px); }
 .homepage-projects { padding-top: 80px; padding-bottom: 70px; }
 .project-total { border: 1px solid #d8e7ed; border-radius: 20px; padding: 7px 13px; white-space: nowrap; font-family: ui-monospace, monospace; font-size: 10px; }
 .project-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-top: 1px solid #e4ecf2; padding-block: 23px 15px; }
@@ -166,7 +165,6 @@
   .homepage-section-title { flex-wrap: wrap; align-items: start; gap: 17px; }
   .homepage-featured { padding-top: 50px; }
   .homepage #commentsy .featured-project { padding: 24px 20px; border-radius: 14px; }
-  .homepage #commentsy .relative.px-16 { padding: 60px 40px; margin-top: 20px; }
   .homepage-projects { padding-block: 50px; }
   .project-toolbar { align-items: stretch; flex-direction: column; gap: 16px; }
   .project-search input { width: 100%; }
@@ -233,4 +231,16 @@
   .writing-row { gap: 16px; padding: 21px 3px; }
   .writing-row h3 { font-size: 15px; }
   .writing-number { font-size: 10px; }
+}
+
+/* Balance the compact preview with the project description. */
+.homepage #commentsy .featured-commentsy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 38px;
+  align-items: center;
+}
+.homepage #commentsy .commentsy-copy { min-width: 0; }
+@media (max-width: 1023px) {
+  .homepage #commentsy .featured-commentsy { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }
