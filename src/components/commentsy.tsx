@@ -2,8 +2,8 @@ import React from 'react';
 import * as styles from './commentsy.module.css';
 
 export default function Commentsy() {
-  return <div className="featured-project featured-commentsy flex flex-wrap rounded-lg mb-4">
-    <div className="w-full lg:w-1/2 lg:mb-4 lg:pr-20 flex flex-col justify-center">
+  return <div className="featured-project featured-commentsy rounded-lg mb-4">
+    <div className="commentsy-copy flex flex-col justify-center">
       <h5>Add comments to your website in just a few minutes.</h5>
       <div className="flex items-center mb-2">
         <h4 className="text-lg font-bold mr-[8px]">Commentsy </h4>
@@ -66,17 +66,15 @@ export default function Commentsy() {
         It simplifies the process of code integration and commenting, saving time and effort.
       </p>
     </div>
-    <a className="w-full lg:w-1/2 relative px-16 py-20" href="https://commentsy.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore Commentsy (opens in a new tab)">
-      <img
-        className={`${styles.left} rounded-xl border border-neutral-200  shadow-md`}
-        src="/images/commentsy-1.jpg"
-        alt="commentsy banner 1"
-      />
-      <img
-        className={`${styles.right} rounded-xl absolute inset-0 rotate-12 scale-75 shadow-2xl`}
-        src="/images/commentsy-2.jpg"
-        alt="commentsy banner 2"
-      />
-    </a>
+    <div className={styles.preview}>
+      <a className={`${styles.window} ${styles.overview}`} href="https://commentsy.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore Commentsy (opens in a new tab)">
+        <span className={styles.chrome}><span className={styles.dots} aria-hidden="true"><i /><i /><i /></span><span>commentsy.com</span><span aria-hidden="true">01</span></span>
+        <img src="/images/commentsy-2.jpg" alt="Commentsy homepage and embedded conversation preview" loading="lazy" />
+      </a>
+      <a className={`${styles.window} ${styles.themes}`} href="https://commentsy.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore Commentsy themes (opens in a new tab)">
+        <span className={styles.chrome}><span className={styles.dots} aria-hidden="true"><i /><i /><i /></span><span>Your site. Your style.</span><span aria-hidden="true">02</span></span>
+        <img src="/images/commentsy-1.jpg" alt="Commentsy appearance options and comment themes" loading="lazy" />
+      </a>
+    </div>
   </div>
 }
